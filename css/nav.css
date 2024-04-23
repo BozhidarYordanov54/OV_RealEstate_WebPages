@@ -41,16 +41,13 @@
     transform: rotate(-45deg);
 }
 
-.background-image{
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.site-header{
     background-image: url('../images/main-bg2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
-    filter: brightness(0.8);
+    height: 100vh;
 }
 
 .fa-solid.fa-phone{
@@ -98,6 +95,21 @@
     align-items: center;
     padding: 0.5em 1rem;
     margin-top: -2em;
+    transition: all 0.3s ease-in-out;
+}
+
+.main-nav.scrolled{
+    background: var(--nav-bg-color);
+    backdrop-filter: blur(7px);
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.main-nav.scrolled .burger{
+    right: 3em;
 }
 
 .logo{
@@ -121,7 +133,7 @@
 
 .login-element{
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     padding-right: 2rem;
 }
 
@@ -169,7 +181,7 @@
     .main-nav.active .nav-wrapper{
         overflow: visible;
         opacity: 1;
-        width: 80%;
+        width: 70%;
         border-bottom-right-radius: 1em;
     }
 
