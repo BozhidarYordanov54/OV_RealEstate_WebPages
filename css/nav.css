@@ -1,5 +1,8 @@
 :root{
+    --nav-bg-color: rgba(63, 63, 63, 0.37);
 
+    --text-color: #ffffff;
+    --element-color-white: #ffffff;
 }
 
 .burger {
@@ -18,7 +21,7 @@
 .burger div {
     width: 2rem;
     height: 0.25rem;
-    background-color: #ffffff;
+    background-color: var(--element-color-white);
     border-radius: 10px;
     position: relative;
     transform-origin: 0px;
@@ -47,7 +50,7 @@
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
-    filter: brightness(0.6);
+    filter: brightness(0.8);
 }
 
 .fa-solid.fa-phone{
@@ -59,14 +62,13 @@
     justify-content: end;
     gap: 1rem;
     padding: 0.5rem 15% 0.5rem 0;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid var(--element-color-white);
 }
 
 .site-header a{
     text-decoration: none;
     text-wrap: nowrap;
-    color: #ffffff;
-    font-size: 14px;
+    color: var(--text-color);
     line-height: 18px;
     letter-spacing: 0.05em;
     font-weight: bold;
@@ -80,7 +82,7 @@
     content: "";
     display: block;
     height: 2px;
-    background: #ffffff;
+    background: var(--element-color-white);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -142,7 +144,7 @@
     .nav-element .login-element{
         display: flex;
         position: absolute;
-        border-top: 2px solid #ffffff;
+        border-top: 2px solid var(--element-color-white);
         padding-top: 1rem;
         padding-left: 1.5em;
         margin-top: 5rem;
@@ -156,7 +158,7 @@
         overflow: hidden;
         opacity: 0;
         left: 0;
-        background: rgba(63, 63, 63, 0.37);
+        background: var(--nav-bg-color);
         backdrop-filter: blur(7px);
         z-index: 9;
         width: 0%;
@@ -167,7 +169,7 @@
     .main-nav.active .nav-wrapper{
         overflow: visible;
         opacity: 1;
-        width: 60%;
+        width: 80%;
         border-bottom-right-radius: 1em;
     }
 
