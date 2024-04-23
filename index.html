@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="css/main-layout.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/typography.css">
@@ -28,7 +29,6 @@
                           <a href="#">Контакти</a>
                         </span>
                     </div>
-                    
                 </div>  
             </section>
             <section class="main-nav">
@@ -50,6 +50,13 @@
                         <li class="nav-element"><a href="index.html">Услуги</a></li>
                         <li class="nav-element"><a href="index.html">За нас</a></li>
                         <li class="nav-element"><a href="#">Блог</a></li>
+                        <li class="nav-element profile">
+                            <div class="login-element">
+                                <a href="#" class="login">Вход</a>
+                                <span>/</span>
+                                <a href="#" class="register">Регистрация</a>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
                 <div class="login-element">
@@ -65,7 +72,7 @@
                     <p class="site-description">Най-доброто място за вашите мечти</p>
                 </section>
                 <section class="search-form-wrapper">
-                    <form action="" method="get" class="search-form">
+                    <form action="#" method="post" class="search-form">
                         <div class="selection-wrapper">
                             <div class="input-wrapper">
                                 <select name="" id="">
@@ -94,7 +101,7 @@
                                 </select>
                             </div>
                         </div>
-                        <button type="submit" class="search-button">Търсене</button>
+                        <button type="submit" class="search-button"><i class="fa-solid fa-magnifying-glass"></i>Търсене</button>
                     </form>
                 </section>
             </div>
@@ -108,5 +115,7 @@
             <div class="footer-wrapper"></div>
         </footer>
     </div>
+
+    <script src="js/burger-button.js"></script>
 </body>
 </html>
