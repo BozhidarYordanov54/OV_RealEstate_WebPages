@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/site.css">
-    <link rel="stylesheet" href="css/main-layout.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/contacts.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/typography.css">
 
     <script src="https://kit.fontawesome.com/6592283e01.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <title>Начало Овча Купел Estate</title>
+
+    <title>Document</title>
 </head>
 <body>
     <div class="site">
@@ -28,7 +27,7 @@
                     <div class="contact-element">
                         <img class="contact-icon" src="" alt="">
                         <span class="contact-link">
-                          <a href="contacts.html">Контакти</a>
+                          <a href="#">Контакти</a>
                         </span>
                     </div>
                 </div>  
@@ -65,50 +64,67 @@
                     <a href="#" class="register">Регистрация</a>
                 </div>
             </section>
-            <div class="search-wrapper">
-                <section class="site-welcome">
-                    <h2 class="welcome-header">Добре дошли в</h2>
-                    <img class="site-brand" src="images/logo.png" alt="">
-                    <p class="site-description">Вие търсите имот... Ние го имаме ТУК</p>
-                </section>
-                <section class="search-form-wrapper">
-                    <form action="#" method="post" class="search-form">
-                        <div class="selection-wrapper">
-                            <div class="input-wrapper">
-                                <select name="" id="">
-                                    <option value="">Град/Област</option>
-                                    <option value="1">София</option>
-                                </select>
-                            </div>
-                            <span class="vertical-splitter"></span>
-                            <div class="input-wrapper">
-                                <select name="" id="">
-                                    <option value="">Квартал</option>
-                                    <option value="1">Овча Купел</option>
-                                    <option value="1">Овча Купел</option>
-                                    <option value="1">Овча Купел</option>
-                                    <option value="1">Овча Купел</option>
-                                    <option value="1">Овча Купел</option>
-                                    <option value="1">Овча Купел</option>
-                                    <option value="1">Овча Купел</option>
-                                </select>
-                            </div>
-                            <span class="vertical-splitter"></span>
-                            <div class="input-wrapper">
-                                <select name="" id="">
-                                    <option value="">Тип имот</option>
-                                    <option value="1">Апартамент</option>
-                                </select>
-                            </div>
-                        </div>
-                        <button type="submit" class="search-button btn-submit"><i class="fa-solid fa-magnifying-glass"></i>Търсене</button>
-                    </form>
-                </section>
             </div>
         </header>
 
         <main class="main">
-            
+            <div class="main-content-wrapper">
+                <div class="map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1233.1449069499101!2d23.257826248142464!3d42.68403792371781!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa9b288482af17%3A0x54ca354d652e287a!2z0JHRg9GE0LXRgNC10L0g0L_QsNGA0LrQuNC90LMgItCc0LjQt9C40Y8i!5e0!3m2!1sbg!2sbg!4v1714046788060!5m2!1sbg!2sbg" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="contact-information">
+                    <div class="contact-info-wrapper">
+                        <div class="contact-info">
+                            <div class="working-hours-wrapper">
+                                <h3>Работно Време</h3>
+                                <div class="hours">
+                                    <p class="days">Понеделник-Петък</p>
+                                    <p>09:00 - 18:00</p>
+                                </div>
+                                <div class="hours">
+                                    <p class="days">Събота</p>
+                                    <p>09:00 - 14:00</p>
+                                </div>
+                            </div>
+                            <div class="contact-details">
+                                <h3 class="contacts-header">Контакти</h3>
+                                <div class="phone-wrapper">
+                                    <p class="phone-header">Телефон</p>
+                                <p class="phone-text">+359 888 888 888</p>
+                                </div>
+                                <div class="email-wrapper">
+                                    <p class="email-header">Email</p>
+                                    <p class="email-text">test@mail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="address">
+                            <h3>Адрес</h3>
+                            <p>София, ж.к. Овча Купел 1, ул. "761-ва"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-wrapper">
+                    <h2 class="form-header"><i class="fa-solid fa-envelope"></i>Свържете се с нас</h2>
+                    <form class="contact-form" action="post">
+                        <div class="personal-details">
+                            <div class="input-wrapper">
+                                <input type="text" name="name" id="name" class="input-text">
+                                <label for="name">Име</label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="text" name="email" id="email" class="input-text">
+                                <label for="email">Имейл</label>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <label for="message">Съобщение</label>
+                        </div>
+                        <button type="submit" class="btn-submit">Изпрати</button>
+                    </form>
+                </div>
+            </div>
         </main>
 
         <footer class="footer">

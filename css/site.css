@@ -1,0 +1,75 @@
+*::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+    background: transparent;
+}
+
+*::-webkit-scrollbar-track{
+    background: white;
+    border-radius: 2px;
+}
+
+*::-webkit-scrollbar-thumb{
+    background: #919191;
+    border-radius: 5px;
+}
+
+.main{
+    border-bottom: 2px solid #b1b1b1;
+}
+
+input[type=text]{
+    padding: 1em;
+    width: 300px;
+    outline: none;
+    border: none;
+    border-bottom: 1.5px solid #b1b1b1;;
+}
+
+textarea{
+    padding: 1em;
+    border-radius: 5px;
+    height: 200px;
+    width: 616px;
+    resize: none;
+}
+
+input[type=text] + label,
+textarea + label{
+    position: relative;
+    font-size: 14px;
+    top: -2em;
+    left: 0em;
+    pointer-events: none;
+    background-color: transparent;
+    transition: transform 0.2s ease-out;
+}
+
+input[type=text]:focus + label,
+.input-text.has-content + label{
+    transform: translateY(-2em);
+    font-weight: bold;
+}
+
+textarea + label{
+    top: -13em;
+    left: 1em;
+}
+
+textarea:focus + label{
+    transform: translateY(-2em);
+    font-weight: bold;
+    background: #ffffff;
+    width: max-content;
+}
+
+@media(max-width: 950px)
+{
+    textarea{
+        width: 100%;
+    }
+
+    input[type=text]{
+        width: 100%;
+    }
+}
