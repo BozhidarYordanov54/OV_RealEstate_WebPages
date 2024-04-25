@@ -42,6 +42,9 @@
 }
 
 .site-header{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     background-image: url('../images/main-bg2.jpg');
     background-size: cover;
     background-position: center;
@@ -94,7 +97,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.5em 1rem;
-    margin-top: -2em;
     transition: all 0.3s ease-in-out;
 }
 
@@ -113,7 +115,7 @@
 }
 
 .logo{
-    width: 150px;
+    width: 80px;
     filter: brightness(0) invert(1);
 }
 
@@ -176,10 +178,11 @@
 
 .search-wrapper{
     width: 100%;
+    height: 60%;
     display: flex;
-    margin-top: -6em;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 1em;
 }
 
@@ -238,10 +241,6 @@ select{
         position: absolute;
         right: 2em;
     }
-    
-    .login-element{
-        display: none;
-    }
 
     .nav-element .login-element{
         display: flex;
@@ -285,12 +284,17 @@ select{
         margin-left: 2.5rem;
     }
 
+    .nav-element{
+        border-bottom: 1px solid var(--element-color-white);
+    }
+
     .logo{
-        width: 120px;
+        width: 70px;
+        padding-left: 1rem;
     }
 
     .main-nav{
-        padding: 1rem;
+        padding: 0.2rem ;
     }
 
     .contacts-wrapper{
@@ -299,12 +303,9 @@ select{
         padding: 0.5em 0;
     }
 
-    .site-welcome{
-        margin-top: 5em;
-    }
-
     .site-welcome h2{
-        font-size: 1.5rem;
+        font-size: 2rem;
+        margin-top: 0;
     }
 
     .site-welcome p{
@@ -315,24 +316,13 @@ select{
         width: 100%;
     }
 
-    .vertical-splitter{
-        display: none;
-    }
-
     .search-form{
         background: transparent;
     }
 
+    .input-wrapper,
     .selection-wrapper{
         flex: 1;
-    }
-
-    .input-wrapper{
-        flex: 1;
-    }
-
-    .search-wrapper{
-        margin-top: -10em;
     }
 
     select{
@@ -343,9 +333,18 @@ select{
         border-radius: 0.5rem;
     }
 
+    .search-wrapper{
+        height: 100%;
+    }
+
     .search-button{
         padding: 0.5em 1em;
         width: 100%;
+    }
+
+    .login-element,
+    .vertical-splitter{
+        display: none;
     }
 
 }
