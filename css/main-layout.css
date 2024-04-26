@@ -1,0 +1,12 @@
+.main,
+.new-properties,
+.container-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    padding: 4em 0;
+}
