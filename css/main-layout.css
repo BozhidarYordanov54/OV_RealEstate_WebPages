@@ -1,6 +1,5 @@
 .main,
-.new-properties,
-.container-header{
+.new-properties{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -8,7 +7,7 @@
 }
 
 .main{
-    padding: 4em 0;
+    padding: 1em 0;
 }
 
 .property-status{
@@ -83,6 +82,7 @@
 }
 
 .container-header{
+    text-align: center;
     font-size: 1.5em;
     padding: 0.5em;
     border-bottom: 2px solid red;
@@ -111,7 +111,22 @@
     gap: 1em;
 }
 
+.more-properties{
+    margin-top: 6em;
+    text-decoration: none;
+    color: white;
+    background: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 0.5em;
+    border-radius: 0.3em;
+
+}
+
 @media(max-width: 950px){
+    .container-header{
+        font-size: 1.2em;
+    }
+    
     .properties-container-wrapper{
         padding-top: 1em;
     }
