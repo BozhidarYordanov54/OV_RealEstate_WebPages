@@ -140,6 +140,10 @@
         flex-direction: row;
         font-size: 1.1em;
     }
+    
+    .property-card{
+        margin-top: 1em;
+    }
 
     .property-description p{
         width: 110px;
