@@ -279,10 +279,6 @@ select{
         right: 2em;
     }
 
-    .site-header{
-        height: 100%;
-    }
-
     .nav-element .login-element{
         display: flex;
         position: absolute;
