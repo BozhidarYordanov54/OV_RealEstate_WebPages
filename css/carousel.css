@@ -94,18 +94,4 @@
     border-radius: 5px;
 }
 
-.property-features-list{
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5em;
-    flex-wrap: wrap;
-    width: 250px;
-}
 
-.property-feature{
-    background: #efefef;
-    padding: 0.5em;
-    border-radius: 5px;
-}
