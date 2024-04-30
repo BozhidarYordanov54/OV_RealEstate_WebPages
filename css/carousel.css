@@ -19,7 +19,7 @@
 .card .image-box img{
     height: 100%;
     width: 100%;
-    padding: 1em;
+    padding: 1em 0;
     object-fit: cover;
     opacity: 0.7;
     transition: all ease 0.5s;
@@ -39,19 +39,31 @@
     z-index: 2;
 }
 
+.card.swiper-slide.swiper-slide-active .property-category-wrapper{
+    opacity: 1;
+}
+
 .card .property-details{
     display: flex;
     justify-content: space-between;
     align-items: center;
     column-gap: 12px;
-    padding-top: 2em;
-    padding-bottom: 1em;
+    padding: 1em 0;
     opacity: 0;
     border-bottom: 1px solid #000;
     transition: all ease 0.5s;
 }
 
-.swiper-navBtn{
+.property-description{
+    padding-left: 1em;
+}
+.property-features{
+    padding-right: 1em;
+}
+
+.swiper-navBtn,
+.swiper-button-next,
+.swiper-button-prev{
     color: #ffffff;
     height: 40px;
     width: 40px;
@@ -60,15 +72,45 @@
     transition: background ease-in-out 0.3s;
 }
 
-.swiper-navBtn:hover{
+.swiper-navBtn:hover,
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
     background: rgba(0, 0, 0, 0.8);
 }
 
 .swiper-navBtn::before,
-.swiper-navBtn::after{
+.swiper-navBtn::after,
+.swiper-button-next::before,
+.swiper-button-next::after,
+.swiper-button-prev::before,
+.swiper-button-prev::after{
     font-size: 18px;
 }
 
 .swiper-pagination-bullet{
     background: #000;
 }
+
+.property-category-wrapper{
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+.property-category{
+    padding-top: 2em;
+    color: rgb(199, 143, 38);
+}
+
+.sale-rent{
+    color: rgb(65, 75, 90);
+}
+
+.property-category,
+.sale-rent{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.6em;
+}
+

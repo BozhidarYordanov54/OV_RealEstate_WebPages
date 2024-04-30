@@ -54,7 +54,7 @@
     text-decoration: none;
     font-weight: 500;
     color: #000;
-    border: 2px solid #000 ;
+    border: 2px solid rgb(65, 75, 90) ;
     padding: 0.5em;
     transition: color ease-in-out 0.3s, background ease-in-out 0.3s, border ease-in-out 0.3s;
 }
@@ -73,6 +73,10 @@
     gap: 0.5em;
     flex-wrap: wrap;
     width: 250px;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    color: rgb(65, 75, 90);
 }
 
 .property-feature{
@@ -84,7 +88,7 @@
 .property-description{
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1.5em;
     border-radius: 8px;
     margin-top: 1em;
 }
@@ -92,6 +96,7 @@
 .property-location{
     font-size: 1.5rem;
     font-weight: 500;
+    letter-spacing: 0.1em;
 }
 
 .property-price{
@@ -173,29 +178,39 @@
 
 @media(max-width: 768px)
 {
-    .property-location{
-        font-size: 1rem;
-    }
-
-    .property-price{
-        font-size: 0.8rem;
-        width: 100px;
+    .card .property-details{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
     }
 
     .property-features-list{
-        width: 150px;
-        flex: 1;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .property-description{
+        padding: 0em !important;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
     }
 
     .property-feature{
-        flex: 1;
         justify-content: center;
+        text-wrap: nowrap;
+    }
+
+    .property-features{
+        padding: 0em !important;
     }
 
     .latest-articles .image-box{
         padding: 0;
     }
-
 
     .article-description{
         width: 100%;
