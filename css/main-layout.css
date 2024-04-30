@@ -54,9 +54,12 @@
     text-decoration: none;
     font-weight: 500;
     color: #000;
-    border: 2px solid rgb(65, 75, 90) ;
+    border: 2px solid #000;
     padding: 0.5em;
-    transition: color ease-in-out 0.3s, background ease-in-out 0.3s, border ease-in-out 0.3s;
+    transition: 
+        color ease-in-out 0.3s, 
+        background ease-in-out 0.3s, 
+        border-radius ease-in-out 0.3s;
 }
 
 .more-properties:hover{
@@ -102,7 +105,7 @@
 .property-price{
     font-size: 1.1rem;
     font-weight: bold;
-    background: #000;
+    background: #2b2c32;
     color: #fff;
     text-align: center;
     width: 150px;
@@ -133,6 +136,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 8px;
   }
 
   .latest-articles .image-box{
@@ -174,6 +178,77 @@
     font-size: 1.2rem;
     font-style: italic;
     color: gray;
+}
+
+.services-wrapper{
+    padding: 2em 0;
+    margin-top: 2em;
+    background: #000;
+    color: #efefef;
+}
+
+.service-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    padding: 3em 0;
+}
+
+.service-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.service-card:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.service-card i{
+    font-size: 5rem;
+}
+
+.service-description{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 50%;
+}
+
+.service-description .service-title{
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-wrap: nowrap;
+}
+
+.service-link{
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #efefef;
+    padding: 0.5em 1em;
+    width: max-content;
+    text-decoration: none;
+    color: #efefef;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 
+        background ease-in-out 0.2s, 
+        color ease-in-out 0.2s;
+}
+
+.service-link:hover{
+    background: #efefef;
+    color: #000;
+}
+
+.service-description .service-link i{
+    font-size: 1.1rem;
 }
 
 @media(max-width: 768px)
@@ -231,5 +306,18 @@
     .swiper-button-next.article-btn,
     .swiper-button-prev.article-btn{
         display: none;
+    }
+
+    .service-card i{
+        font-size: 3rem;
+    }
+
+    .service-description .service-title{
+        font-size: 1.8rem;
+    }
+
+    .service-link{
+        width: 100%;
+        text-align: center;
     }
 }

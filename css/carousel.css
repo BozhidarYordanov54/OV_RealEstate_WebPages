@@ -5,7 +5,7 @@
 }
 
 .slide-container{
-    margin: 0 30px;
+    margin: 0 10px;
     overflow: hidden;
 }
 .card{
@@ -88,7 +88,7 @@
 }
 
 .swiper-pagination-bullet{
-    background: #000;
+    background: #2b2c32;
 }
 
 .property-category-wrapper{
@@ -98,11 +98,11 @@
 
 .property-category{
     padding-top: 2em;
-    color: rgb(199, 143, 38);
+    color: #e5a45f;
 }
 
 .sale-rent{
-    color: rgb(65, 75, 90);
+    color: #30547c;
 }
 
 .property-category,
@@ -112,5 +112,12 @@
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 0.6em;
+}
+
+@media(max-width: 768px)
+{
+    .swiper-navBtn{
+        display: none;
+    }
 }
 
