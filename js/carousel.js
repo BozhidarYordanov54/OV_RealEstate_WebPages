@@ -7,13 +7,13 @@ var swiper = new Swiper(".slide-container", {
     grabCursor: "true",
     fade: "true",
     pagination: {
-        el: ".swiper-pagination",
+        el: ".swiper-pagination.estates",
         clickable: true,
         dynamicBullets: true,
     },
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next.swiper-navBtn",
+        prevEl: ".swiper-button-prev.swiper-navBtn",
     },
     
     breakpoints: {
@@ -33,4 +33,23 @@ var swiper = new Swiper(".slide-container", {
             slidesPerGroup: 1,
         }
     }
+})
+
+var swiper2 = new Swiper(".article-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    slidesPerGroup: 1,
+    loop: true,
+    centeredSlides: true,
+    grabCursor: "true",
+    fade: "true",
+    pagination: {
+        el: ".swiper-pagination.article",
+        clickable: true,
+        dynamicBullets: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next.article-btn",
+        prevEl: ".swiper-button-prev.article-btn",
+    },
 })

@@ -12,7 +12,9 @@
 }
 
 .header{
-    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
+    border-bottom: 1px solid #000;
 }
 
 .description{
@@ -35,6 +37,13 @@
     font-weight: 500;
     color: #000;
     width: 100%;
+}
+
+.cubic::after{
+    content: '2';
+    font-size: 10px;
+    position: relative;
+    top: -0.5em;
 }
 
 .more-properties{
@@ -72,6 +81,96 @@
     border-radius: 5px;
 }
 
+.property-description{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 8px;
+    margin-top: 1em;
+}
+
+.property-location{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.property-price{
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    width: 150px;
+    padding: 0.4em;
+    border-radius: 5px;
+}
+
+.latest-articles{
+    margin-top: 3em;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    position: relative;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .latest-articles .image-box{
+    position: relative;
+    height: 500px;
+    width: 100%;
+    padding: 0em 3em;
+}
+
+.article-description{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 5em;
+    transform: translateY(-50%);
+    background-color: #efefefd0;
+    width: 500px;
+    padding: 1.5em;
+}
+
+.article-title{
+    font-size: 2rem;
+    font-weight: 500;
+
+}
+
+.latest-articles .header{
+    font-size: 2.5rem;
+}
+
+.swiper-wrapper{
+    margin-top: 2em;
+}
+
+.article-description .article-date{
+    font-size: 1.2rem;
+    font-style: italic;
+    color: gray;
+}
+
 @media(max-width: 768px)
 {
     .property-location{
@@ -91,5 +190,30 @@
     .property-feature{
         flex: 1;
         justify-content: center;
+    }
+
+    .latest-articles .image-box{
+        padding: 0;
+    }
+
+
+    .article-description{
+        width: 100%;
+        left: 0;
+        padding: 1em;
+        gap: 2em;
+    }
+
+    .article-title{
+        font-size: 1.4rem;
+    }
+
+    .article-text{
+        font-size: 1rem;
+    }
+
+    .swiper-button-next.article-btn,
+    .swiper-button-prev.article-btn{
+        display: none;
     }
 }

@@ -33,7 +33,7 @@
     opacity: 1;
 }
 
-.card.swiper-slide.swiper-slide-active .image-box img{
+.new-property-cards .card.swiper-slide.swiper-slide-active .image-box img{
     transform: scale(1.2);
     opacity: 1;
     z-index: 2;
@@ -72,28 +72,3 @@
 .swiper-pagination-bullet{
     background: #000;
 }
-
-.property-description{
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    border-radius: 8px;
-    margin-top: 1em;
-}
-
-.property-location{
-    font-size: 1.5rem;
-}
-
-.property-price{
-    font-size: 1.1rem;
-    font-weight: bold;
-    background: #000;
-    color: #fff;
-    text-align: center;
-    width: 150px;
-    padding: 0.4em;
-    border-radius: 5px;
-}
-
-
