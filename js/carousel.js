@@ -52,4 +52,7 @@ var swiper2 = new Swiper(".article-swiper", {
         nextEl: ".swiper-button-next.article-btn",
         prevEl: ".swiper-button-prev.article-btn",
     },
+    autoplay: {
+        delay: 3000,
+    },
 })
