@@ -6,11 +6,12 @@
 
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/site.css">
-    <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/main-layout.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/carousel.css">
 
     <script src="https://kit.fontawesome.com/6592283e01.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" href="images/logo.png">
@@ -128,117 +129,146 @@
         </header>
 
         <main class="main">
-            <section class="new-properties">
+            <section class="new-properties-header">
                 <div class="container-header">
-                    <h2 class="">Имоти</h2>
-                    <p>Нашите най-нови предложения</p>
+                    <h2 class="header">Имоти</h2>
+                    <p class="description">Нашите най-нови предложения</p>
                 </div>
-                <div class="properties-container-wrapper">
-                    <div class="properties-wrapper" data-carousel>
-                        <button class="carousel-button prev" data-carousel-button="prev"><i class="fa-solid fa-chevron-left"></i></i></button>
-                        <button class="carousel-button next" data-carousel-button="next"><i class="fa-solid fa-chevron-right"></i></button>
-                        <ul class="property-list" data-carousel-slide>
-                            <li class="property-card" data-active>
-                                <p class="property-status">Наем</p>
-                                <div class="property-link">
-                                    <a href="#">
-                                        <img class="property-image" src="images/property1.jpeg" alt="">
-                                    </a>
-                                </div>
-                                <div class="property-information">
-                                    <div class="price-location-wrapper">
-                                        <span class="property-price"><span class="price">€ 500</span><span class="italic">/ на месец</span></span>
-                                        <span class="property-location">София, Овча Купел</span>
-                                    </div>
-                                    <div class="property-description">
-                                        <div class="main-property-description">
-                                            <p class="property-size"><i class="fa-solid fa-up-right-and-down-left-from-center"></i> 75m</p>
-                                            <p class="property-category"><i class="fa-solid fa-door-open"></i> 2-стаен</p>
-                                        </div>
-                                        <div class="room-layout-description">
-                                            <p class="num-of-rooms"><i class="fa-solid fa-bed"></i> 3 спални</p>
-                                            <p class="num-of-bathrooms"><i class="fa-solid fa-bath"></i> 1 баня</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="property-card">
-                                <p class="property-status">Продава</p>
-                                <div class="property-link">
-                                    <a href="#">
-                                        <img class="property-image" src="images/property2.jpeg" alt="">
-                                    </a>
-                                </div>
-                                <div class="property-information">
-                                    <div class="price-location-wrapper">
-                                        <span class="property-price"><span class="price">€ 585 000</span></span>
-                                        <span class="property-location">София, Овча Купел</span>
-                                    </div>
-                                    <div class="property-description">
-                                        <div class="main-property-description">
-                                            <p class="property-size"><i class="fa-solid fa-up-right-and-down-left-from-center"></i>75m</p>
-                                            <p class="property-category"><i class="fa-solid fa-door-open"></i> 2-стаен</p>
-                                        </div>
-                                        <div class="room-layout-description">
-                                            <p class="num-of-rooms"><i class="fa-solid fa-bed"></i> 2 спални</p>
-                                            <p class="num-of-bathrooms"><i class="fa-solid fa-bath"></i> 1 баня</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="property-card">
-                                <p class="property-status">Продава</p>
-                                <div class="property-link">
-                                    <a href="#">
-                                        <img class="property-image" src="images/property3.jpeg" alt="">
-                                    </a>
-                                </div>
-                                <div class="property-information">
-                                    <div class="price-location-wrapper">
-                                        <span class="property-price"><span class="price">€ 253 000</span></span>
-                                        <span class="property-location">София, Овча Купел</span>
-                                    </div>
-                                    <div class="property-description">
-                                        <div class="main-property-description">
-                                            <p class="property-size"><i class="fa-solid fa-up-right-and-down-left-from-center"></i> 75m</p>
-                                            <p class="property-category"><i class="fa-solid fa-door-open"></i> 2-стаен</p>
-                                        </div>
-                                        <div class="room-layout-description">
-                                            <p class="num-of-rooms"><i class="fa-solid fa-bed"></i> 2 спални</p>
-                                            <p class="num-of-bathrooms"><i class="fa-solid fa-bath"></i> 1 баня</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="property-card">
-                                <p class="property-status">Продава</p>
-                                <div class="property-link">
-                                    <a href="#">
-                                        <img class="property-image" src="images/property4.jpeg" alt="">
-                                    </a>
-                                </div>
-                                <div class="property-information">
-                                    <div class="price-location-wrapper">
-                                        <span class="property-price"><span class="price">€ 100 000</span></span>
-                                        <span class="property-location">София, Овча Купел</span>
-                                    </div>
-                                    <div class="property-description">
-                                        <div class="main-property-description">
-                                            <p class="property-size"><i class="fa-solid fa-up-right-and-down-left-from-center"></i> 284m</p>
-                                            <p class="property-category"><i class="fa-solid fa-door-open"></i> 2-стаен</p>
-                                        </div>
-                                        <div class="room-layout-description">
-                                            <p class="num-of-rooms"><i class="fa-solid fa-bed"></i> 2 спални</p>
-                                            <p class="num-of-bathrooms"><i class="fa-solid fa-bath"></i> 1 баня</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <a class="more-properties" href="#">Разгледай още</a>
             </section>
+            <section class="new-property-cards">
+                <div class="container swiper">
+                    <div class="slide-container">
+                        <div class="card-wrapper swiper-wrapper">
+                            <div class="card swiper-slide">
+                                <div class="image-box">
+                                    <a href="#">
+                                        <img src="images/property1.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="property-details">
+                                    <div class="property-description">
+                                        <p class="property-location">София, Овча Купел</p>
+                                        <p class="property-price">50 000 €</p>
+                                    </div>
+                                    <div class="property-features">
+                                        <ul class="property-features-list">
+                                            <li class="property-feature"><i class="fa-solid fa-door-open"></i>1-стаен</li>
+                                            <li class="property-feature"><i class="fa-solid fa-up-right-and-down-left-from-center"></i>50 кв.м.</li>
+                                            <li class="property-feature"><i class="fa-solid fa-stairs"></i>Етаж 2/5</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="image-box">
+                                    <a href="#">
+                                        <img src="images/property3.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="property-details">
+                                    <div class="property-description">
+                                        <p class="property-location">София, Овча Купел</p>
+                                        <p class="property-price">150 000 €</p>
+                                    </div>
+                                    <div class="property-features">
+                                        <ul class="property-features-list">
+                                            <li class="property-feature"><i class="fa-solid fa-door-open"></i>1-стаен</li>
+                                            <li class="property-feature"><i class="fa-solid fa-up-right-and-down-left-from-center"></i>50 кв.м.</li>
+                                            <li class="property-feature"><i class="fa-solid fa-stairs"></i>Етаж 2/5</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="image-box">
+                                    <a href="#">
+                                        <img src="images/property4.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="property-details">
+                                    <div class="property-description">
+                                        <p class="property-location">София, Овча Купел</p>
+                                        <p class="property-price">50 000 €</p>
+                                    </div>
+                                    <div class="property-features">
+                                        <ul class="property-features-list">
+                                            <li class="property-feature"><i class="fa-solid fa-door-open"></i>1-стаен</li>
+                                            <li class="property-feature"><i class="fa-solid fa-up-right-and-down-left-from-center"></i>50 кв.м.</li>
+                                            <li class="property-feature"><i class="fa-solid fa-stairs"></i>Етаж 2/5</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="image-box">
+                                    <a href="#">
+                                        <img src="images/property2.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="property-details">
+                                    <div class="property-description">
+                                        <p class="property-location">София, Овча Купел</p>
+                                        <p class="property-price">50 000 €</p>
+                                    </div>
+                                    <div class="property-features">
+                                        <ul class="property-features-list">
+                                            <li class="property-feature"><i class="fa-solid fa-door-open"></i>1-стаен</li>
+                                            <li class="property-feature"><i class="fa-solid fa-up-right-and-down-left-from-center"></i>50 кв.м.</li>
+                                            <li class="property-feature"><i class="fa-solid fa-stairs"></i>Етаж 2/5</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="image-box">
+                                    <a href="#">
+                                        <img src="images/property4.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="property-details">
+                                    <div class="property-description">
+                                        <p class="property-location">София, Овча Купел</p>
+                                        <p class="property-price">50 000 €</p>
+                                    </div>
+                                    <div class="property-features">
+                                        <ul class="property-features-list">
+                                            <li class="property-feature"><i class="fa-solid fa-door-open"></i>1-стаен</li>
+                                            <li class="property-feature"><i class="fa-solid fa-up-right-and-down-left-from-center"></i>50 кв.м.</li>
+                                            <li class="property-feature"><i class="fa-solid fa-stairs"></i>Етаж 2/5</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="image-box">
+                                    <a href="#">
+                                        <img src="images/property2.jpeg" alt="">
+                                    </a>
+                                </div>
+                                <div class="property-details">
+                                    <div class="property-description">
+                                        <p class="property-location">София, Овча Купел</p>
+                                        <p class="property-price">50 000 €</p>
+                                    </div>
+                                    <div class="property-features">
+                                        <ul class="property-features-list">
+                                            <li class="property-feature"><i class="fa-solid fa-door-open"></i>1-стаен</li>
+                                            <li class="property-feature"><i class="fa-solid fa-up-right-and-down-left-from-center"></i>50 кв.м.</li>
+                                            <li class="property-feature"><i class="fa-solid fa-stairs"></i>Етаж 2/5</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next swiper-navBtn"></div>
+                    <div class="swiper-button-prev swiper-navBtn"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+            <div class="view-more-link-wrapper">
+                <a class="more-properties" href="#">Разгледай още</a>
+            </div>
         </main>
 
         <footer class="footer">
@@ -325,6 +355,7 @@
 
     <script src="js/burger-button.js"></script>
     <script src="js/checkInputContent.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/carousel.js"></script>
 </body>
 </html>

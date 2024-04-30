@@ -38,7 +38,7 @@ input[type=text] + label,
 textarea + label{
     position: relative;
     font-size: 14px;
-    top: -2em;
+    top: -2.6em;
     left: 0em;
     pointer-events: none;
     background-color: transparent;
@@ -52,12 +52,12 @@ input[type=text]:focus + label,
 }
 
 textarea + label{
-    top: -13em;
+    top: -15em;
     left: 1em;
 }
 
 textarea:focus + label{
-    transform: translateY(-2em);
+    transform: translateY(-1em);
     font-weight: bold;
     background: #ffffff;
     width: max-content;
