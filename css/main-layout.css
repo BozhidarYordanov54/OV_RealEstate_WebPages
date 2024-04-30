@@ -188,6 +188,7 @@
     .property-features-list{
         flex-direction: row;
         flex-wrap: nowrap;
+        font-size: 0.8rem;
         width: 100%;
     }
 
