@@ -27,11 +27,17 @@ html{
     width: 100%;
     justify-content: space-around;
     list-style-type: none;
+    flex-wrap: wrap;
+    /* margin-top: 20px; */
+}
+.property-features > li {
+    min-width: 150px;
+    margin-top: 10px;
 }
 
 .listing-presentation{
+    margin: 0 auto;
     width: 80%;
-    margin: 60px auto 0px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,19 +49,42 @@ html{
     gap: 15px;
 }
 .listing-presentation-paragraph-wrapper > p{
-    width: 50%;
-    min-width: 250px;
     border: 1px solid red;
     padding: 1em;
 }
 
 .listing-gallery {
+    margin: 80px auto 0px auto;
     width: 80%;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 500px;
     border: 1px solid red;
     padding: 2em;
+}
+
+@media (max-width: 768px) {
+    .listing-floating-info{
+        width: 100%;
+        background-color: lightgrey;
+        transform: translate(0%,0%);
+        position: static;
+        padding: 1em;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .listing-presentation{
+        width: 100%;
+        /* margin: 30px auto 0px auto; */
+        padding: 1em;
+    }
+    .listing-presentation-paragraph-wrapper{
+        flex-direction: column;
+    }
+
+    .listing-gallery{
+        margin: 30px auto 0px auto;
+        width: 100%;
+    }
 }
