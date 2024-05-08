@@ -12,7 +12,7 @@ html{
     height: 75vh;
     background-size: cover;
     background-position: center;
-    transition: height 0.5s ease 0.3s;
+    transition: height 0.5s ease;
 }
 
 .swiper-pagination{
@@ -39,7 +39,7 @@ html{
     align-items: center;
     gap: 8px;
     opacity:1;
-    transition: opacity 0.2s ease-in-out 0.5s, transform 0.2s ease-in-out 0.5s;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .property-features{
@@ -58,8 +58,15 @@ html{
     justify-content: center;
     align-items: center;
 }
-.property-features i{
+.property-features i,
+.fa-expand{
     font-size: 1.2em;
+}
+.expand-listing-images{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .listing-presentation{
     margin: 120px auto 0px auto;
@@ -78,15 +85,13 @@ html{
     border: 2px solid rgb(239, 239, 239);
     padding: 1em;
 }
-.listing-background-img:hover{
-    /* transform: translateY(10%); */
+
+.listing-background-img.active{
     height: 92vh;
-    transition-delay: 0s;
 }
-.listing-background-img:hover + .listing-floating-info {
+.listing-floating-info.active {
     opacity: 0;
     transform: translate(-50%, 10%);
-    transition-delay: 0s;
 }
 
 .contact-broker-form-wrapper{
@@ -126,6 +131,28 @@ html{
 
 textarea:focus + label{
     background: #efefef;
+}
+
+.expand-listing-images,
+.compress-listing-images{
+    border:1px solid grey;
+    padding: 1em;
+    background-color: rgba(239, 239, 239, 1);
+    cursor: pointer;
+}
+.compress-listing-images{
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    opacity: 0.9;
+    display: none;
+}
+.site-header{
+    transition: transform 0.3s ease;
+}
+.site-header.active{
+    transform: translateY(-100%);
 }
 
 
