@@ -10,10 +10,14 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/typography.css" />
     <link rel="stylesheet" href="css/listing.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/listing-carousel.css">
     <script
       src="https://kit.fontawesome.com/6592283e01.js"
-      crossorigin="anonymous"
+      crossorigin="anonymous" defer
     ></script>
+    <script src="js/swiper-bundle.min.js" defer></script>
+    <script src="js/carousel.js" defer></script>
 
     <title>Listing - OV Estate</title>
   </head>
@@ -68,7 +72,25 @@
         </section>
         </div>
     </header>
-    <div class="listing-background-img"></div>
+    <div class="listing-background-img">
+        <div class="swiper swiper-listing">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/property1.jpeg" alt="property1"></div>
+              <div class="swiper-slide"><img src="images/property2.jpeg" alt="property2"></div>
+              <div class="swiper-slide"><img src="images/property3.jpeg" alt="property3"></div>
+              <div class="swiper-slide"><img src="images/property4.jpeg" alt="property4"></div>
+              <div class="swiper-slide"><img src="images/article1.jpeg" alt=""></div>
+              <div class="swiper-slide"><img src="images/article3.jpg" alt=""></div>
+              <!-- <div class="swiper-slide">Slide 7</div> -->
+              <!-- <div class="swiper-slide">Slide 8</div> -->
+              <!-- <div class="swiper-slide">Slide 9</div> -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+    </div>
+   
     <div class="listing-floating-info">
         <p class="property-type">HOUSE</p>
         <h2 class="property-street">str. Narodno Horo</h2>
@@ -77,17 +99,11 @@
             doloremque at non architecto, sed, esse dolores vero vitae maiores numquam. 
             Ut perferendis assumenda esse veritatis aspernatur?</p>
         <ul class="property-features">
-            <li class="bed-count">10 beds</li>
-            <li class="bathrooms-count">2 baths</li>
-            <li class="room-count">5 rooms</li>
-            <li class="property-volume">150 sq.m.</li>
+            <li class="bed-count"><i class="fa-solid fa-bed"></i>10 beds</li>
+            <li class="bathrooms-count"><i class="fa-solid fa-bath"></i>2 baths</li>
+            <li class="room-count"><i class="fa-solid fa-door-open"></i>5 rooms</li>
+            <li class="property-volume"><i class="fa-solid fa-up-right-and-down-left-from-center"></i><span class="cubic">150m</span></li>
         </ul>
-    </div>
-    <div class="listing-gallery">
-        <h2 class="listing-gallery-header">A virtual tour of the place</h2>
-        <p class="listing-gallery-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-            Reprehenderit aperiam minima molestias, veritatis dolore iste sed magni illo dignissimos sapiente, 
-            ab necessitatibus officiis maxime quas modi harum laborum soluta repellat?</p>
     </div>
     <div class="listing-presentation">
         <h2 class="listing-presentation-heading">About the listing</h2>
