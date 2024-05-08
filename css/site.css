@@ -18,7 +18,8 @@
     border-bottom: 2px solid #b1b1b1;
 }
 
-input[type=text]{
+input[type=text],
+input[type=tel]{
     padding: 1em;
     width: 300px;
     outline: none;
@@ -35,6 +36,7 @@ textarea{
 }
 
 input[type=text] + label,
+input[type=tel] + label,
 textarea + label{
     position: relative;
     font-size: 14px;
@@ -46,6 +48,7 @@ textarea + label{
 }
 
 input[type=text]:focus + label,
+input[type=tel]:focus + label,
 .input-text.has-content + label{
     transform: translateY(-2em);
     font-weight: bold;
@@ -69,7 +72,8 @@ textarea:focus + label{
         width: 100%;
     }
 
-    input[type=text]{
+    input[type=text],
+    input[type=tel]{
         width: 100%;
     }
 }

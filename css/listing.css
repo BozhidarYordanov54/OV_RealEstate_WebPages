@@ -2,15 +2,29 @@ html{
     --listing-floating-color: wheat;
 }
 
+input[type=text],
+input[type=tel],
+textarea{
+    width: auto;
+}
+
 .listing-background-img{
     /* background-image: url(../images/property3.jpeg); */
     height: 75vh;
     background-size: cover;
     background-position: center;
+    transition: height 0.5s ease 0.3s;
 }
 
 .swiper-pagination{
     display: none;
+}
+
+.cubic::after{
+    content: '2';
+    font-size: 10px;
+    position: relative;
+    top: -0.5em;
 }
 .listing-floating-info{
     width: 80%;
@@ -26,7 +40,7 @@ html{
     align-items: center;
     gap: 8px;
     opacity:1;
-    transition: opacity 0.3s ease-in-out 0.5s;
+    transition: opacity 0.2s ease-in-out 0.5s, transform 0.2s ease-in-out 0.5s;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .property-features{
@@ -35,7 +49,6 @@ html{
     justify-content: space-around;
     list-style-type: none;
     flex-wrap: wrap;
-    /* margin-top: 20px; */
 }
 .property-features > li {
     min-width: 150px;
@@ -49,14 +62,12 @@ html{
 .property-features i{
     font-size: 1.2em;
 }
-
 .listing-presentation{
-    /* margin: 0 auto; */
     margin: 120px auto 0px auto;
     width: 80%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     padding: 2em;
     gap: 10px;
 }
@@ -65,22 +76,55 @@ html{
     gap: 15px;
 }
 .listing-presentation-paragraph-wrapper > p{
-    border: 1px solid red;
+    border: 2px solid rgb(239, 239, 239);
     padding: 1em;
 }
-
+.listing-background-img:hover{
+    /* transform: translateY(10%); */
+    height: 92vh;
+    transition-delay: 0s;
+}
 .listing-background-img:hover + .listing-floating-info {
     opacity: 0;
+    transform: translate(-50%, 10%);
     transition-delay: 0s;
 }
 
-
-.cubic::after{
-    content: '2';
-    font-size: 10px;
-    position: relative;
-    top: -0.5em;
+.contact-broker-form-wrapper{
+    background-color: rgb(239, 239, 239);
+    padding: 2em;
+    min-width: 350px;
 }
+.input-wrapper input,
+.input-wrapper textarea {
+    background-color: transparent;
+}
+
+.submit-btn {
+    border: none;
+    background-color: white;
+    width: 100%;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.broker-contact-card{
+    display: flex;
+}
+.broker-img img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.broker-contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+}
+
 
 @media (max-width: 768px) {
     .listing-floating-info{
@@ -94,17 +138,24 @@ html{
     }
     .listing-background-img:hover + .listing-floating-info {
         opacity: 1;
+        transform: translate(0%, 0%);
     }
     .listing-presentation{
         width: 100%;
         margin: 30px auto 0px auto;
         padding: 1em;
     }
-    .listing-presentation-paragraph-wrapper{
-        flex-direction: column;
-    }
-
     .swiper-pagination{
         display: block;
+    }
+    .listing-background-img:hover{
+        transform: translateY(0%);
+        transition-delay: 0s;
+    }
+}
+
+@media (max-width: 950px){
+    .listing-presentation-paragraph-wrapper{
+        flex-direction: column;
     }
 }
