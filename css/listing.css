@@ -2,14 +2,13 @@ html{
     --listing-floating-color: wheat;
 }
 
-input[type=text],
-input[type=tel],
-textarea{
+.broker-contact input[type=text],
+.broker-contact input[type=tel],
+.broker-contact textarea{
     width: auto;
 }
 
 .listing-background-img{
-    /* background-image: url(../images/property3.jpeg); */
     height: 75vh;
     background-size: cover;
     background-position: center;
@@ -123,6 +122,10 @@ textarea{
     justify-content: space-around;
     align-items: flex-end;
     width: 100%;
+}
+
+textarea:focus + label{
+    background: #efefef;
 }
 
 

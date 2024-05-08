@@ -55,12 +55,12 @@ input[type=tel]:focus + label,
 }
 
 textarea + label{
-    top: -15em;
+    top: -13em;
     left: 1em;
 }
 
 textarea:focus + label{
-    transform: translateY(-1em);
+    transform: translateY(-2em);
     font-weight: bold;
     background: #ffffff;
     width: max-content;
