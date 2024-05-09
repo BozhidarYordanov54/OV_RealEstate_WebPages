@@ -8,7 +8,9 @@ const btnCompress = document.querySelector(".compress-listing-images");
 
 function expandImg() {
   imageContainer.classList.toggle("active");
-  floatingInfo.classList.toggle("active");
+  if (window.innerWidth > 768) {
+    floatingInfo.classList.toggle("active");
+  }
   header.classList.toggle("active");
   carousel.forEach((element) => {
     element.classList.toggle("active");
@@ -17,6 +19,7 @@ function expandImg() {
     window.getComputedStyle(btnExpand).display === "none" ? "flex" : "none";
   btnCompress.style.display =
     window.getComputedStyle(btnCompress).display === "none" ? "block" : "none";
+  console.log("Executed");
 }
 window.addEventListener("resize", () => {
   if (window.innerWidth < 768) {
