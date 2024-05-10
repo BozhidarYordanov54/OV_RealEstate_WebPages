@@ -21,12 +21,13 @@ function expandImg() {
     window.getComputedStyle(btnCompress).display === "none" ? "block" : "none";
   console.log("Executed");
 }
-window.addEventListener("resize", () => {
-  if (window.innerWidth < 768) {
-    btnExpand.classList.add("shrink");
-  } else if (window.innerWidth >= 768) {
-    btnExpand.classList.remove("shrink");
-  }
-});
+function checkWindowWidth(){
+    if (window.innerWidth < 768) {
+      btnExpand.classList.add("shrink");
+    } else if (window.innerWidth >= 768) {
+      btnExpand.classList.remove("shrink");
+    }
+}
+checkWindowWidth();
 btnExpand.addEventListener("click", expandImg);
 btnCompress.addEventListener("click", expandImg);
