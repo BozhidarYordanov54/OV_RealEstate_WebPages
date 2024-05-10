@@ -18,7 +18,7 @@ function expandImg() {
   btnExpand.style.display =
     window.getComputedStyle(btnExpand).display === "none" ? "flex" : "none";
   btnCompress.style.display =
-    window.getComputedStyle(btnCompress).display === "none" ? "block" : "none";
+    window.getComputedStyle(btnCompress).display === "none" ? "inline-block" : "none";
   console.log("Executed");
 }
 function checkWindowWidth(){
