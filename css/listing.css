@@ -188,6 +188,51 @@ textarea:focus + label{
     min-width: 100px;
 }
 /* ----------------------------- */
+/* Only for visual representation of the various options */
+.listing-overview-info-wrapper > ul {
+    list-style-type:circle;
+}
+.listing-overview-info-wrapper ul:nth-child(3){
+    list-style-type:decimal;
+}
+.listing-overview-info-wrapper ul:nth-child(5),
+.listing-overview-info-wrapper ul:nth-child(4){
+    list-style-type: none;
+    position: relative;
+}
+.listing-overview-info-wrapper ul:nth-child(5) > li::before{
+    position: absolute;
+    content: "\2715";
+    color: red;
+    left: -15px;
+}
+.listing-overview-info-wrapper ul:nth-child(4) > li::before{
+    position: absolute;
+    content: "\2713";
+    color: green;
+    left: -15px;
+}
+/* ----------------------------------------------------- */
+
+.listing-price-wrapper{
+    /* border: 2px solid rgb(239, 239, 239); */
+    position: relative;
+    padding: 1em;
+    background-color: cadetblue;
+    font-weight: bold;
+    color: white;
+}
+.listing-price-wrapper::before{
+    /* border: 2px solid rgb(239, 239, 239); */
+    background-color: cadetblue;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 15px;
+    top: 0;
+    left: -25px;
+    /* border: 1px solid red; */
+}
 
 
 @media (max-width: 768px) {
@@ -239,5 +284,12 @@ textarea:focus + label{
     }
     .expand-listing-images.shrink span{
         display: none;
+    }
+    .listing-overview-info-wrapper{
+        flex-direction: column;
+        align-items: start;
+    }
+    .contact-broker-form-wrapper{
+        width: 100%;
     }
 }
