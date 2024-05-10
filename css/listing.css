@@ -9,6 +9,7 @@ html{
 }
 
 .listing-background-img{
+    position: relative;
     height: 75vh;
     /* background-size:contain; */
     /* background-position:center; */

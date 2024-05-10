@@ -18,15 +18,16 @@ function expandImg() {
   btnExpand.style.display =
     window.getComputedStyle(btnExpand).display === "none" ? "flex" : "none";
   btnCompress.style.display =
-    window.getComputedStyle(btnCompress).display === "none" ? "inline-block" : "none";
-  console.log("Executed");
+    window.getComputedStyle(btnCompress).display === "none"
+      ? "inline-block"
+      : "none";
 }
-function checkWindowWidth(){
-    if (window.innerWidth < 768) {
-      btnExpand.classList.add("shrink");
-    } else if (window.innerWidth >= 768) {
-      btnExpand.classList.remove("shrink");
-    }
+function checkWindowWidth() {
+  if (window.innerWidth < 768) {
+    btnExpand.classList.add("shrink");
+  } else if (window.innerWidth >= 768) {
+    btnExpand.classList.remove("shrink");
+  }
 }
 checkWindowWidth();
 btnExpand.addEventListener("click", expandImg);
