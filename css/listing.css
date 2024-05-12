@@ -79,6 +79,7 @@ html{
     font-size: 1.8em;
     font-weight: bold;
     color: #659df1;
+    text-wrap: nowrap;
 }
 
 .call{
@@ -132,14 +133,14 @@ html{
     list-style-type: none;
     flex-wrap: wrap;
     flex: 1;
-    padding: 1em;
+    padding: 0.8em;
     row-gap: 1em;
 }
 .property-features:nth-child(1){
     border-bottom: 1px dashed rgb(117, 117, 117);
 }
 .property-features > li {
-    min-width: 150px;
+    min-width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -476,5 +477,12 @@ textarea:focus + label{
 
     .info-wrapper{
         flex-direction: column;
+    }
+
+    .price-contact-wrapper{
+        width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 }
