@@ -11,8 +11,6 @@ html{
 .listing-background-img{
     position: relative;
     height: 75vh;
-    /* background-size:contain; */
-    /* background-position:center; */
     transition: height 0.5s ease;
 }
 
@@ -78,8 +76,8 @@ html{
     align-items: center;
     padding: 0.5em;
     border-radius: 0.5em;
-    color: rgb(0, 0, 0);
-    border: 1px solid #000;
+    color: #659df1;
+    border: 1px solid #659df1;
     cursor: pointer;
     text-decoration: none;
     font-weight: bold;
@@ -88,7 +86,7 @@ html{
 }
 
 .call:hover{
-    background-color: #000000;
+    background-color: #659df1;
     color: white;
 }
 
@@ -97,7 +95,7 @@ html{
 }
 
 .fa-phone{
-    color: rgb(0, 0, 0) !important;
+    color: #659df1 !important;
 }
 
 .interest{
@@ -119,8 +117,10 @@ html{
 
 .property-features{
     display: flex;
+    justify-content: space-evenly;
     list-style-type: none;
     flex-wrap: wrap;
+    flex: 1;
     padding: 1em;
     row-gap: 1em;
 }
@@ -133,7 +133,6 @@ html{
     justify-content: center;
     align-items: center;
     font-weight: 600;
-    flex-grow: 1;
 }
 .label-info{
     display: flex;
@@ -261,7 +260,8 @@ textarea:focus + label{
     position: absolute;
     right: 1em;
     bottom: 1em;
-    border:1px solid grey;
+    border: none;
+    outline: none;
     border-radius: 0.5em;
     padding: 1em;
     background-color: rgba(239, 239, 239, 0.8);

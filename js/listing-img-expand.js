@@ -28,7 +28,32 @@ function expandImg() {
     btnExpand.appendChild(expandIcon);
   }
 
-  console.log(btnExpand.innerHTML);
+  
 }
+
+window.onscroll = function() {
+  if (imageContainer.classList.contains("active")) {
+      imageContainer.classList.remove("active");
+  }
+  if (window.innerWidth > 768 && floatingInfo.classList.contains("active")) {
+      floatingInfo.classList.remove("active");
+  }
+  if (header.classList.contains("active")) {
+      header.classList.remove("active");
+  }
+  carousel.forEach((element) => {
+      if (element.classList.contains("active")) {
+          element.classList.remove("active");
+      }
+  });
+
+  let expandIcon = document.createElement("i");
+  expandIcon.className = "fa-solid fa-expand";
+
+  if (!btnExpand.innerHTML.includes("fa-expand")) {
+      btnExpand.innerHTML = "";
+      btnExpand.appendChild(expandIcon);
+  }
+};
 
 btnExpand.addEventListener("click", expandImg);
