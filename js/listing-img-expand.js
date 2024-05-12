@@ -3,8 +3,6 @@ const floatingInfo = document.querySelector(".listing-floating-info");
 const header = document.querySelector(".site-header");
 const carousel = document.querySelectorAll(".swiper-slide");
 const btnExpand = document.querySelector(".expand-listing-images");
-const btnExpandText = document.querySelector(".expand-listing-images > span");
-const btnCompress = document.querySelector(".compress-listing-images");
 
 function expandImg() {
   imageContainer.classList.toggle("active");
@@ -15,20 +13,22 @@ function expandImg() {
   carousel.forEach((element) => {
     element.classList.toggle("active");
   });
-  btnExpand.style.display =
-    window.getComputedStyle(btnExpand).display === "none" ? "flex" : "none";
-  btnCompress.style.display =
-    window.getComputedStyle(btnCompress).display === "none"
-      ? "inline-block"
-      : "none";
-}
-function checkWindowWidth() {
-  if (window.innerWidth < 768) {
-    btnExpand.classList.add("shrink");
-  } else if (window.innerWidth >= 768) {
-    btnExpand.classList.remove("shrink");
+
+  let expandIcon = document.createElement("i");
+  expandIcon.className = "fa-solid fa-expand";
+
+  let compressIcon = document.createElement("i");
+  compressIcon.className = "fa-solid fa-compress";
+
+  if (btnExpand.innerHTML.includes("fa-expand")) {
+    btnExpand.innerHTML = "";
+    btnExpand.appendChild(compressIcon);
+  } else {
+    btnExpand.innerHTML = "";
+    btnExpand.appendChild(expandIcon);
   }
+
+  console.log(btnExpand.innerHTML);
 }
-checkWindowWidth();
+
 btnExpand.addEventListener("click", expandImg);
-btnCompress.addEventListener("click", expandImg);
