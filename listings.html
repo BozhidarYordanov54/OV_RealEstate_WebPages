@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Обяви</title>
+
+    <link rel="stylesheet" href="css/typography.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <!-- <link rel="stylesheet" href="css/main-layout.css" /> -->
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/listings.css" />
+
+    <script
+      src="https://kit.fontawesome.com/6592283e01.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+
+    <script src="js/burger-button.js" defer></script>
+    <script src="js/checkInputContent.js" defer></script>
+    <script src="js/nav-movement.js" defer></script>
+  </head>
+  <body>
+    <div class="site">
+        <header class="site-header">
+            <div class="background-image"></div>
+            <section class="nav-contacts">
+                <div class="contacts-wrapper">
+                    <div class="contact-element">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+359888888888" class="contact-text">+359 888 888 888</a>
+                    </div>
+                    <div class="contact-element">
+                        <img class="contact-icon" src="" alt="">
+                        <span class="contact-link">
+                          <a href="#">Контакти</a>
+                        </span>
+                    </div>
+                </div>  
+            </section>
+            <section class="main-nav">
+                <div class="logo-wrapper">
+                    <a class="logo-link" href="index.html">
+                        <img class="logo" src="images/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <nav class="nav-wrapper">
+                    <ul class="nav-elements">
+                        <li class="nav-element"><a href="index.html">Начало</a></li>
+                        <li class="nav-element"><a href="index.html">Имоти</a></li>
+                        <li class="nav-element"><a href="index.html">Нови сгради</a></li>
+                        <li class="nav-element"><a href="index.html">Услуги</a></li>
+                        <li class="nav-element"><a href="index.html">За нас</a></li>
+                        <li class="nav-element"><a href="#">Блог</a></li>
+                        <li class="nav-element profile">
+                            <div class="login-element">
+                                <a href="#" class="login">Вход</a>
+                                <a href="#" class="register">Регистрация</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="login-element">
+                    <a href="#" class="login">Вход</a>
+                    <a href="#" class="register">Регистрация</a>
+                </div>
+            </section>
+            </div>
+        </header>
+      <main>
+        <div class="main-wrapper">
+          <div class="listings-filter-container">
+            <h2>Filtri</h2>
+            <div class="inputs-container">
+            <div class="radio-input-wrapper">
+              <div class="radio-input">
+                <div class="input-wrapper radio">
+                  <input
+                    type="radio"
+                    name="search-type"
+                    id="buy"
+                    value="buy"
+                    checked
+                  />
+                  <label for="buy">Продажби</label>
+                </div>
+                <div class="input-wrapper radio">
+                  <input
+                    type="radio"
+                    name="search-type"
+                    id="rent"
+                    value="rent"
+                  />
+                  <label for="rent">Наеми</label>
+                </div>
+              </div>
+            </div>
+            <div class="select-wrapper">
+              <div class="selection-wrapper">
+                <div class="input-wrapper">
+                  <select name="" id="">
+                    <option value="">Град/Област</option>
+                    <option value="1">София</option>
+                  </select>
+                </div>
+                <span class="vertical-splitter"></span>
+                <div class="input-wrapper">
+                  <select name="" id="">
+                    <option value="">Квартал</option>
+                    <option value="1">Овча Купел</option>
+                  </select>
+                </div>
+                <span class="vertical-splitter"></span>
+                <div class="input-wrapper">
+                  <select name="" id="">
+                    <option value="">Тип имот</option>
+                    <option value="1">1-стаен</option>
+                    <option value="2">2-стаен</option>
+                    <option value="3">3-стаен</option>
+                    <option value="4">4-стаен</option>
+                    <option value="5">Многостаен</option>
+                    <option value="6">Мезонет</option>
+                    <option value="7">Къща</option>
+                    <option value="8">Офис</option>
+                    <option value="9">Магазин</option>
+                    <option value="10">Склад</option>
+                    <option value="11">Парцел</option>
+                    <option value="12">Гараж/Паркомясто</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+              <div class="price-input-container input-container">
+                <label for="price">Цена в евро</label>
+                <div class="input-fields-container">
+                    <input type="number" placeholder="Ot:" />
+                    <span>-</span>
+                    <input type="number" placeholder="Do:" />
+                </div>  
+              </div>
+              <div class="price-m2-container input-container">
+                <label for="price-m2">Cena m2</label>
+                <div class="input-fields-container">
+                    <input type="number" placeholder="Ot:" />
+                    <span>-</span>
+                    <input type="number" placeholder="Do:" />
+                </div>
+              </div>
+              <div class="floor-number-container input-container">
+                <label for="floor-number">Etaj</label>
+                <div class="input-fields-container">
+                    <input type="number" placeholder="Ot:" />
+                    <span>-</span>
+                    <input type="number" placeholder="Do:" />
+                </div>
+              </div>
+              <div class="are-size-container input-container">
+                <label for="area-size">Plosht m2</label>
+                <div class="input-fields-container">
+                    <input type="number" placeholder="Ot:" />
+                    <span>-</span>
+                    <input type="number" placeholder="Do:" />
+                </div>
+              </div>
+            </div>
+            <!-- <label for="construction-type">Vid konstrukciq</label> -->
+            <div class="drop-down-selection-container">
+              <select name="construction-type" id="construction-type">
+                <option value="none">Vid konstrukciq</option>
+                <option value="tuhla">Tuhla</option>
+                <option value="panel">Panel</option>
+                <option value="epk">EPK</option>
+                <option value="greadored">Gredored</option>
+              </select>
+              <!-- <label for="">Obzavejdane</label> -->
+              <select name="obzavejdane" id="obzavejdane">
+                <option value="none">Obzavejdane</option>
+                <option value="true">obzaveden</option>
+                <option value="false">neobzaveden</option>
+              </select>
+              <!-- <label for="otoplenie">Otoplenie</label> -->
+              <select name="otoplenie" id="otoplenie">
+                <option value="none">Otoplenie</option>
+                <option value="tec">TEC</option>
+                <option value="electric">Electric</option>
+                <option value="local">Lokalno</option>
+              </select>
+            </div>
+            <button type="submit" class="search-button btn-submit">
+                <i class="fa-solid fa-magnifying-glass"></i>Приложи
+              </button>
+          </div>
+          <div class="listings-wrapper">
+            <h2>Imoti</h2>
+            <div class="listings-container">
+              <div class="listing">
+                <img src="images/property1.jpeg" alt="" />
+                <p>Kushta</p>
+                <h3>Ovcha kupel</h3>
+                <div class="listing-short-info">
+                    <div class="listing-price">50,000$</div>
+                    <div class="listing-features">
+                        <p class="area"><i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i>100m2</p>
+                        <p class="rooms"><i class="fa-solid fa-door-open" aria-hidden="true"></i>5 staen</p>
+                    </div>
+                </div>
+              </div>
+              <div class="listing">
+                <img src="images/property2.jpeg" alt="" />
+                <p>Kushta</p>
+                <h3>nadejda</h3>
+                <div class="listing-short-info">
+                    <div class="listing-price">50,000$</div>
+                    <div class="listing-features">
+                        <p class="area"><i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i>100m2</p>
+                        <p class="rooms"><i class="fa-solid fa-door-open" aria-hidden="true"></i>5 staen</p>
+                    </div>
+                </div>
+              </div>
+              <div class="listing">
+                <img src="images/property3.jpeg" alt="" />
+                <p>Kushta</p>
+                <h3>gaygay</h3>
+                <div class="listing-short-info">
+                    <div class="listing-price">50,000$</div>
+                    <div class="listing-features">
+                        <p class="area"><i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i>100m2</p>
+                        <p class="rooms"><i class="fa-solid fa-door-open" aria-hidden="true"></i>5 staen</p>
+                    </div>
+                </div>
+              </div>
+              <div class="listing">
+                <img src="images/property1.jpeg" alt="" />
+                <p>Kushta</p>
+                <h3>Ovcha kupel</h3>
+                <div class="listing-short-info">
+                    <div class="listing-price">50,000$</div>
+                    <div class="listing-features">
+                        <p class="area"><i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i>100m2</p>
+                        <p class="rooms"><i class="fa-solid fa-door-open" aria-hidden="true"></i>5 staen</p>
+                    </div>
+                </div>
+              </div>
+              <div class="listing">
+                <img src="images/property2.jpeg" alt="" />
+                <p>Kushta</p>
+                <h3>nadejda</h3>
+                <div class="listing-short-info">
+                    <div class="listing-price">50,000$</div>
+                    <div class="listing-features">
+                        <p class="area"><i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i>100m2</p>
+                        <p class="rooms"><i class="fa-solid fa-door-open" aria-hidden="true"></i>5 staen</p>
+                    </div>
+                </div>
+              </div>
+              <div class="listing">
+                <img src="images/property3.jpeg" alt="" />
+                <p>Kushta</p>
+                <h3>gaygay</h3>
+                <div class="listing-short-info">
+                    <div class="listing-price">50,000$</div>
+                    <div class="listing-features">
+                        <p class="area"><i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i>100m2</p>
+                        <p class="rooms"><i class="fa-solid fa-door-open" aria-hidden="true"></i>5 staen</p>
+                    </div>
+                </div>
+              </div>
+              <div class="listing">
+                <img src="images/property1.jpeg" alt="" />
+                <p>Kushta</p>
+                <h3>Ovcha kupel</h3>
+                <div class="listing-short-info">
+                    <div class="listing-price">50,000$</div>
+                    <div class="listing-features">
+                        <p class="area"><i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i>100m2</p>
+                        <p class="rooms"><i class="fa-solid fa-door-open" aria-hidden="true"></i>5 staen</p>
+                    </div>
+                </div>
+              </div>
+              <div class="listing">
+                <img src="images/property2.jpeg" alt="" />
+                <p>Kushta</p>
+                <h3>nadejda</h3>
+                <div class="listing-short-info">
+                    <div class="listing-price">50,000$</div>
+                    <div class="listing-features">
+                        <p class="area"><i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i>100m2</p>
+                        <p class="rooms"><i class="fa-solid fa-door-open" aria-hidden="true"></i>5 staen</p>
+                    </div>
+                </div>
+              </div>
+              <div class="listing">
+                <img src="images/property3.jpeg" alt="" />
+                <p>Kushta</p>
+                <h3>gaygay</h3>
+                <div class="listing-short-info">
+                    <div class="listing-price">50,000$</div>
+                    <div class="listing-features">
+                        <p class="area"><i class="fa-solid fa-up-right-and-down-left-from-center" aria-hidden="true"></i>100m2</p>
+                        <p class="rooms"><i class="fa-solid fa-door-open" aria-hidden="true"></i>5 staen</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="socials-wrapper">
+            <img class="footer-logo" src="images/logo.png" alt="" />
+            <div class="socials-links">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+          </div>
+          <div class="footer-wrapper">
+            <div class="footer-elements">
+              <div class="footer-element">
+                <h3 class="footer-header">Последни статии</h3>
+                <ul class="footer-list articles">
+                  <li class="footer-article-card">
+                    <a href="#" class="footer-article-link"
+                      >Как да продадем имота си бързо?</a
+                    >
+                    <span class="article-date">04/03/2024</span>
+                  </li>
+                  <li class="footer-article-card">
+                    <a href="#" class="footer-article-link"
+                      >Как да продадем имота си бързо?</a
+                    >
+                    <span class="article-date">04/03/2024</span>
+                  </li>
+                  <li class="footer-article-card">
+                    <a href="#" class="footer-article-link"
+                      >Как да продадем имота си бързо?</a
+                    >
+                    <span class="article-date">04/03/2024</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-element">
+                <h3 class="footer-header">Имоти</h3>
+                <ul class="footer-list">
+                  <li class="footer-list-element"><a href="#">Сгради</a></li>
+                  <li class="footer-list-element">
+                    <a href="#">Апартаменти</a>
+                  </li>
+                  <li class="footer-list-element"><a href="#">Гаражи</a></li>
+                </ul>
+              </div>
+              <div class="footer-element">
+                <h3 class="footer-header">Полезни Връзки</h3>
+                <ul class="footer-list">
+                  <li class="footer-list-element"><a href="#">Услуги</a></li>
+                  <li class="footer-list-element"><a href="#">Блог</a></li>
+                  <li class="footer-list-element"><a href="#">Контакти</a></li>
+                  <li class="footer-list-element"><a href="#">За нас</a></li>
+                </ul>
+              </div>
+              <div class="footer-element">
+                <h3 class="footer-header">Контакти</h3>
+                <p class="address town">София</p>
+                <p class="address">ж.к. Овча Купел 1</p>
+                <p class="address">ул. "761-ва"</p>
+                <p class="email">Email: test@mail.com</p>
+                <p class="phone">Телефон: +359 888 888 888</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="newsletter-section">
+          <div class="newsletter-wrapper">
+            <div class="newsletter-content">
+              <i class="fa-solid fa-envelope-open-text"></i>
+              <h2 class="newsletter-header">Абонирай се</h2>
+              <p class="newsletter-text">
+                Запишете се за нашия бюлетин и научавайте първи за всички
+                актуални оферти на пазара!
+              </p>
+              <form class="newsletter-form" action="">
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    class="input-text"
+                  />
+                  <label for="email">Имейл</label>
+                </div>
+                <div class="input-wrapper">
+                  <input type="hidden" name="name" id="name" />
+                </div>
+                <button type="submit" class="subscribe-button btn-submit">
+                  Абонирай се <i class="fa-regular fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="copyright-wrapper">
+          <p class="copy-text">
+            © 2024 Овча Купел Estate. Всички права запазени.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
