@@ -57,3 +57,32 @@ window.onscroll = function() {
 };
 
 btnExpand.addEventListener("click", expandImg);
+
+    
+// Wait for the page to load
+window.onload = function() {
+  var images = document.querySelectorAll('.swiper-slide img');
+  var colorThief = new ColorThief();
+
+  images.forEach(function(img) {
+      if (img.complete) {
+          extractColor(img);
+      } else {
+          img.onload = function() {
+              extractColor(img);
+          };
+      }
+  });
+
+  function extractColor(img) {
+    var palette = colorThief.getPalette(img, 2); // Get the 2 most dominant colors
+    var color1 = palette[0]; // Most dominant color
+    var color2 = palette[1]; // Second most dominant color
+
+    var orientation = color1[0] > color2[0] ? 'to right' : 'to bottom';
+
+    img.parentElement.style.background = 'linear-gradient(' + orientation + ', rgba(' + color1[0] + ',' + color1[1] + ',' + color1[2] + ', 0.8), rgba(' + color2[0] + ',' + color2[1] + ',' + color2[2] + ', 1))';
+}
+};
+
+

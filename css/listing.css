@@ -36,7 +36,7 @@ html{
     top: -0.5em;
 }
 .listing-floating-info{
-    width: 70%;
+    width: 85%;
     text-align: center;
     border-radius: 15px;
     background-color: rgba(250,250,252, 0.9);
@@ -228,7 +228,6 @@ html{
 }
 
 .contact-broker-form-wrapper{
-    background-color: rgb(239, 239, 239);
     padding: 1em;
     min-width: 350px;
     border-radius: 0.5em;
@@ -244,6 +243,13 @@ html{
     width: 100%;
     padding: 1em;
     cursor: pointer;
+}
+
+.listing-presentation-heading{
+    font-size: 2em;
+    font-weight: 600;
+    color: #659df1;
+    text-align: center;
 }
 
 .broker-contact-card{
