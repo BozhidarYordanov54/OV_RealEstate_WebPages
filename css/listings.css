@@ -69,6 +69,24 @@
     background-size: cover;
     object-fit: cover;
 }
+.listing-short-info{
+    display: flex;
+    /* border: 1px solid red; */
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.listing-price{
+    /* border: 1px solid red; */
+}
+.listing-features{
+    display: flex;
+    /* gap: 40px; */
+    max-width: 200px;
+    width: 50%;
+    justify-content: space-between;
+}
 .input-fields-container{
     display: flex;
     justify-content: space-between;
