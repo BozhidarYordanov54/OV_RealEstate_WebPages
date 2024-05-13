@@ -96,6 +96,19 @@
     border: 1px solid black;
     outline: none;
 }
+.listings-filter-collapsable-wrapper{
+    max-height: none; /* Set initially to none to allow for variable content height */
+    transition: max-height 1s ease; /* Smooth transition for max-height */
+    overflow: hidden;
+}
+.listings-filter-collapsable-wrapper.collapse-filters{
+    max-height: 0;
+}
+.filter-section-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 /* Overriding the nav.css properties for the main search bar */
 .radio-input{
     gap: 10px;
