@@ -404,6 +404,34 @@ textarea:focus + label{
     border-right: 1px dotted grey;
 }
 
+.swiper-navBtn,
+.swiper-button-next,
+.swiper-button-prev{
+    color: #ffffff;
+    width: 40px !important;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.315);
+    border-radius: 50%;
+    transition: background ease-in-out 0.3s;
+}
+
+.swiper-navBtn:hover,
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after,
+.swiper-button-next::before,
+.swiper-button-next::after,
+.swiper-button-prev::before,
+.swiper-button-prev::after{
+    color: white;
+    font-size: 18px !important;
+}
+
+
 @media (max-width: 768px) {
     .listing-floating-info{
         width: 100%;
@@ -443,6 +471,10 @@ textarea:focus + label{
         flex-wrap: wrap;
     }
 
+    .price-contact-wrapper{
+        flex-direction: column;
+    }
+
     .property-features{
         padding: 0.5em;
     }
@@ -479,10 +511,5 @@ textarea:focus + label{
         flex-direction: column;
     }
 
-    .price-contact-wrapper{
-        width: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
+    
 }
