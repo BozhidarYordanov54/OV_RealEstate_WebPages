@@ -97,12 +97,12 @@
     outline: none;
 }
 .listings-filter-collapsable-wrapper{
-    max-height: none; /* Set initially to none to allow for variable content height */
-    transition: max-height 1s ease; /* Smooth transition for max-height */
+    height: 840px; /* Set initially to none to allow for variable content height */
+    transition: height 0.5s ease; /* Smooth transition for max-height */
     overflow: hidden;
 }
 .listings-filter-collapsable-wrapper.collapse-filters{
-    max-height: 0;
+    height: 0;
 }
 .filter-section-heading{
     display: flex;
