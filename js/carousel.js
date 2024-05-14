@@ -74,3 +74,17 @@ var swiper3 = new Swiper(".swiper-listing", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+var swiper4 = new Swiper(".listing-card-swiper", {
+  slidesPerView: 1,
+  spaceBetween: 15,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
