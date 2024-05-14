@@ -192,7 +192,11 @@ html{
 }
 .collapse-filters-btn{
     display: none;
+    background: none;
+    border: none;
+    font-size: 1.8em;
 }
+
 /* Overriding the nav.css properties for the main search bar */
 .radio-input{
     gap: 10px;
@@ -421,6 +425,10 @@ select:focus{
     }
     .collapse-filters-btn{
         display: block;
+        transition: transform 0.4s ease-in-out;
+    }
+    .collapse-filters-btn.hidden{
+        transform: rotate(-180deg);
     }
     .listings-wrapper{
         margin: 0;

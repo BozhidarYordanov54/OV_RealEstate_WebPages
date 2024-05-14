@@ -59,7 +59,7 @@ var swiper2 = new Swiper(".article-swiper", {
 
 var swiper3 = new Swiper(".swiper-listing", {
   slidesPerView: 1,
-  spaceBetween: 30,
+  spaceBetween: 0,
   autoplay: {
     delay: 3000,
     disableOnInteraction: true,
