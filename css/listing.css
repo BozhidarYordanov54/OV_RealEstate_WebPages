@@ -2,22 +2,13 @@ html{
     --listing-floating-color: wheat;
 }
 
-.site-header{
-    background-image: none;
-    height: auto;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-}
-
-.nav-contacts{
-    display: none;
-}
-
-
 .broker-contact input[type=text],
 .broker-contact input[type=tel],
 .broker-contact textarea{
     width: auto;
 }
+
+
 
 .listing-background-img{
     position: relative;
@@ -405,14 +396,14 @@ textarea:focus + label{
     }
 }
 
-.site-header{
+.site-header .main-nav-wrapper{
     transition: transform 0.3s ease;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     width: 100%;
 }
-.site-header.active{
-    transform: translateY(-100%);
+.site-header.active .main-nav-wrapper{
+    transform: translateY(-110%);
 }
 /* needs to be tuned doesnt work */
 .listing-overview-info-wrapper{

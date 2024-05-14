@@ -1,8 +1,11 @@
-:root{
-    --nav-bg-color: rgba(63, 63, 63, 0.37);
-
-    --text-color: #ffffff;
-    --element-color-white: #ffffff;
+.main-bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/main-bg2.jpg') no-repeat center center/cover;
+    height: 100vh;
+    z-index: -1;
+    object-fit: cover;
 }
 
 .burger {
@@ -21,7 +24,7 @@
 .burger div {
     width: 2rem;
     height: 0.25rem;
-    background-color: var(--element-color-white);
+    background-color: #ffffff;
     border-radius: 10px;
     position: relative;
     transform-origin: 0px;
@@ -41,67 +44,73 @@
     transform: rotate(-45deg);
 }
 
-.site-header{
+.logo{
+    filter: brightness(0) invert(1);
+    width: 80px;
+}
+
+.site-brand{
+    width: 50px;
+}
+
+.main-nav-wrapper{
+    position: fixed;
     display: flex;
-    flex-direction: column;
-    flex: 1;
-    background-image: url('../images/main-bg2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 1em;
+    z-index: 1000;
 }
 
-.fa-solid.fa-phone{
-    color: #fff;
-}
-
-.contacts-wrapper{
+.main-nav{
+    position: relative;
     display: flex;
-    justify-content: end;
-    gap: 1rem;
-    padding: 0.5rem 15% 0.5rem 0;
-    border-bottom: 1px solid var(--element-color-white);
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    backdrop-filter: blur(5px);
+    background: rgba(101, 157, 241, 0.89);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+
 }
 
-.site-header a{
+.nav-elements{
+    display: flex;
+    gap: 1em;
+    list-style-type: none;
+}
+
+.nav-element a{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.2em;
     text-decoration: none;
-    text-wrap: nowrap;
-    color: var(--text-color);
-    line-height: 18px;
-    letter-spacing: 0.05em;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: 0.2s all ease-in-out;
 }
 
-.site-header a:after {    
+.nav-element a:after {    
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
     display: block;
     height: 2px;
-    background: var(--element-color-white);
+    background: #ffffff;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
 
-.site-header a:not(.logo-link):hover:after { 
+.nav-elements a:not(.logo-link):hover:after { 
     width: 100%; 
     left: 0; 
 }
 
-.main-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 3em;
-    transition: all 0.3s ease-in-out;
-}
+.login-element a{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.2em;
+    text-decoration: none;
 
-.main-nav.scrolled .burger{
-    right: 3em;
 }
 
 .logo{
@@ -113,6 +122,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: transparent;
+
 }
 
 .nav-elements{
@@ -145,9 +156,8 @@
 
 .site-welcome .site-brand{
     filter: brightness(0) invert(1);
-    margin-top: -6rem;
-    margin-bottom: -5rem;
     pointer-events: none;
+    width: 300px;
 }
 
 .site-welcome h2{
@@ -163,72 +173,6 @@
     color: #fff;
     text-align: center;
     margin-bottom: 1rem;
-}
-
-.search-wrapper{
-    width: 100%;
-    height: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 1em;
-}
-
-.search-form{
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
-.select-wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 0.5em 1em;
-    max-width: 900px;
-    border-radius: 0.3rem;
-    background: #ffffff;
-}
-
-.radio-input-wrapper{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.radio-input{
-    display: flex;
-    gap: 2em;
-}
-
-.input-wrapper.radio{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-}
-
-input[type="radio"]{
-    display: none;
-}
-
-input[type="radio"] + label{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5em 1em;
-    width: 250px;
-    border-radius: 0.3rem;
-    cursor: pointer;
-    background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
-    transition: color 0.2s ease-in-out;
-}
-
-input[type="radio"]:checked + label{
-    background: #fff;
-    color: #405a5e;
 }
 
 .vertical-splitter{
@@ -271,67 +215,52 @@ select{
 
 }
 
+.nav-element.login-element{
+    display: none;
+}
+
 @media(max-width: 1047px){
+
+    .nav-elements.login{
+        display: none;
+    }
 
     .burger {
         display: flex;
         position: absolute;
-        right: 2em;
+        right: 20px;
+        top: 20px;
     }
 
-    .nav-element .login-element{
+    .nav-element.login-element{
         display: flex;
-        position: absolute;
-        border-top: 2px solid var(--element-color-white);
-        padding-top: 1rem;
-        padding-left: 1.5em;
-        margin-top: 5rem;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 1em;
     }
 
     .nav-wrapper{
-        position: fixed;
         overflow: hidden;
         opacity: 0;
-        left: 0;
-        background: var(--nav-bg-color);
-        backdrop-filter: blur(7px);
         z-index: 9;
-        width: 0%;
-        height: 650px;
+        width: 100%;
+        height: 0px;
         transition: all 0.3s ease-in-out;
     }
 
-    .main-nav.active .nav-wrapper{
+    .main-nav-wrapper.active .nav-wrapper{
         overflow: visible;
         opacity: 1;
-        width: 80%;
-        border-bottom-right-radius: 1em;
+        height: 400px;
     }
 
-    .nav-elements{
-        flex: 1;
-        margin-top: 15rem;
+    .nav-elements.main-list{
         flex-direction: column;
+        justify-content: center;
         align-items: start;
-        gap: 1.5rem;
-        padding: 1rem;
-        margin-left: 2.5rem;
-    }
-
-    .nav-element{
-        border-bottom: 1px solid var(--element-color-white);
+        margin-left: 2em;
     }
 
     .logo{
         width: 70px;
         padding-left: 1rem;
-    }
-
-    .main-nav{
-        padding: 0.2rem ;
     }
 
     .contacts-wrapper{
@@ -354,44 +283,7 @@ select{
     }
 
     .site-welcome .site-brand{
-        width: 100%;
-    }
-
-    input[type="radio"] + label{
-        width: 100%;
-    }
-
-    .select-wrapper{
-        flex-direction: column;
-        background: transparent;
-        padding-bottom: 2em;
-    }
-
-    .input-wrapper,
-    .selection-wrapper,
-    .radio-input{
-        flex: 1;
-        gap: 1em;
-    }
-
-    .radio-input-wrapper{
-        display: flex;
-        padding: 0 1em;
-        width: 100%;
-    }
-
-    select{
-        background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(5px);
-        padding: 1em;
-        width: 100%;
-        border-radius: 0.3rem;
-    }
-
-    .search-wrapper{
-        padding: 0;
-        height: 100%;
-        width: 100%;
+        width: 200px;
     }
 
     .login-element,

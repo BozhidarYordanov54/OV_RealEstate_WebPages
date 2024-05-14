@@ -27,8 +27,6 @@ function expandImg() {
     btnExpand.innerHTML = "";
     btnExpand.appendChild(expandIcon);
   }
-
-  
 }
 
 window.onscroll = function() {
