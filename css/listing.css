@@ -232,6 +232,8 @@ html{
     padding: 1em;
     min-width: 350px;
     border-radius: 0.5em;
+    border: 1px solid #eeb3a7;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 .input-wrapper input,
 .input-wrapper textarea {
@@ -240,10 +242,43 @@ html{
 
 .submit-btn {
     border: none;
-    background-color: white;
+    background-color: #659df1;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9em;
+    border-radius: 1em 0.5em;
     width: 100%;
     padding: 1em;
     cursor: pointer;
+}
+
+.broker-name-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+
+.broker-name{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.broker-specialization{
+    font-size: 0.7em;
+    color: #aeaeae;
+}
+
+.broker-mail,
+.broker-tel{
+    text-decoration: none;
+    color: #659df1;
+}
+
+.container-header{
+    text-align: center;
+    font-weight: 600;
+    color: #ed816b;
 }
 
 .listing-presentation-heading{
@@ -430,6 +465,8 @@ textarea:focus + label{
     color: white;
     font-size: 18px !important;
 }
+
+
 
 
 @media (max-width: 768px) {
