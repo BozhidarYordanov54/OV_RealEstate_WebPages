@@ -56,15 +56,15 @@
 .fa-solid.fa-phone{
     color: #fff;
 }
-
+/* Disabled because gaygay */
 .contacts-wrapper{
-    display: flex;
+    display: none;
     justify-content: end;
     gap: 1rem;
     padding: 0.5rem 15% 0.5rem 0;
     border-bottom: 1px solid var(--element-color-white);
 }
-
+/* gaygay no cap */
 .site-header a{
     text-decoration: none;
     text-wrap: nowrap;
