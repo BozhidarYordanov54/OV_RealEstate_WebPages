@@ -96,6 +96,22 @@
     border: 1px solid black;
     outline: none;
 }
+.listings-filter-collapsable-wrapper{
+    /* height: 840px; Set initially to none to allow for variable content height */
+    transition: height 0.5s ease; /* Smooth transition for max-height */
+    overflow: hidden;
+}
+.listings-filter-collapsable-wrapper.collapse-filters{
+    height: 0;
+}
+.filter-section-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.collapse-filters-btn{
+    display: none;
+}
 /* Overriding the nav.css properties for the main search bar */
 .radio-input{
     gap: 10px;
@@ -144,6 +160,12 @@ select {
         max-width: none;
         margin: 0;
         padding: 0.5em;
+    }
+    .listings-filter-collapsable-wrapper{
+        height: 840px;
+    }
+    .collapse-filters-btn{
+        display: block;
     }
     .listings-wrapper{
         margin: 0;
