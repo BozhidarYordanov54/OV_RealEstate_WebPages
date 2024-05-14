@@ -1,3 +1,7 @@
+:root{
+    --listing-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    --listing-shadow-hover: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
 .site-welcome{
     display: none;
 }
@@ -22,7 +26,6 @@
     gap: 10px;
 }
 .input-container{
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -36,7 +39,6 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    /* padding: 0.5em 1em; */
     margin: 20px auto;
 }
 .drop-down-selection-container > select {
@@ -50,36 +52,73 @@
 }
 .listings-container{
     display: grid;
-    gap: 15px;
+    gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-auto-rows: 300px;
+    grid-auto-rows: 320px;
 }
+.listings-container a,.listings-container a:visited,
+.listings-container a:hover,.listings-container a:active {
+    color: inherit;
+  }
 .listing{
-    border: 1px solid black;
+    max-width: 700px;
+    text-decoration: none;
+    box-shadow: var(--listing-shadow);
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 8px;
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
-.listing img {
-    border-radius: 8px 8px 0px 0px;
+.listing:hover{
+    box-shadow: var(--listing-shadow-hover);
+    transform: translateY(-5px);
+}
+.listing-card-images{
     width: 100%;
     height: 70%;
+    margin-bottom: auto;
     background-position: center;
     background-size: cover;
     object-fit: cover;
 }
+.swiper{
+    border-radius: 8px 8px 0px 0px;
+    height: 100%;
+    width: 100%;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    color: black;
+    font-size: 1.5em !important;
+    font-weight: bold;
+}
+.swiper-pagination-bullet-active{
+    background-color: white !important;
+}
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: auto;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+}
+
 .listing-short-info{
     display: flex;
-    /* border: 1px solid red; */
+    flex-wrap: wrap;
     width: 100%;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
 }
+
+.listing-short-info *{
+    margin: 0 auto;
+}
 .listing-features{
     display: flex;
-    /* gap: 40px; */
     max-width: 200px;
     width: 50%;
     justify-content: space-between;
@@ -96,6 +135,7 @@
     border: 1px solid black;
     outline: none;
 }
+/* transition has to be optimized wihtout using fixed hight */
 .listings-filter-collapsable-wrapper{
     /* height: 840px; Set initially to none to allow for variable content height */
     transition: height 0.5s ease; /* Smooth transition for max-height */
