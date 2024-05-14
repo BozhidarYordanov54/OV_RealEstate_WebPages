@@ -66,6 +66,56 @@ textarea:focus + label{
     width: max-content;
 }
 
+/* .card .image-box .offer{
+    position: absolute;
+    top: 0.3em;
+    left: 3em;
+    padding: 0.5em 1em;
+    font-size: 0.8rem;
+    border-radius: 0.3em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+    z-index: 1;
+    opacity: 0;
+    transition: all ease 0.5s;
+} */
+
+.offer{
+    position: absolute;
+    top: 0.3em;
+    left: 3em;
+    padding: 0.5em 1em;
+    font-size: 0.8rem;
+    border-radius: 0.3em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+    z-index: 1;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+.offer.top{
+    background: #2596be;
+}
+
+.offer.no-commision{
+    background: #30547c;
+}
+
+.offer.new{
+    background: #a0e55f;
+}
+
+.offer.deposit{
+    background: rgb(255, 185, 81);
+}
+
+.offer.sold{
+    background: #f55858;
+
+}
 @media(max-width: 950px)
 {
     textarea{

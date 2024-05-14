@@ -61,6 +61,7 @@
     color: inherit;
   }
 .listing{
+    position: relative;
     max-width: 700px;
     text-decoration: none;
     box-shadow: var(--listing-shadow);
@@ -185,6 +186,12 @@ select {
     padding: 1em 0.5em;
 }
 /* --------------------------------------------------------- */
+.offer{
+    opacity: 1;
+    z-index: 2;
+    top: -0.6em;
+    left: 1em;
+}
 @media(max-width: 768px){
     .main-wrapper{
         flex-direction: column;
