@@ -62,6 +62,12 @@ html{
     margin-top: 1em;
 }
 
+.ref-number{
+    font-size: 0.9em;
+    color: #646464;
+    margin-top: 1em;
+}
+
 .price-wrapper{
     display: flex;
     flex-direction: column;
@@ -192,17 +198,68 @@ html{
     gap: 15px;
 }
 .listing-presentation-paragraph{
-    padding: 1.5em;
     display: flex;
     justify-content: space-between;
     gap: 2em;
     flex-direction: column;
 }
-.listing-presentation-paragraph ul{
+
+.listing-description{
+    line-height: 2em;
+}
+
+.details-wrapper{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
     gap: 1em;
+    padding: 1em;
+    width: 100%;
+    background: #efefef59;
+    border-radius: 0.5em;
+}
+
+.details-header{
+    display: flex;
     flex-direction: column;
+    gap: 1em;
+}
+
+.details-heading.small{
+    color: #ed816b;
+    letter-spacing: 0.2em;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.text{
+    max-width: 500px;
+}
+
+.card{
+    color: #4b545b;
+}
+
+.details-heading.big{
+    color: #659df1;
+    font-size: 1.4em;
+    font-weight: 600;
+    width: 400px;
+}
+
+.card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    gap: 10px;
+
+}
+
+.card{
+    display: flex;
+    gap: 1em;
+    font-size: 1.1em;
 }
 
 .listing-background-img.active{
@@ -232,8 +289,7 @@ html{
     padding: 1em;
     min-width: 350px;
     border-radius: 0.5em;
-    border: 1px solid #eeb3a7;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .input-wrapper input,
 .input-wrapper textarea {
@@ -276,6 +332,7 @@ html{
 }
 
 .container-header{
+    text-transform: uppercase;
     text-align: center;
     font-weight: 600;
     color: #ed816b;
@@ -520,6 +577,9 @@ textarea:focus + label{
         width: 100%;
     }
 
+    .details-heading.big{
+        width: 100%;
+    }
     
 }
 
