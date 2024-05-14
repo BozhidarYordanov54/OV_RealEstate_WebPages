@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/footer.css" />
     <!-- <link rel="stylesheet" href="css/main-layout.css" /> -->
     <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/listings.css" />
 
     <script
       src="https://kit.fontawesome.com/6592283e01.js"
@@ -34,6 +33,18 @@
     />
     <script src="js/swiper-bundle.min.js" defer></script>
     <script src="js/carousel.js" defer></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"
+      defer
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/listings.css" />
+    <script src="js/selectSearch.js" defer></script>
   </head>
   <body>
     <div class="site">
@@ -124,7 +135,7 @@
                   <div class="selection-wrapper">
                     <div class="input-wrapper">
                       <i class="fa-solid fa-location-dot"></i>
-                      <select name="" id="">
+                      <select class="town" name="town" id="town">
                         <option value="">Град/Област</option>
                         <option value="1">София</option>
                       </select>
@@ -132,16 +143,14 @@
                     <span class="vertical-splitter"></span>
                     <div class="input-wrapper">
                       <i class="fa-solid fa-magnifying-glass"></i>
-                      <select name="" id="">
-                        <option value="">Квартал</option>
+                      <select class="neighborhood" name="" id="" multiple="multiple">
                         <option value="1">Овча Купел</option>
                       </select>
                     </div>
                     <span class="vertical-splitter"></span>
                     <div class="input-wrapper">
                       <i class="fa-solid fa-magnifying-glass"></i>
-                      <select name="" id="">
-                        <option value="">Тип имот</option>
+                      <select class="estate-type" name="" id="" multiple="multiple">
                         <option value="1">1-стаен</option>
                         <option value="2">2-стаен</option>
                         <option value="3">3-стаен</option>
@@ -159,7 +168,9 @@
                   </div>
                 </div>
                 <div class="price-input-container input-container">
-                  <label for="price"><i class="fa-solid fa-tag"></i> Цена в €</label>
+                  <label for="price"
+                    ><i class="fa-solid fa-tag"></i> Цена в €</label
+                  >
                   <div class="input-fields-container">
                     <input type="number" placeholder="От" />
                     <span>-</span>
@@ -167,7 +178,9 @@
                   </div>
                 </div>
                 <div class="floor-number-container input-container">
-                  <label for="floor-number"><i class="fa-solid fa-stairs"></i> Етаж</label>
+                  <label for="floor-number"
+                    ><i class="fa-solid fa-stairs"></i> Етаж</label
+                  >
                   <div class="input-fields-container">
                     <input type="number" placeholder="От" />
                     <span>-</span>
@@ -175,7 +188,12 @@
                   </div>
                 </div>
                 <div class="are-size-container input-container">
-                  <label for="area-size"><i class="fa-solid fa-up-right-and-down-left-from-center"></i> Площ м2</label>
+                  <label for="area-size"
+                    ><i
+                      class="fa-solid fa-up-right-and-down-left-from-center"
+                    ></i>
+                    Площ м2</label
+                  >
                   <div class="input-fields-container">
                     <input type="number" placeholder="От" />
                     <span>-</span>
@@ -185,16 +203,16 @@
               </div>
               <!-- <label for="construction-type">Vid konstrukciq</label> -->
               <div class="drop-down-selection-container">
-               <div class="input-wrapper">
-                <i class="fa-solid fa-trowel"></i>
-                <select name="construction-type" id="construction-type">
-                  <option value="none">Тип строителство</option>
-                  <option value="tuhla">Тухла</option>
-                  <option value="panel">Панел</option>
-                  <option value="epk">ЕПК</option>
-                  <option value="greadored">Гредоред</option>
-                </select>
-               </div>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-trowel"></i>
+                  <select name="construction-type" id="construction-type">
+                    <option value="none">Тип строителство</option>
+                    <option value="tuhla">Тухла</option>
+                    <option value="panel">Панел</option>
+                    <option value="epk">ЕПК</option>
+                    <option value="greadored">Гредоред</option>
+                  </select>
+                </div>
                 <div class="input-wrapper">
                   <i class="fa-solid fa-chair"></i>
                   <select name="obzavejdane" id="obzavejdane">
@@ -204,15 +222,15 @@
                   </select>
                 </div>
                 <!-- <label for="otoplenie">Otoplenie</label> -->
-               <div class="input-wrapper">
-                <i class="fa-solid fa-temperature-three-quarters"></i>
-                <select name="otoplenie" id="otoplenie">
-                  <option value="none">Отопление</option>
-                  <option value="tec">ТЕЦ</option>
-                  <option value="electric">Ток</option>
-                  <option value="local">Газ</option>
-                </select>
-               </div>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-temperature-three-quarters"></i>
+                  <select name="otoplenie" id="otoplenie">
+                    <option value="none">Отопление</option>
+                    <option value="tec">ТЕЦ</option>
+                    <option value="electric">Ток</option>
+                    <option value="local">Газ</option>
+                  </select>
+                </div>
               </div>
               <button type="submit" class="search-button btn-submit">
                 Приложи<i class="fa-solid fa-magnifying-glass"></i>
@@ -261,7 +279,9 @@
                       ></i
                       >100m2
                     </p>
-                    <p class="baths short-info"><i class="fa-solid fa-bath"></i>2 бани</p>
+                    <p class="baths short-info">
+                      <i class="fa-solid fa-bath"></i>2 бани
+                    </p>
                     <p class="rooms short-info">
                       <i class="fa-solid fa-door-open" aria-hidden="true"></i>5
                       стаен
@@ -309,7 +329,9 @@
                       ></i
                       >100m2
                     </p>
-                    <p class="baths short-info"><i class="fa-solid fa-bath"></i>2 бани</p>
+                    <p class="baths short-info">
+                      <i class="fa-solid fa-bath"></i>2 бани
+                    </p>
                     <p class="rooms short-info">
                       <i class="fa-solid fa-door-open" aria-hidden="true"></i>5
                       стаен
@@ -357,7 +379,9 @@
                       ></i
                       >100m2
                     </p>
-                    <p class="baths short-info"><i class="fa-solid fa-bath"></i>2 бани</p>
+                    <p class="baths short-info">
+                      <i class="fa-solid fa-bath"></i>2 бани
+                    </p>
                     <p class="rooms short-info">
                       <i class="fa-solid fa-door-open" aria-hidden="true"></i>5
                       стаен
@@ -405,7 +429,9 @@
                       ></i
                       >100m2
                     </p>
-                    <p class="baths short-info"><i class="fa-solid fa-bath"></i>2 бани</p>
+                    <p class="baths short-info">
+                      <i class="fa-solid fa-bath"></i>2 бани
+                    </p>
                     <p class="rooms short-info">
                       <i class="fa-solid fa-door-open" aria-hidden="true"></i>5
                       стаен
@@ -453,7 +479,9 @@
                       ></i
                       >100m2
                     </p>
-                    <p class="baths short-info"><i class="fa-solid fa-bath"></i>2 бани</p>
+                    <p class="baths short-info">
+                      <i class="fa-solid fa-bath"></i>2 бани
+                    </p>
                     <p class="rooms short-info">
                       <i class="fa-solid fa-door-open" aria-hidden="true"></i>5
                       стаен
@@ -501,7 +529,9 @@
                       ></i
                       >100m2
                     </p>
-                    <p class="baths short-info"><i class="fa-solid fa-bath"></i>2 бани</p>
+                    <p class="baths short-info">
+                      <i class="fa-solid fa-bath"></i>2 бани
+                    </p>
                     <p class="rooms short-info">
                       <i class="fa-solid fa-door-open" aria-hidden="true"></i>5
                       стаен
@@ -549,7 +579,9 @@
                       ></i
                       >100m2
                     </p>
-                    <p class="baths short-info"><i class="fa-solid fa-bath"></i>2 бани</p>
+                    <p class="baths short-info">
+                      <i class="fa-solid fa-bath"></i>2 бани
+                    </p>
                     <p class="rooms short-info">
                       <i class="fa-solid fa-door-open" aria-hidden="true"></i>5
                       стаен
@@ -597,7 +629,9 @@
                       ></i
                       >100m2
                     </p>
-                    <p class="baths short-info"><i class="fa-solid fa-bath"></i>2 бани</p>
+                    <p class="baths short-info">
+                      <i class="fa-solid fa-bath"></i>2 бани
+                    </p>
                     <p class="rooms short-info">
                       <i class="fa-solid fa-door-open" aria-hidden="true"></i>5
                       стаен
@@ -645,7 +679,9 @@
                       ></i
                       >100m2
                     </p>
-                    <p class="baths short-info"><i class="fa-solid fa-bath"></i>2 бани</p>
+                    <p class="baths short-info">
+                      <i class="fa-solid fa-bath"></i>2 бани
+                    </p>
                     <p class="rooms short-info">
                       <i class="fa-solid fa-door-open" aria-hidden="true"></i>5
                       стаен
