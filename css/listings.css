@@ -26,12 +26,8 @@
     gap: 10px;
 }
 
-.variable-number-input-wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+.variable-number-input-wrapper input:not(:last-child){
+    margin-bottom: 1em;
 }
 
 .input-container > input[type=number]{
@@ -320,6 +316,14 @@ select:focus{
     z-index: 2;
     top: -0.6em;
     left: 1em;
+}
+
+.selection-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 100%;
 }
 
 .fa-location-dot,
