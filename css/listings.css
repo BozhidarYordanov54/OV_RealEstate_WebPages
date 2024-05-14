@@ -16,7 +16,7 @@
 }
 .listings-filter-container{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: 2em;
+    padding: 1.5em;
     max-width: 350px;
     border-bottom-right-radius: 0.5em;
 }  
@@ -25,11 +25,15 @@
     flex-direction: column;
     gap: 10px;
 }
-.input-container{
+
+.variable-number-input-wrapper{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     gap: 10px;
 }
+
 .input-container > input[type=number]{
     border-radius: 5px;
     border: 1px solid black;
@@ -40,6 +44,7 @@
     flex-direction: column;
     gap: 1em;
     margin: 20px auto;
+    width: 100%;
 }
 .drop-down-selection-container > select {
     width: 100%;
@@ -155,6 +160,10 @@
 }
 /* transition has to be optimized wihtout using fixed hight */
 .listings-filter-collapsable-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 740px;
     /* height: 840px; Set initially to none to allow for variable content height */
     transition: height 0.5s ease; /* Smooth transition for max-height */
     overflow: hidden;
@@ -190,6 +199,7 @@ input[type="radio"] + label {
 
 input[type="number"]{
     border: 2px solid #e0e0e0;
+    border-radius: 5px;
     transition: all 0.2s ease-in-out;
 }
 
@@ -346,9 +356,6 @@ select:focus{
         max-width: none;
         margin: 0;
         padding: 0.5em;
-    }
-    .listings-filter-collapsable-wrapper{
-        height: 840px;
     }
     .collapse-filters-btn{
         display: block;

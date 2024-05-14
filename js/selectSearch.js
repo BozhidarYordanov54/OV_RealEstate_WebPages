@@ -16,3 +16,22 @@ $(document).ready(function() {
     });
 });
 
+$(document).ready(function() {
+    $('.construction-type').select2({
+        placeholder: 'Тип строителство',
+    });
+});
+
+$(document).ready(function() {
+    $('.furnished').select2({
+        placeholder: 'Обзавеждане',
+    });
+});
+
+$(document).ready(function() {
+    $('.heating').select2({
+        placeholder: 'Отопление',
+    });
+});
+
+
