@@ -1,11 +1,17 @@
+:root{
+    --contact-info-bg: #ffffff;
+    --contact-info-text-color: #413f3f;
+    --contact-info-border: #d0d2d4;
+}
+
 .contact-info-wrapper{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 2em;
-    color: #413f3f;
-    background: #ffffff;
-    border: 2px solid #d0d2d4;
+    color: var(--contact-info-text-color);
+    background: var(--contact-info-bg);
+    border: 2px solid var(--contact-info-border);
     padding: 2em;
     border-radius: 10px;
     width: 500px;
@@ -54,7 +60,7 @@
     padding: 2em;
     gap: 1rem;
     margin-top: 5em;
-    color: #413f3f;
+    color: var(--contact-info-text-color);
 }
 
 .form-header{
