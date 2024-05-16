@@ -1,3 +1,13 @@
+:root{
+    --main-bg-color: rgba(101, 157, 241, 0.89);
+    --burger-color: #ffffff;
+    --nav-element-color: #ffffff;
+    --nav-element-after-bg: #ffffff;
+    --btn-submit-color: #ffffff;
+    --btn-submit-bg: #000000;
+    --vertical-splitter-color: #333;
+    --select-border-right-color: #333;
+}
 .main-bg{
     display: flex;
     justify-content: center;
@@ -24,7 +34,7 @@
 .burger div {
     width: 2rem;
     height: 0.25rem;
-    background-color: #ffffff;
+    background: var(--burger-color);
     border-radius: 10px;
     position: relative;
     transform-origin: 0px;
@@ -70,7 +80,7 @@
     align-items: center;
     width: 90%;
     backdrop-filter: blur(5px);
-    background: rgba(101, 157, 241, 0.89);
+    background: var(--main-bg-color);
     padding: 0.5em 1em;
     border-radius: 5px;
 
@@ -83,7 +93,7 @@
 }
 
 .nav-element a{
-    color: #ffffff;
+    color: var(--nav-element-color);
     font-weight: 600;
     font-size: 1.2em;
     text-decoration: none;
@@ -95,7 +105,7 @@
     content: "";
     display: block;
     height: 2px;
-    background: #ffffff;
+    background: var(--nav-element-after-bg);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -106,7 +116,7 @@
 }
 
 .login-element a{
-    color: #ffffff;
+    color: var(--nav-element-color);
     font-weight: 600;
     font-size: 1.2em;
     text-decoration: none;
@@ -176,7 +186,7 @@
 }
 
 .vertical-splitter{
-    border-left: 1px solid #333;
+    border-left: 1px solid var(--vertical-splitter-color);
     height: 30px;
 }
 
@@ -190,7 +200,7 @@
 
 select{
     padding: 0.5em;
-    border-right: 1px solid #333;
+    border-right: 1px solid var(--select-border-right-color);
     min-width: 200px;
     border: none;
     outline: none;
@@ -204,8 +214,8 @@ select{
     align-items: center;
     gap: 0.5em;
     padding: 0.5em 1em;
-    color: #ffffff;
-    background: #000000;
+    color: var(--btn-submit-color);
+    background: var(--btn-submit-bg);
     font-weight: bold;
     font-size: 0.8em;
     border: none;
