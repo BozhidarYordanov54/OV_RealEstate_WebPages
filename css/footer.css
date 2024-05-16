@@ -1,3 +1,10 @@
+:root{
+    --footer-bg: #f4f4f4;
+    --footer-text-color: #333;
+    --footer-article-bg: #eeeeee;
+    --footer-border-color: #e4e4e4;
+}
+
 .footer-container{
     display: flex;
     justify-content: space-evenly;
@@ -30,7 +37,7 @@
 
 .socials-links a i{
     font-size: 1.5rem;
-    color: #333;
+    color: var(--footer-text-color);
     
 }
 
@@ -68,14 +75,14 @@
     flex-direction: column;
     gap: 1em;
     font-size: 0.8rem;
-    background-color: #eeeeee;
+    background: var(--footer-article-bg);
     padding: 1em;
     width: 400px;
     border-radius: 0.3rem;
 }
 
 .footer-list a{
-    color: #333;
+    color: var(--footer-text-color);
     text-decoration: none;
 }
 
@@ -94,8 +101,8 @@
     flex-direction: column;
     padding: 5em 0;
     width: 80%;
-    border-top: 1px solid #e4e4e4;
-    border-bottom: 1px solid #e4e4e4;;
+    border-top: 1px solid var(--footer-border-color);
+    border-bottom: 1px solid var(--footer-border-color);
 }
 
 .newsletter-content{
