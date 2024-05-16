@@ -1,5 +1,33 @@
-html{
-    --listing-floating-color: wheat;
+:root{
+    --floating-label-bg: rgba(250,250,252, 0.9);
+    --floating-label-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    --light-gray: #646464;
+
+    --price-call-color: #659df1;
+    --price-call-color-second: #ffffff;
+
+    --more-details-bg: #efefef59;
+    --information-list-border-color: rgb(117, 117, 117);
+    --proprty-features-color: #659df1;
+    --property-type-color: #eeb3a7;
+    --small-heading-color: #ed816b;
+    --big-headeing-color: #659df1;
+    --card-color: #4b545b;
+    --main-property-text-color: #8c8c8d;
+    --listing-floating-info-color: #4b545b;
+
+    --broker-contacts-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    --broker-specialization-color: #aeaeae;
+    --btn-contact-bg: #659df1;
+    --broker-card-color: #659df1;
+
+    --container-header-color: #ed816b;
+
+    --label-color: #efefef;
+
+    --expand-btn-color: #659df1;
+
+    --listing-feature-border-color: gray;
 }
 
 .broker-contact input[type=text],
@@ -7,8 +35,6 @@ html{
 .broker-contact textarea{
     width: auto;
 }
-
-
 
 .listing-background-img{
     position: relative;
@@ -30,7 +56,7 @@ html{
     width: 85%;
     text-align: center;
     border-radius: 15px;
-    background-color: rgba(250,250,252, 0.9);
+    background: var(--floating-label-bg);
     backdrop-filter: blur(5px);
     left: 50%;
     transform: translate(-50%,-50%);
@@ -42,7 +68,7 @@ html{
     gap: 8px;
     opacity:1;
     transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    box-shadow: var(--floating-label-box-shadow);
 }
 .property-features-wrapper{
     display: flex;
@@ -55,7 +81,7 @@ html{
 
 .ref-number{
     font-size: 0.9em;
-    color: #646464;
+    color: var(--light-gray);
     margin-top: 1em;
 }
 
@@ -75,7 +101,7 @@ html{
 .price{
     font-size: 1.8em;
     font-weight: bold;
-    color: #659df1;
+    color: var(--price-call-color);
     text-wrap: nowrap;
 }
 
@@ -85,8 +111,8 @@ html{
     align-items: center;
     padding: 0.5em;
     border-radius: 0.5em;
-    color: #659df1;
-    border: 1px solid #659df1;
+    color: var(--price-call-color);
+    border: 1px solid var(--price-call-color);
     cursor: pointer;
     text-decoration: none;
     font-weight: bold;
@@ -95,16 +121,16 @@ html{
 }
 
 .call:hover{
-    background-color: #659df1;
-    color: white;
+    background-color: var(--price-call-color);
+    color: var(--price-call-color-second);
 }
 
 .call:hover i{
-    color: white !important;
+    color: var(--price-call-color-second) !important;
 }
 
 .fa-phone{
-    color: #659df1 !important;
+    color: var(--price-call-color) !important;
 }
 
 .interest{
@@ -134,7 +160,7 @@ html{
     row-gap: 1em;
 }
 .property-features:nth-child(1){
-    border-bottom: 1px dashed rgb(117, 117, 117);
+    border-bottom: 1px dashed var(--information-list-border-color);
 }
 .property-features > li {
     min-width: 100px;
@@ -163,14 +189,14 @@ html{
 
 .property-features i{
     font-size: 1.2em;
-    color: #659df1;
+    color: var(--proprty-features-color);
 }
 
 .property-type{
     text-transform: uppercase;
     font-size: 1.3em;
     font-family: "Pacifico", cursive;
-    color: #eeb3a7;
+    color: var(--property-type-color);
 }
 
 .listing-presentation{
@@ -207,7 +233,7 @@ html{
     gap: 1em;
     padding: 1em;
     width: 100%;
-    background: #efefef59;
+    background: var(--more-details-bg);
     border-radius: 0.5em;
 }
 
@@ -218,7 +244,7 @@ html{
 }
 
 .details-heading.small{
-    color: #ed816b;
+    color: var(--small-heading-color);
     letter-spacing: 0.2em;
     font-size: 1em;
     font-weight: 600;
@@ -230,11 +256,11 @@ html{
 }
 
 .card{
-    color: #4b545b;
+    color: var(--card-color);
 }
 
 .details-heading.big{
-    color: #659df1;
+    color: var(--big-headeing-color);
     font-size: 1.4em;
     font-weight: 600;
     width: 400px;
@@ -263,12 +289,12 @@ html{
 }
 
 .listing-floating-info{
-    color: #4b545b;
+    color: var(--card-color);
 }
 
 .property-address,
 .property-text{
-    color: #8c8c8d;
+    color: var(--main-property-text-color);
 }
 
 .property-text{
@@ -280,16 +306,16 @@ html{
     padding: 1em;
     min-width: 350px;
     border-radius: 0.5em;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: var(--broker-contacts-box-shadow);
 }
 .input-wrapper input,
 .input-wrapper textarea {
-    background-color: transparent;
+    background: transparent;
 }
 
 .submit-btn {
     border: none;
-    background-color: #659df1;
+    background: var(--btn-contact-bg);
     color: #ffffff;
     font-weight: 600;
     font-size: 0.9em;
@@ -313,20 +339,20 @@ html{
 
 .broker-specialization{
     font-size: 0.7em;
-    color: #aeaeae;
+    color: var(--broker-specialization-color);
 }
 
 .broker-mail,
 .broker-tel{
     text-decoration: none;
-    color: #659df1;
+    color: var(--broker-card-color);
 }
 
 .container-header{
     text-transform: uppercase;
     text-align: center;
     font-weight: 600;
-    color: #ed816b;
+    color: var(--container-header-color);
 }
 
 .listing-presentation-heading{
@@ -357,7 +383,7 @@ html{
 }
 
 textarea:focus + label{
-    background: #efefef;
+    background: var(--label-color);
 }
 
 .expand-listing-images{
@@ -368,7 +394,7 @@ textarea:focus + label{
     outline: none;
     border-radius: 0.5em;
     padding: 1em;
-    color: #659df1;
+    color: var(--expand-btn-color);
     background-color: rgba(239, 239, 239, 0.8);
     cursor: pointer;
     animation-name: opacity-bg;
@@ -440,39 +466,8 @@ textarea:focus + label{
     list-style-type: none;
     position: relative;
 }
-.listing-overview-info-wrapper ul:nth-child(5) > li::before{
-    position: absolute;
-    content: "\2715";
-    color: red;
-    left: -15px;
-}
-.listing-overview-info-wrapper ul:nth-child(4) > li::before{
-    position: absolute;
-    content: "\2713";
-    color: green;
-    left: -15px;
-}
-/* ----------------------------------------------------- */
 
-.listing-price-wrapper{
-    /* border: 2px solid rgb(239, 239, 239); */
-    position: relative;
-    padding: 1em;
-    background-color: cadetblue;
-    font-weight: bold;
-    color: white;
-}
-.listing-price-wrapper::before{
-    /* border: 2px solid rgb(239, 239, 239); */
-    background-color: cadetblue;
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 15px;
-    top: 0;
-    left: -25px;
-    /* border: 1px solid red; */
-}
+/* ----------------------------------------------------- */
 
 .listing-features{
     display: flex;
@@ -484,7 +479,7 @@ textarea:focus + label{
 }
 
 .listing-features:nth-last-child(2){
-    border-right: 1px dotted grey;
+    border-right: 1px dotted var(--listing-feature-border-color);
 }
 
 .swiper-navBtn,
