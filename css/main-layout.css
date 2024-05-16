@@ -1,3 +1,26 @@
+:root{
+    --header-border-color: #000;
+    --view-more-link-color: #000;
+    --more-properties-border-color: #000;
+    --more-propertues-bg-hover: #000;
+
+    --property-features-color: rgb(65, 75, 90);
+    --property-feature-bg: #efefef;
+    --property-price-bg: #2b2c32;
+    --property-price-color: #fff;
+
+    --swiper-slide-bg: #ffffff;
+
+    --services-bg: #000;
+    --services-bg-hover: #efefef;
+    --services-color: #efefef;
+    --services-color-hover: #000;
+    --services-border-color: #efefef;
+
+    --article-bg: #efefefd0;
+    --article-date-color: gray;
+}
+
 .main{
     padding: 2em 0;
 }
@@ -14,7 +37,7 @@
 .header{
     font-size: 3rem;
     font-weight: 500;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--header-border-color);
 }
 
 .description{
@@ -36,7 +59,7 @@
     gap: 0.5em;
     text-decoration: none;
     font-weight: 500;
-    color: #000;
+    color: var(--view-more-link-color);
     width: 100%;
 }
 
@@ -54,8 +77,8 @@
     margin-top: 2em;
     text-decoration: none;
     font-weight: 500;
-    color: #000;
-    border: 2px solid #000;
+    color: var(--view-more-link-color);
+    border: 2px solid var(--more-properties-border-color);
     padding: 0.5em;
     transition: 
         color ease-in-out 0.3s, 
@@ -64,7 +87,7 @@
 }
 
 .more-properties:hover{
-    background: #000;
+    background: var(--more-propertues-bg-hover);
     color: #fff;
     border-radius: 5px;
 }
@@ -80,11 +103,11 @@
     font-size: 1rem;
     letter-spacing: 0.1em;
     font-weight: 600;
-    color: rgb(65, 75, 90);
+    color: var(--property-features-color);
 }
 
 .property-feature{
-    background: #efefef;
+    background: var(--property-feature-bg);
     padding: 0.5em;
     border-radius: 5px;
 }
@@ -106,8 +129,8 @@
 .property-price{
     font-size: 1.1rem;
     font-weight: bold;
-    background: #2b2c32;
-    color: #fff;
+    background: var(--property-price-bg);
+    color: var(--property-price-color);
     text-align: center;
     width: 150px;
     padding: 0.4em;
@@ -126,7 +149,7 @@
   .swiper-slide {
     position: relative;
     font-size: 18px;
-    background: #fff;
+    background: var(--swiper-slide-bg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -156,7 +179,7 @@
     top: 50%;
     left: 5em;
     transform: translateY(-50%);
-    background-color: #efefefd0;
+    background: var(--article-bg);
     width: 500px;
     padding: 1.5em;
 }
@@ -178,14 +201,14 @@
 .article-description .article-date{
     font-size: 1.2rem;
     font-style: italic;
-    color: gray;
+    color: var(--article-date-color);
 }
 
 .services-wrapper{
     padding: 2em 0;
     margin-top: 2em;
-    background: #000;
-    color: #efefef;
+    background: var(--services-bg);
+    color: var(--services-color);
 }
 
 .service-list{
@@ -231,11 +254,11 @@
     gap: 0.5em;
     justify-content: center;
     align-items: center;
-    border: 2px solid #efefef;
+    border: 2px solid var(--services-border-color);
     padding: 0.5em 1em;
     width: max-content;
     text-decoration: none;
-    color: #efefef;
+    color: var(--services-color);
     font-weight: bold;
     font-size: 1.1rem;
     transition: 
@@ -244,8 +267,8 @@
 }
 
 .service-link:hover{
-    background: #efefef;
-    color: #000;
+    background: var(--services-bg-hover);
+    color: var(--services-color-hover);
 }
 
 .service-description .service-link i{

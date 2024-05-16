@@ -1,7 +1,33 @@
 :root{
-    --listing-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    --listing-shadow: rgba(0, 0, 0, 0.1);
     --listing-shadow-hover: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    --background-color: #efefef;
+    --filter-container-background: #ffffff;
+    --filter-container-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --number-input-border: 1px solid black;
+    --listing-card-background: #ffffff;
+    --short-info-color: #3d485d;
+    --radio-checked-background: #659df1;
+    --radio-color: #ffffff;
+    --radio-border: #659df1;
+    --input-border-focus: #659df1;
+    --label-color: #3d485d;
+    --input-border-bottom: #e0e0e0;
+    --select-border-bottom-focus: #659df1;
+    --select2-color: #3d485d;
+    --search-button-background: #659df1;
+    --search-button-icon-color: #fff;
+    --icon-color: #659df1;
+    --property-category-color: #ed816b;
+    --property-location-color: #3d485d;
+    --deal-type-color: #659df1;
+    --price-background: #3d485d;
+    --price-color: #ffffff;
+    --btn-search-bg: #659df1;
+    --btn-search-color: #ffffff;
+    --svg-main-color: #659df1;
 }
+
 html{
     background: #efefef;
 }
@@ -23,9 +49,9 @@ html{
 
 .listings-filter-container{
     position: sticky;
-    background: #ffffff;
+    background: var(--filter-container-background);
     top: 0em;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: var(--filter-container-shadow);
     padding: 1.5em;
     max-width: 350px;
     border-bottom-right-radius: 0.5em;
@@ -44,7 +70,6 @@ html{
 
 .input-container > input[type=number]{
     border-radius: 5px;
-    border: 1px solid black;
     padding: 10px;
 }
 .drop-down-selection-container{
@@ -99,7 +124,7 @@ html{
 
 .listing-info-wrapper{
     width: 100%;
-    background: #ffffff;
+    background: var(--listing-card-background);
     border-radius: 0px 0px 8px 8px;
 }
 
@@ -118,7 +143,7 @@ html{
     font-weight: bold;
 }
 .swiper-pagination-bullet-active{
-    background-color: white !important;
+    background-color: var(--listing-card-background) !important;
 }
 .swiper-slide img{
     width: 100%;
@@ -136,7 +161,7 @@ html{
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    color: #3d485d;
+    color: var(--short-info-color);
     font-size: 1em;
     font-weight: 600;
     padding: 1em;
@@ -168,7 +193,7 @@ html{
 .input-fields-container > input{
     width: 47%;
     padding: 0.5em;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--input-border-bottom);
     outline: none;
 }
 /* transition has to be optimized wihtout using fixed hight */
@@ -203,30 +228,29 @@ html{
     width: 100%;
 }
 input[type="radio"]:checked + label {
-    background: #659df1;
+    background: var(--radio-checked-background);
     border: none;
-    color: #fff;
+    color: var(--radio-color);
 }
 input[type="radio"] + label {
-    border: 2px solid #659df1;
+    border: 2px solid var(--radio-checked-background);
     width: 100%;
-    color: #659df1;
+    color: var(--radio-checked-background);
     transition: color 0.2s ease-in-out;
 }
 
 input[type="number"]{
-    border: 2px solid #e0e0e0;
+    border: 2px solid var(--input-border-bottom);
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
 }
 
 input[type="number"]:focus{
-    border: 2px solid #659df1;
-
+    border: 2px solid var(--input-border-focus);
 }
 
 .input-container label{
-    color: #3d485d;
+    color: var(--price-background);
     font-weight: 600;
 }
 
@@ -237,7 +261,7 @@ input[type="number"]:focus{
     display: none;
 }
 select{
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 2px solid var(--input-border-bottom);
     padding-left: 1em;
     color: #3d485d;
     font-weight: 600;
@@ -247,7 +271,7 @@ select{
 
 select:focus{
     border: none;
-    border-bottom: 2px solid #659df1;
+    border-bottom: 2px solid var(--input-border-focus);
 }
 
 .select2-selection__rendered {
@@ -259,7 +283,7 @@ select:focus{
 .select2-container--default .select2-selection--single {
     border: none;
     border-bottom: 2px solid #e0e0e0;
-    color: #3d485d;
+    color: var(--select2-color);
     font-weight: 600;
     padding-left: 1em;
     width: 100%;
@@ -268,18 +292,18 @@ select:focus{
 }
 
 .select2-selection__choice__display {
-    color: #3d485d;
+    color: var(--select2-color);
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice,
 .select2-container--default .select2-selection--single .select2-selection__choice {
-    color: #3d485d !important;
+    color: var(--select2-color) !important;
     background: none;
     border: none;
 }
 
 .select2-selection__choice__remove {
-    color: #3d485d !important;
+    color: var(--select2-color) !important;
     font-weight: 600;
     border-right: none !important;
 }
@@ -291,7 +315,7 @@ select:focus{
 
 .select2-search__field::placeholder,
 .select2-selection__placeholder {
-    color: #3d485d !important;
+    color: var(--select2-color) !important;
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
 }
@@ -299,7 +323,7 @@ select:focus{
 .select2-container--default.select2-container--focus .select2-selection--multiple,
 .select2-container--default.select2-container--focus .select2-selection--single {
     border: none;
-    border-bottom: 2px solid #659df1;
+    border-bottom: 2px solid var(--select-border-bottom-focus);
 }
 
 .select2-selection--multiple::before,
@@ -324,12 +348,12 @@ select:focus{
     position: relative;
     width: 100%;
     padding: 1em 0.5em;
-    background: #659df1;
+    background: var(--background-color);
 }
 
 .search-button .fa-magnifying-glass{
     position: static;
-    color: #fff;
+    color: var(--btn-search-color);
 }
 /* --------------------------------------------------------- */
 .offer{
@@ -356,20 +380,20 @@ select:focus{
     top: 5px;
     left: 2px;
     z-index: 1;
-    color: #659df1;
+    color: var(--svg-main-color);
     font-size: 1em;
 }
 
 .fa-tag,
 .fa-stairs,
 .fa-up-right-and-down-left-from-center{
-    color: #659df1;
+    color: var(--svg-main-color);
 }
 
 .property-category{
     font-size: 1.2em;
     font-weight: 400;
-    color: #ed816b;
+    color: var(--property-category-color);
     letter-spacing: 0.1em;
     font-family: "Pacifico", cursive;
 }
@@ -377,7 +401,7 @@ select:focus{
 .property-location{
     font-size: 1em;
     font-weight: 600;
-    color: #3d485d;
+    color: var(--property-location-color);
     letter-spacing: 0.1em;
 }
 
@@ -385,7 +409,7 @@ select:focus{
     text-transform: uppercase;
     font-size: 0.9em;
     font-weight: 600;
-    color: #659df1;
+    color: var(--deal-type-color);
     letter-spacing: 0.3em;
 }
 
@@ -398,7 +422,7 @@ select:focus{
 
 .price{
     font-weight: 600;
-    color: #ffffff;
+    color: var(--price-color);
     padding: 0.3em 1em;
     border-radius: 5px;
     background: #3d485d;
