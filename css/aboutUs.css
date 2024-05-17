@@ -48,6 +48,21 @@
     display: flex;
     gap: 40px;
 }
+.team-filter button{
+    border: none;
+    background-color: rgb(69, 82, 91);
+    border: 1px solid rgb(69, 82, 91);
+    color: white;
+    padding: 1em;
+    border-radius: 4px;
+    transition: color 0.2s, background-color 0.2s;
+}
+.team-filter button:hover{
+    background-color: white;
+    color: black;
+}
+
+
 .team-member-card{
     /* border: 1px solid red; */
     /* max-width: 200px; */
@@ -57,7 +72,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    box-shadow: var(--listing-shadow);
+    /* box-shadow: var(--listing-shadow); */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 .team-member-card:hover{
@@ -80,6 +96,44 @@
     width: 100%;
     object-fit: cover;
 }
+.agent-listings{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+    width: fit-content;
+    cursor: pointer;
+}
+
+.agent-listings-btn{
+    background-color: white;
+    border: none;
+    /* text-decoration: underline; */
+    padding: 1em;
+    /* border: 1px solid red; */
+    width: fit-content;
+    margin-right: 0px;
+    transition: margin-right 0.2s;
+}
+.agent-listings:hover .agent-listings-btn{
+    margin-right: 5px;
+}
+/* Underline animation, the same as the link hover on the header */
+/* .agent-listings-btn:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    background: black;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.agent-listings:hover .agent-listings-btn:after { 
+    width: 135%; 
+    left: 0; 
+} */
 
 @media (max-width: 1050px) {
     .about-us-section{
