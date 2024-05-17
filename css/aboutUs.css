@@ -1,0 +1,108 @@
+:root{
+    --listing-shadow: rgba(0, 0, 0, 0.1);
+    --listing-shadow-hover: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.about-us-section{
+    border: 1px solid red;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+}
+.about-us-info{
+    gap: 30px;
+    padding-top: 100px;
+}
+.about-us-logo{
+    width: 300px;
+}
+.small-heading{
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: red;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.about-us-team{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #efefef; */
+}
+.team-text{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+}
+.team-filter{
+    border: 1px solid red;
+    padding: 1em;
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 40px;
+}
+.team-member-card{
+    /* border: 1px solid red; */
+    /* max-width: 200px; */
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: var(--listing-shadow);
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.team-member-card:hover{
+    box-shadow: var(--listing-shadow-hover);
+    transform: translateY(-5px);
+}
+.team-members{
+    width: 100%;
+    display: grid;
+    max-width: 1000px;
+    padding: 2em;
+    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows:auto;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.team-member-card img{
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1050px) {
+    .about-us-section{
+        padding: 1em;
+    }
+    .about-us-info{
+        flex-direction: column;
+        text-align: center;
+    }
+    .team-text{
+        padding: 0px;
+        width: 100%;
+    }
+    .team-members{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .about-us-section{
+        width: 90%;
+    }
+    .team-members{
+        grid-template-columns: 1fr;
+        padding: 0;
+    };
+}
