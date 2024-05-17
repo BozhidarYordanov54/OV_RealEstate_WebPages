@@ -1,5 +1,5 @@
 :root{
-    --main-bg-color: rgba(101, 157, 241, 0.89);
+    --main-bg-color: rgba(69, 82, 91, 0.8);
     --burger-color: #ffffff;
     --nav-element-color: #ffffff;
     --nav-element-after-bg: #ffffff;
@@ -56,8 +56,9 @@
 
 .logo{
     filter: brightness(0) invert(1);
-    width: 80px;
+    width: 60px;
 }
+
 
 .site-brand{
     width: 50px;
@@ -81,7 +82,7 @@
     width: 90%;
     backdrop-filter: blur(5px);
     background: var(--main-bg-color);
-    padding: 0.5em 1em;
+    padding: 0.2em 1em;
     border-radius: 5px;
 
 }
@@ -121,11 +122,6 @@
     font-size: 1.2em;
     text-decoration: none;
 
-}
-
-.logo{
-    width: 80px;
-    filter: brightness(0) invert(1);
 }
 
 .nav-wrapper{
@@ -239,7 +235,7 @@ select{
         display: flex;
         position: absolute;
         right: 20px;
-        top: 20px;
+        top: 18px;
     }
 
     .nav-element.login-element{
@@ -266,11 +262,6 @@ select{
         justify-content: center;
         align-items: start;
         margin-left: 2em;
-    }
-
-    .logo{
-        width: 70px;
-        padding-left: 1rem;
     }
 
     .contacts-wrapper{
