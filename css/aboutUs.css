@@ -3,25 +3,33 @@
     --listing-shadow-hover: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .about-us-section{
-    border: 1px solid red;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 3em;
+    padding: 100px 1em 1em 1em;
+    text-align: justify;
+}
+
+.about-us-info.about-us-section{
+    width: 80%;
+}
+
+.about-us-team.about-us-section{
+    background: #fafafc;
 }
 .about-us-info{
     gap: 30px;
-    padding-top: 100px;
 }
 .about-us-logo{
-    width: 300px;
+    width: 200px;
 }
 .small-heading{
     font-size: 14px;
     letter-spacing: 2px;
-    color: red;
+    color: rgb(255, 136, 0);
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -31,37 +39,39 @@
     flex-direction: column;
     /* background-color: #efefef; */
 }
+
 .team-text{
     width: 60%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
-    gap: 4px;
-    text-align: center;
-}
-.team-filter{
-    border: 1px solid red;
-    padding: 1em;
-    margin: 20px;
-    border-radius: 10px;
-    display: flex;
-    gap: 40px;
-}
-.team-filter button{
-    border: none;
-    background-color: rgb(69, 82, 91);
-    border: 1px solid rgb(69, 82, 91);
-    color: white;
-    padding: 1em;
-    border-radius: 4px;
-    transition: color 0.2s, background-color 0.2s;
-}
-.team-filter button:hover{
-    background-color: white;
-    color: black;
+    gap: 1em;
+    text-align: justify;
 }
 
+.team-text-header{
+    text-align: center;
+}
+
+.about-us-text{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.about-us-text h1,
+.team-text h1{
+    color: #45525b;
+}
+
+
+.team-filter{
+    margin: 40px 10px 20px 10px;
+    border-radius: 10px;
+    display: flex;
+    gap: 0.5em;
+}
 
 .team-member-card{
     /* border: 1px solid red; */
@@ -72,6 +82,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    color: #45525b;
     /* box-shadow: var(--listing-shadow); */
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
@@ -83,8 +94,7 @@
 .team-members{
     width: 100%;
     display: grid;
-    max-width: 1000px;
-    padding: 2em;
+    max-width: 1300px;
     /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows:auto;
@@ -101,12 +111,12 @@
     align-items: center;
     justify-content: center;
     /* border: 1px solid red; */
-    width: fit-content;
     cursor: pointer;
+    width: fit-content;
 }
 
 .agent-listings-btn{
-    background-color: white;
+    background-color: transparent;
     border: none;
     /* text-decoration: underline; */
     padding: 1em;
@@ -114,6 +124,7 @@
     width: fit-content;
     margin-right: 0px;
     transition: margin-right 0.2s;
+    cursor: pointer;
 }
 .agent-listings:hover .agent-listings-btn{
     margin-right: 5px;
@@ -135,13 +146,34 @@
     left: 0; 
 } */
 
+
+input[type="radio"] + label{
+    border: 1px solid #caccd1;
+    color: #45525b;
+    text-wrap: nowrap;
+    width: fit-content;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="radio"]:hover + label{
+    background: #caccd1;
+}
+
+input[type="radio"]:checked + label{
+    background: #45525b;
+    color: #ffffff;
+}
+
 @media (max-width: 1050px) {
-    .about-us-section{
-        padding: 1em;
+    .about-us-info.about-us-section{
+        width: 100%;
     }
+    
     .about-us-info{
         flex-direction: column;
-        text-align: center;
+    }
+    .about-us-team.about-us-section{
+        padding: 1em;
     }
     .team-text{
         padding: 0px;
@@ -151,12 +183,25 @@
         grid-template-columns: 1fr 1fr;
     }
 }
+
 @media (max-width: 768px) {
     .about-us-section{
-        width: 90%;
+        width: 100%;
     }
     .team-members{
         grid-template-columns: 1fr;
         padding: 0;
-    };
+    }
+
+    .team-filter{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    input[type="radio"] + label{
+        justify-content: start;
+        align-items: start;
+        width: auto;
+    }
+    
 }

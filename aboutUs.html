@@ -61,8 +61,10 @@
       <div class="about-us-info about-us-section">
         <img class="about-us-logo" src="images/logo.png" alt="brand logo" />
         <div class="about-us-text">
-          <p class="small-heading">нашата</p>
-          <h1>История</h1>
+          <div class="about-us-text-header">
+            <p class="small-heading">нашата</p>
+            <h1>История</h1>
+          </div>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque
             provident nobis quam architecto! Ut fugiat eius provident
@@ -77,8 +79,10 @@
       </div>
       <div class="about-us-team about-us-section">
         <div class="team-text">
-          <p class="small-heading">нашият</p>
-          <h1>Екип специалисти</h1>
+          <div class="team-text-header">
+            <p class="small-heading">нашият</p>
+            <h1>Екип професионалисти</h1>
+          </div>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque
             provident nobis quam architecto! Ut fugiat eius provident
@@ -91,9 +95,18 @@
           </p>
         </div>
         <div class="team-filter">
-          <button>Всики</button>
-          <button>Продажби</button>
-          <button>Наеми</button>
+          <div class="input-wrapper">
+            <input type="radio" id="team-all" name="team" checked>
+            <label for="team-all">Всички</label>
+          </div>
+          <div class="input-wrapper">
+            <input type="radio" id="team-rent" name="team">
+            <label for="team-rent">Наеми & Продажби</label>
+          </div>
+          <div class="input-wrapper">
+            <input type="radio" id="team-sales" name="team">
+            <label for="team-sales">Управление</label>
+          </div>
         </div>
         <div class="team-members">
           <div class="team-member-card">
