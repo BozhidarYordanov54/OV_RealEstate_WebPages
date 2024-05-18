@@ -19,6 +19,7 @@
     <link rel="icon" type="image/png" href="images/logo.png" />
 
     <script src="js/burger-button.js" defer></script>
+    <script src="js/filterAgents.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -96,20 +97,39 @@
         </div>
         <div class="team-filter">
           <div class="input-wrapper">
-            <input type="radio" id="team-all" name="team" checked>
+            <input
+              class="agent-filter"
+              type="radio"
+              id="team-all"
+              name="team"
+              value="team-member-card"
+              checked
+            />
             <label for="team-all">Всички</label>
           </div>
           <div class="input-wrapper">
-            <input type="radio" id="team-rent" name="team">
-            <label for="team-rent">Наеми & Продажби</label>
+            <input
+              class="agent-filter"
+              type="radio"
+              id="team-sales"
+              value="sales-agent"
+              name="team"
+            />
+            <label for="team-sales">Наеми & Продажби</label>
           </div>
           <div class="input-wrapper">
-            <input type="radio" id="team-sales" name="team">
-            <label for="team-sales">Управление</label>
+            <input
+              class="agent-filter"
+              type="radio"
+              id="team-administration"
+              value="administration-agent"
+              name="team"
+            />
+            <label for="team-administration">Управление</label>
           </div>
         </div>
         <div class="team-members">
-          <div class="team-member-card">
+          <div class="team-member-card sales-agent">
             <img
               class="member-img"
               src="images/damontweedy_alt4_stocksphotography.webp"
@@ -120,72 +140,88 @@
               <h3 class="agent-name">Иван Иванов</h3>
             </div>
             <div class="agent-contact-info">
-              <p class="agent-phone"><i class="fa-solid fa-phone-volume"></i>+359888888888</p>
-              <p class="agent-mail"><i class="fa-solid fa-envelope"></i>test@mail.com</p>
+              <p class="agent-phone">
+                <i class="fa-solid fa-phone-volume"></i>+359888888888
+              </p>
+              <p class="agent-mail">
+                <i class="fa-solid fa-envelope"></i>test@mail.com
+              </p>
             </div>
             <div class="agent-listings">
               <button class="agent-listings-btn">Всички обяви</button>
               <i class="fa-solid fa-arrow-right"></i>
             </div>
           </div>
-          <div class="team-member-card">
+          <div class="team-member-card sales-agent">
             <img
               class="member-img"
               src="images/damontweedy_alt4_stocksphotography.webp"
               alt=""
             />
             <div class="agent-main-info">
-              <p class="small-heading">наеми</p>
+              <p class="small-heading">продажби</p>
               <h3 class="agent-name">Иван Иванов</h3>
             </div>
             <div class="agent-contact-info">
-              <p class="agent-phone"><i class="fa-solid fa-phone-volume"></i>+359888888888</p>
-              <p class="agent-mail"><i class="fa-solid fa-envelope"></i>test@mail.com</p>
+              <p class="agent-phone">
+                <i class="fa-solid fa-phone-volume"></i>+359888888888
+              </p>
+              <p class="agent-mail">
+                <i class="fa-solid fa-envelope"></i>test@mail.com
+              </p>
             </div>
             <div class="agent-listings">
               <button class="agent-listings-btn">Всички обяви</button>
               <i class="fa-solid fa-arrow-right"></i>
             </div>
           </div>
-          <div class="team-member-card">
+          <div class="team-member-card sales-agent">
             <img
               class="member-img"
               src="images/damontweedy_alt4_stocksphotography.webp"
               alt=""
             />
             <div class="agent-main-info">
-              <p class="small-heading">наеми</p>
+              <p class="small-heading">продажби</p>
               <h3 class="agent-name">Иван Иванов</h3>
             </div>
             <div class="agent-contact-info">
-              <p class="agent-phone"><i class="fa-solid fa-phone-volume"></i>+359888888888</p>
-              <p class="agent-mail"><i class="fa-solid fa-envelope"></i>test@mail.com</p>
+              <p class="agent-phone">
+                <i class="fa-solid fa-phone-volume"></i>+359888888888
+              </p>
+              <p class="agent-mail">
+                <i class="fa-solid fa-envelope"></i>test@mail.com
+              </p>
             </div>
             <div class="agent-listings">
               <button class="agent-listings-btn">Всички обяви</button>
               <i class="fa-solid fa-arrow-right"></i>
             </div>
           </div>
-          <div class="team-member-card">
+          <div class="team-member-card administration-agent">
             <img
               class="member-img"
               src="images/damontweedy_alt4_stocksphotography.webp"
               alt=""
             />
             <div class="agent-main-info">
-              <p class="small-heading">наеми</p>
+              <p class="small-heading">управление</p>
               <h3 class="agent-name">Иван Иванов</h3>
             </div>
             <div class="agent-contact-info">
-              <p class="agent-phone"><i class="fa-solid fa-phone-volume"></i>+359888888888</p>
-              <p class="agent-mail"><i class="fa-solid fa-envelope"></i>test@mail.com</p>
+              <p class="agent-phone">
+                <i class="fa-solid fa-phone-volume"></i>+359888888888
+              </p>
+              <p class="agent-mail">
+                <i class="fa-solid fa-envelope"></i>test@mail.com
+              </p>
             </div>
             <div class="agent-listings">
               <button class="agent-listings-btn">Всички обяви</button>
               <i class="fa-solid fa-arrow-right"></i>
             </div>
           </div>
-          <div class="team-member-card">
+          <div class="team-member-card sales-agent">
             <img
               class="member-img"
               src="images/damontweedy_alt4_stocksphotography.webp"
@@ -196,15 +232,19 @@
               <h3 class="agent-name">Иван Иванов</h3>
             </div>
             <div class="agent-contact-info">
-              <p class="agent-phone"><i class="fa-solid fa-phone-volume"></i>+359888888888</p>
-              <p class="agent-mail"><i class="fa-solid fa-envelope"></i>test@mail.com</p>
+              <p class="agent-phone">
+                <i class="fa-solid fa-phone-volume"></i>+359888888888
+              </p>
+              <p class="agent-mail">
+                <i class="fa-solid fa-envelope"></i>test@mail.com
+              </p>
             </div>
             <div class="agent-listings">
               <button class="agent-listings-btn">Всички обяви</button>
               <i class="fa-solid fa-arrow-right"></i>
             </div>
           </div>
-          <div class="team-member-card">
+          <div class="team-member-card sales-agent">
             <img
               class="member-img"
               src="images/damontweedy_alt4_stocksphotography.webp"
@@ -215,8 +255,12 @@
               <h3 class="agent-name">Иван Иванов</h3>
             </div>
             <div class="agent-contact-info">
-              <p class="agent-phone"><i class="fa-solid fa-phone-volume"></i>+359888888888</p>
-              <p class="agent-mail"><i class="fa-solid fa-envelope"></i>test@mail.com</p>
+              <p class="agent-phone">
+                <i class="fa-solid fa-phone-volume"></i>+359888888888
+              </p>
+              <p class="agent-mail">
+                <i class="fa-solid fa-envelope"></i>test@mail.com
+              </p>
             </div>
             <div class="agent-listings">
               <button class="agent-listings-btn">Всички обяви</button>
