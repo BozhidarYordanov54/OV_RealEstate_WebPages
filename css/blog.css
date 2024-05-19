@@ -1,0 +1,129 @@
+:root{
+    --listing-shadow-hover: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.blog-container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 1em 1em 1em;
+}
+.blog-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #fafafc;
+}
+.small-heading{
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: rgb(255, 136, 0);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.fa-arrow-right{
+    color: rgb(255, 136, 0);
+}
+.blog-info{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: 1em;
+    text-align: justify;
+}
+.blog-info-header{
+    text-align: center;
+}
+.blog-info-header h1,
+.blog-post-header{
+    color: #45525b;
+}
+
+.blog-post{
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #45525b;
+    /* box-shadow: var(--listing-shadow); */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.blog-post:hover{
+    box-shadow: var(--listing-shadow-hover);
+    transform: translateY(-5px);
+}
+.blog-posts{
+    width: 100%;
+    display: grid;
+    max-width: 1300px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows:auto;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+.blog-post-img{
+    /* border: 1px solid red; */
+    height: 70%;
+    /* max-height: 400px; */
+    /* object-fit: contain; */
+
+}
+.blog-post-img img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.blog-post-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+    cursor: pointer;
+    width: fit-content;
+    margin-top: auto;
+}
+
+.full-post-btn{
+    background-color: transparent;
+    border: none;
+    /* text-decoration: underline; */
+    padding: 1em;
+    /* border: 1px solid red; */
+    width: fit-content;
+    margin-right: 0px;
+    transition: margin-right 0.2s;
+    cursor: pointer;
+}
+.blog-post-btn:hover .full-post-btn{
+    margin-right: 5px;
+}
+
+@media (max-width: 1050px) {    
+    .about-us-team.about-us-section{
+        padding: 1em;
+    }
+    .blog-info{
+        padding: 0px;
+        width: 100%;
+    }
+    .blog-posts{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-posts{
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+}
