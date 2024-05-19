@@ -126,7 +126,16 @@
 .blog-post-btn:hover .full-post-btn{
     margin-right: 5px;
 }
-
+.blog-posts-container .blog-post{
+    scale: .8;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+}
+@keyframes fade-in {
+    to{scale: 1; opacity: 1;}
+}
 @media (max-width: 1050px) {    
     .blog-info{
         width: 100%;
