@@ -51,7 +51,15 @@
     gap: 10px;
     color: #45525b;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, filter 0.4s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(5px);
+}
+.blog-post.show{
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
 }
 .blog-post:hover{
     box-shadow: var(--listing-shadow-hover);
