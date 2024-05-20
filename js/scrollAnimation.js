@@ -13,5 +13,8 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-const elements = document.querySelectorAll(".blog-post");
-elements.forEach((el) => observer.observe(el));
+const blogPosts = document.querySelectorAll(".blog-post");
+blogPosts.forEach((el) => observer.observe(el));
+
+const teamMembers = document.querySelectorAll(".team-member-card");
+teamMembers.forEach((el) => observer.observe(el));
