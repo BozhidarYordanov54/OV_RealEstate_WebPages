@@ -1,7 +1,8 @@
 :root{
-    --swiper-navBtn-color: #ffffff;
-    --swiper-navBtn-bg: rgba(0, 0, 0, 0.315);
-    --swiper-navBtn-hover-bg: rgba(0, 0, 0, 0.8);
+    --swiper-navBtn-color: #2b2c32;
+    --swiper-navBtn-bg: rgba(239, 239, 239, 0.4);
+    --swiper-navBtn-hover-bg: #2b2c32;
+    --swiper-navBtn-hover-color: #efefef;
     --swiper-pagination-bullet-bg: #2b2c32;
     --property-category-color: #e5a45f;
     --sale-rent-color: #30547c;
@@ -9,9 +10,8 @@
 }
 
 .container{
-    max-width: 1500px;
+    max-width: 1800px;
     width: 100%;
-    padding: 40px 0;
 }
 
 .slide-container{
@@ -74,15 +74,26 @@
     color: var(--swiper-navBtn-color);
     height: 40px;
     width: 40px;
+    top: 520px;
     background: var(--swiper-navBtn-bg);
     border-radius: 50%;
+    border: 1px solid black;
     transition: background ease-in-out 0.3s;
+}
+
+.swiper-button-prev{
+    left: 20%;
+}
+
+.swiper-button-next{
+    right: 20%;
 }
 
 .swiper-navBtn:hover,
 .swiper-button-next:hover,
 .swiper-button-prev:hover{
     background: var(--swiper-navBtn-hover-bg);
+    color: var(--swiper-navBtn-hover-color);
 }
 
 .swiper-navBtn::before,

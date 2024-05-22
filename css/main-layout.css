@@ -207,39 +207,56 @@
 .services-wrapper{
     padding: 2em 0;
     margin-top: 2em;
-    background: var(--services-bg);
-    color: var(--services-color);
+    background: var(--services-color);
 }
 
 .service-list{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5em;
-    padding: 3em 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2em;
+    margin-top: 2em;
+    padding: 0 1em;
 }
 
 .service-card{
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    border-radius: 8px;
+    padding: 1em;
+    background: var(--services-bg-hover);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    color: var(--services-color-hover);
+    transition: all 0.2s ease-in-out;
 }
 
-.service-card:nth-child(even){
-    flex-direction: row-reverse;
+.service-card:hover{
+    background: var(--services-bg);
+    color: var(--services-color);
+    transform: scale(1.05);
 }
 
 .service-card i{
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 .service-description{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1em;
-    width: 50%;
+    padding: 1em;
+    width: 100%;
+}
+
+.service-text{
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 1.3em;
+    text-align: center;
 }
 
 .service-description .service-title{
@@ -254,11 +271,11 @@
     gap: 0.5em;
     justify-content: center;
     align-items: center;
-    border: 2px solid var(--services-border-color);
+    border: 2px solid var(--services-color-hover);
     padding: 0.5em 1em;
     width: max-content;
     text-decoration: none;
-    color: var(--services-color);
+    color: var(--services-bg);
     font-weight: bold;
     font-size: 1.1rem;
     transition: 
@@ -343,5 +360,9 @@
     .service-link{
         width: 100%;
         text-align: center;
+    }
+
+    .service-list{
+        grid-template-columns: 1fr;
     }
 }

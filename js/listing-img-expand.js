@@ -10,6 +10,8 @@ function expandImg() {
     floatingInfo.classList.toggle("active");
   }
   header.classList.toggle("active");
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
   carousel.forEach((element) => {
     element.classList.toggle("active");
   });

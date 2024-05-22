@@ -90,7 +90,7 @@ textarea:focus + label{
 
 .offer{
     position: absolute;
-    top: 0.3em;
+    top: -1em;
     left: 3em;
     padding: 0.5em 1em;
     font-size: 0.8rem;
@@ -149,7 +149,7 @@ textarea:focus + label{
     padding: 0.5em 1em;
     max-width: 900px;
     border-radius: 0.3rem;
-    background: #ffffff;
+    background: #efefef;
 }
 
 .radio-input-wrapper{
@@ -188,7 +188,7 @@ input[type="radio"] + label{
 }
 
 input[type="radio"]:checked + label{
-    background: #fff;
+    background: #efefef;
     color: #405a5e;
 }
 
