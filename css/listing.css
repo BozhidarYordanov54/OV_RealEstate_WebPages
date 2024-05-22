@@ -308,22 +308,6 @@
     border-radius: 0.5em;
     box-shadow: var(--broker-contacts-box-shadow);
 }
-.input-wrapper input,
-.input-wrapper textarea {
-    background: transparent;
-}
-
-.submit-btn {
-    border: none;
-    background: var(--btn-contact-bg);
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 0.9em;
-    border-radius: 1em 0.5em;
-    width: 100%;
-    padding: 1em;
-    cursor: pointer;
-}
 
 .broker-name-info{
     display: flex;
@@ -481,36 +465,6 @@ textarea:focus + label{
 .listing-features:nth-last-child(2){
     border-right: 1px dotted var(--listing-feature-border-color);
 }
-
-.swiper-navBtn,
-.swiper-button-next,
-.swiper-button-prev{
-    color: #ffffff;
-    width: 40px !important;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.315);
-    border-radius: 50%;
-    transition: background ease-in-out 0.3s;
-}
-
-.swiper-navBtn:hover,
-.swiper-button-next:hover,
-.swiper-button-prev:hover{
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.swiper-navBtn::before,
-.swiper-navBtn::after,
-.swiper-button-next::before,
-.swiper-button-next::after,
-.swiper-button-prev::before,
-.swiper-button-prev::after{
-    color: white;
-    font-size: 18px !important;
-}
-
-
-
 
 @media (max-width: 768px) {
     .listing-floating-info{
