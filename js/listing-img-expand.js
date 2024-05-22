@@ -4,7 +4,19 @@ const header = document.querySelector(".site-header");
 const carousel = document.querySelectorAll(".swiper-slide");
 const btnExpand = document.querySelector(".expand-listing-images");
 
+const nextButton = document.querySelector(".swiper-button-next");
+const prevButton = document.querySelector(".swiper-button-prev");
+
 let isProgrammaticScroll = false;
+
+
+function stopPropagation(event) {
+  event.stopPropagation();
+}
+
+nextButton.addEventListener("click", stopPropagation);
+prevButton.addEventListener("click", stopPropagation);
+
 
 function expandImg(event) {
   event.stopPropagation();
