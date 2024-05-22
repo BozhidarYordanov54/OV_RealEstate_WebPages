@@ -72,13 +72,7 @@ html{
     border-radius: 5px;
     padding: 10px;
 }
-.drop-down-selection-container{
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    margin: 20px auto;
-    width: 100%;
-}
+
 .drop-down-selection-container > select {
     width: 100%;
 }
@@ -274,81 +268,10 @@ select:focus{
     border-bottom: 2px solid var(--input-border-focus);
 }
 
-.select2-selection__rendered {
-    padding-left: 5em; 
-}
-
-
-.select2-container--default .select2-selection--multiple,
-.select2-container--default .select2-selection--single {
-    border: none;
-    border-bottom: 2px solid #e0e0e0;
-    color: var(--select2-color);
-    font-weight: 600;
-    padding-left: 1em;
-    width: 100%;
-    transition: all 0.2s ease-in-out;
-    border-radius: 0;
-}
-
-.select2-selection__choice__display {
-    color: var(--select2-color);
-}
-
-.select2-container--default .select2-selection--multiple .select2-selection__choice,
-.select2-container--default .select2-selection--single .select2-selection__choice {
-    color: var(--select2-color) !important;
-    background: none;
-    border: none;
-}
-
-.select2-selection__choice__remove {
-    color: var(--select2-color) !important;
-    font-weight: 600;
-    border-right: none !important;
-}
-
-.select-wrapper {
-    width: 100%;
-    padding: 1em 0;
-}
-
-.select2-search__field::placeholder,
-.select2-selection__placeholder {
-    color: var(--select2-color) !important;
-    font-weight: 600;
-    font-family: "Montserrat", sans-serif;
-}
-
-.select2-container--default.select2-container--focus .select2-selection--multiple,
-.select2-container--default.select2-container--focus .select2-selection--single {
-    border: none;
-    border-bottom: 2px solid var(--select-border-bottom-focus);
-}
-
-.select2-selection--multiple::before,
-.select2-selection--single::before {
-    content: "\203A";
-    transform: rotate(90deg);
-    position: absolute;
-    right: 0.2em;
-    font-size: 22px;
-}
-
-.select2-selection__arrow{
-    display: none;
-}
-
-.selection-wrapper,
-.drop-down-selection-container{
-    gap: 2em;
-}
-
 .search-button{
     position: relative;
     width: 100%;
     padding: 1em 0.5em;
-    background: var(--background-color);
 }
 
 .search-button .fa-magnifying-glass{
@@ -368,7 +291,10 @@ select:focus{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    flex: 1 1 100%;
+}
+
+.selection-wrapper:nth-of-type(1){
+    margin-top: 2em;
 }
 
 .fa-location-dot,
