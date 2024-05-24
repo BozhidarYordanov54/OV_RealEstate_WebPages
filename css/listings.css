@@ -7,7 +7,7 @@
     --number-input-border: 1px solid black;
     --listing-card-background: #ffffff;
     --short-info-color: #3d485d;
-    --radio-checked-background: #659df1;
+    --radio-checked-background: #3C5759;
     --radio-color: #ffffff;
     --radio-border: #659df1;
     --input-border-focus: #659df1;
@@ -23,9 +23,8 @@
     --deal-type-color: #659df1;
     --price-background: #3d485d;
     --price-color: #ffffff;
-    --btn-search-bg: #659df1;
-    --btn-search-color: #ffffff;
-    --svg-main-color: #659df1;
+    --btn-search-color: #000000;
+    --svg-main-color: #192524;
 }
 
 html{
@@ -296,6 +295,10 @@ select:focus{
     gap: 2em;
 }
 
+.selection-wrapper:nth-of-type(1){
+    margin-top: 1em;
+}
+
 .fa-location-dot,
 .fa-magnifying-glass,
 .fa-chair,
@@ -355,13 +358,17 @@ select:focus{
     font-size: 1em;
 }
 
+@media(max-width: 768px){
+    .listings-container{
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
 @media(max-width: 1050px){
     .main-wrapper{
         flex-direction: column;
     }
-    .listings-container{
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
+    
     .listings-wrapper{
         padding: 0.5em;
     }
@@ -373,6 +380,7 @@ select:focus{
         padding: 1em;
     }
     .collapse-filters-btn{
+        font-size: 1.4em;
         display: block;
         transition: transform 0.4s ease-in-out;
     }

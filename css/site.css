@@ -218,16 +218,15 @@ select{
     justify-content: center;
     align-items: center;
     gap: 0.5em;
-    padding: 0.5em 1em;
-    color: #ffffff;
-    background: #000000;
+    padding: 1em;
+    color: #000000;
+    background: #efefef;
     font-weight: bold;
     font-size: 0.8em;
     border: none;
     border-radius: 0.3rem;
     cursor: pointer;
     margin: 0 auto;
-
 }
 
 .swiper-navBtn,
@@ -375,6 +374,10 @@ select{
     .search-wrapper{
         padding: 0;
         height: 100%;
+        width: 100%;
+    }
+
+    .btn-submit{
         width: 100%;
     }
 }
