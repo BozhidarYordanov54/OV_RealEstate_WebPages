@@ -367,3 +367,18 @@
         grid-template-columns: 1fr;
     }
 }
+
+@media(max-width: 1200px){
+    .service-card:hover{
+        background: none;
+        color: var(--services-bg);
+        transform: none;
+    }
+
+    .service-card.focus{
+        background: var(--services-bg);
+        color: var(--services-color);
+        transform: scale(1.05);
+    }
+    
+}
