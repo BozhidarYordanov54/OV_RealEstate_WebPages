@@ -195,8 +195,9 @@ html{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 740px;
-    max-height: 100vh;
+    height: 700px;
+    max-width: 600px;
+    margin: 0 auto;
     transition: height 0.5s ease; /* Smooth transition for max-height */
     overflow: hidden;
 }
@@ -290,7 +291,6 @@ select:focus{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2em 0;
     align-items: center;
     flex: none;
     gap: 2em;
@@ -355,7 +355,7 @@ select:focus{
     font-size: 1em;
 }
 
-@media(max-width: 768px){
+@media(max-width: 1050px){
     .main-wrapper{
         flex-direction: column;
     }
