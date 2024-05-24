@@ -196,6 +196,7 @@ html{
     flex-direction: column;
     justify-content: space-between;
     height: 740px;
+    max-height: 100vh;
     /* height: 840px; Set initially to none to allow for variable content height */
     transition: height 0.5s ease; /* Smooth transition for max-height */
     overflow: hidden;
@@ -290,14 +291,15 @@ select:focus{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 2em 0;
     align-items: center;
     flex: none;
     gap: 2em;
 }
 
-.selection-wrapper:nth-of-type(1){
+/* .selection-wrapper:nth-of-type(1){
     margin-top: 2em;
-}
+} */
 
 .fa-location-dot,
 .fa-magnifying-glass,
