@@ -110,24 +110,23 @@ textarea:focus + label{
 }
 
 .offer.top{
-    background: #2596be;
+    background: rgba(61, 72, 93, 0.9);
 }
 
 .offer.no-commision{
-    background: #30547c;
+    background: #000000;
 }
 
 .offer.new{
-    background: #a0e55f;
+    background: #000000;
 }
 
 .offer.deposit{
-    background: rgb(255, 185, 81);
+    background: #000000;
 }
 
 .offer.sold{
-    background: #f55858;
-
+    background: #000000;
 }
 
 .search-wrapper{
