@@ -291,6 +291,8 @@ select:focus{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    flex: none;
+    gap: 2em;
 }
 
 .selection-wrapper:nth-of-type(1){
