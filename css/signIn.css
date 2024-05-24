@@ -1,0 +1,68 @@
+footer{
+    display: none;
+}
+.sign-in-container-wrapper{
+    height: 100vh;
+    display: flex;
+    background-image: url("/images/main-bg2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+}
+.sign-in-container{
+    /* border: 1px solid red; */
+    background-color:white;
+    padding: 2em;
+    /* width: 360px; */
+}
+.sign-in-container h2{
+    text-align: center;
+}
+.alt-sign-in-opts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.alt-sign-in-opts a,
+.alt-sign-in-opts a:hover,
+.alt-sign-in-opts a:focus,
+.alt-sign-in-opts a:active{
+    text-decoration: none;
+    color: inherit;
+}
+.btn-sign-in,
+.alt-sign-in{
+    width: 100%;
+    border: none;
+    /* background-color: #fefafe; */
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    /* background-color: white; */
+    margin-top:10px;
+    padding: 0.5em;
+    text-align: center;
+    transition: box-shadow 0.2s;
+}
+.btn-sign-in:hover,
+.alt-sign-in:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.sign-in-form{
+    padding-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.additional-options{
+    display: flex;
+    justify-content: space-between;
+}
+.google-opt i{
+    color: #DB4437;
+    margin-left: 5px;
+}
+.facebook-opt i{
+    color: #4267B2;
+    margin-left: 5px;
+}
