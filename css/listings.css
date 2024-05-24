@@ -197,7 +197,6 @@ html{
     justify-content: space-between;
     height: 740px;
     max-height: 100vh;
-    /* height: 840px; Set initially to none to allow for variable content height */
     transition: height 0.5s ease; /* Smooth transition for max-height */
     overflow: hidden;
 }
@@ -296,10 +295,6 @@ select:focus{
     flex: none;
     gap: 2em;
 }
-
-/* .selection-wrapper:nth-of-type(1){
-    margin-top: 2em;
-} */
 
 .fa-location-dot,
 .fa-magnifying-glass,
