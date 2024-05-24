@@ -1,8 +1,8 @@
 :root{
-    --main-bg-color: rgba(69, 82, 91, 0.8);
+    --main-bg-color: rgba(117, 121, 118, 0.8);
     --burger-color: #ffffff;
     --nav-element-color: #ffffff;
-    --nav-element-after-bg: #ffffff;
+    --nav-element-after-bg: #eaeae9;
     --btn-submit-color: #ffffff;
     --btn-submit-bg: #000000;
     --vertical-splitter-color: #333;
@@ -100,7 +100,8 @@
     text-decoration: none;
 }
 
-.nav-element a:after {    
+.nav-element a:after,
+.login-element a:after{    
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
@@ -111,7 +112,8 @@
     width: 0;
 }
 
-.nav-elements a:not(.logo-link):hover:after { 
+.nav-elements a:not(.logo-link):hover:after,
+.login-element a:hover:after{ 
     width: 100%; 
     left: 0; 
 }
