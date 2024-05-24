@@ -156,7 +156,9 @@ html{
     border-radius: 5px;
     background-color: #ffffff93;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease,
+                color 0.2s ease,
+                background-color 0.2s ease;
     transition-delay: 0.5s;
 }
 
@@ -165,8 +167,13 @@ html{
     left: auto;
 }
 
+.swiper-button-prev:hover{
+    background: #ffffff;
+}
+
 .swiper-button-next{
     right: 4px;
+    background: #ffffff;
 }
 
 .listing:hover .swiper-button-prev,
