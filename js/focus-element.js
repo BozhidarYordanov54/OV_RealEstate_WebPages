@@ -11,12 +11,12 @@ function focusElementForMobile(){
 
 }
 
-function isInViewport(element){
+function isInViewport(element, offsetTop = 160, offsetBottom = 80){
     const rect = element.getBoundingClientRect();
     return (
-        rect.top >= 0 &&
+        rect.top + offsetTop >= 0 &&
         rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom - offsetBottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
