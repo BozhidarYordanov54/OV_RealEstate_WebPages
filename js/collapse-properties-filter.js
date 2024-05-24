@@ -5,6 +5,7 @@ const listingFilterContainer = document.querySelector(".listings-filter-containe
 
 function collapseMenu() {
   menu.classList.toggle("collapse-filters");
+  filterHeading.classList.toggle("collapsed");
   collapseBtn.classList.toggle("hidden");
 }
 
