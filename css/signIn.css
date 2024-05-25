@@ -1,7 +1,7 @@
 footer{
     display: none;
 }
-.sign-in-container-wrapper{
+/* .sign-in-container-wrapper{
     height: 100vh;
     display: flex;
     background-image: url("/images/main-bg2.jpg");
@@ -9,7 +9,7 @@ footer{
     background-repeat: no-repeat;
     align-items: center;
     justify-content: center;
-}
+} */
 .sign-in-container{
     /* border: 1px solid red; */
     background-color:rgba(250, 250, 252, 0.8);
