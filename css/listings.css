@@ -53,14 +53,14 @@ html{
 }
 
 .listings-filter-container{
-    position: sticky;
     background: var(--filter-container-background);
     top: 0em;
     box-shadow: var(--filter-container-shadow);
     padding: 1.5em;
-    max-width: 350px;
+    max-width: 370px;
+    width: 100%;
     border-bottom-right-radius: 0.5em;
-    transition: top 0.5s ease;
+    transition: max-width 0.5s ease;
     transition-delay: 0.5s;
 }  
 .inputs-container{
@@ -145,12 +145,54 @@ html{
     height: 100%;
     width: 100%;
 }
-.swiper-button-next::after,
-.swiper-button-prev::after{
-    color: black;
-    font-size: 1.5em !important;
-    font-weight: bold;
+.swiper-button-prev,
+.swiper-button-next{
+    top: auto;
+    bottom: 8px;
+    z-index: 20;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #ffffff93;
+    opacity: 0;
+    transition: opacity 0.3s ease,
+                color 0.2s ease,
+                background-color 0.2s ease;
+    transition-delay: 0.5s;
 }
+
+.swiper-button-prev{
+    right: 40px;
+    left: auto;
+}
+
+.swiper-button-prev:hover{
+    background: #ffffff;
+}
+
+.swiper-button-next{
+    right: 4px;
+    background: #ffffff;
+}
+
+.listing:hover .swiper-button-prev,
+.listing:hover .swiper-button-next{
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.swiper-pagination-bullet{
+    background-color: #b09480;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.5;
+    transition: background-color 0.3s;
+}
+
 .swiper-pagination-bullet-active{
     background-color: var(--listing-card-background) !important;
 }
@@ -213,8 +255,8 @@ html{
 .listings-filter-collapsable-wrapper{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 700px;
+    justify-content: space-around;
+    height: 85vh;
     max-width: 600px;
     margin: 0 auto;
     transition: height 0.5s ease; /* Smooth transition for max-height */
@@ -228,12 +270,18 @@ html{
     align-items: center;
     justify-content: space-between;
     padding-bottom: 1em;
+    transition: all 0.2s ease-in-out;
 }
+
+.filter-section-heading.collapsed{
+    padding-bottom: 0;
+}
+
 .collapse-filters-btn{
     display: none;
     background: none;
     border: none;
-    font-size: 1.8em;
+    font-size: 1.4em;
 }
 
 /* Overriding the nav.css properties for the main search bar */
@@ -339,7 +387,7 @@ select:focus{
 }
 
 .property-category{
-    font-size: 0.9em;
+    font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
     color: var(--property-category-color);
@@ -362,14 +410,25 @@ select:focus{
 }
 
 .price{
+    position: relative;
     color: #b09480;
     width: fit-content;
     margin: 0 auto;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
     letter-spacing: 2px;
     font-size: 1.2em;
     font-weight: 700;
+}
+
+.price::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #efefef;
 }
 
 @media(max-width: 768px){
@@ -393,8 +452,10 @@ select:focus{
         margin: 0;
         padding: 1em;
     }
+    .listings-filter-collapsable-wrapper{
+        height: 750px;
+    }
     .collapse-filters-btn{
-        font-size: 1.4em;
         display: block;
         transition: transform 0.4s ease-in-out;
     }
