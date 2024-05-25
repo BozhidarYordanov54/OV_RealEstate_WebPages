@@ -35,7 +35,6 @@ input{
 .sign-in-container a:focus,
 .sign-in-container a:active{
     text-decoration: none;
-    color: inherit;
 }
 .btn-sign-in,
 .alt-sign-in{
@@ -52,18 +51,24 @@ input{
     transition: all 0.1s ease-in-out 0ms;
     user-select: none;
     color: #45525b;
+    font-weight: 600;
 }
 
-.btn-sign-in:hover,
-.alt-sign-in:hover{
-    background-color: #F2F2F2;
-    box-shadow: 0px 0px 20px -18px;
+.alt-sign-in:hover i,
+.alt-sign-in:focus i{
+    animation: rotateLogo 1s alternate infinite;
 }
 .btn-sign-in:active,
 .alt-sign-in:active{
     transform: scale(0.95);
 }
-
+.btn-sign-in i{
+    margin-left: 10px;
+}
+.btn-sign-in:hover i,
+.btn-sign-in:focus i{
+    animation: signInArrow 0.5s alternate infinite;
+}
 .sign-in-form{
     padding-top: 1.5em;
     display: flex;
@@ -78,13 +83,25 @@ input{
 .consent{
     font-size: 0.9em;
 }
+.google-opt{
+    background-color: #DB4437;
+    color: white;
+    /* font-weight: 600; */
+}
 .google-opt i{
-    color: #DB4437;
-    margin-left: 5px;
+    /* color: #DB4437; */
+    color: white;
+    margin-left: 10px;
+}
+.facebook-opt{
+    background-color: #4267B2;
+    color: white;
+    /* font-weight: 600; */
 }
 .facebook-opt i{
-    color: #4267B2;
-    margin-left: 5px;
+    /* color: #4267B2; */
+    color: white;
+    margin-left: 10px;
 }
 .show-pass{
     border: none;
@@ -94,5 +111,31 @@ input{
     top: 14px;
     color: #45525b;
     cursor: pointer;
+}
+.sign-up-link{
+    color: #45525b;
+    text-decoration:underline !important;
+}
+@keyframes rotateLogo {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: rotate(20deg);
+    }
+}
+@keyframes signInArrow {
+    /* 0%{
+        transform:translateX(0)
+    } */
+    /* 50%{
+        transform:translateX(5px)
+    } */
+    100%{
+        transform:translateX(5px)
+    }
 }
 
