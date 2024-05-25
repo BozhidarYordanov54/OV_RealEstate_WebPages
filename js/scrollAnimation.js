@@ -1,10 +1,9 @@
 const observerOptions = {
-  threshold: 0.1,
+  threshold: 0.15,
 };
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry);
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
     } else {
@@ -18,3 +17,6 @@ blogPosts.forEach((el) => observer.observe(el));
 
 const teamMembers = document.querySelectorAll(".team-member-card");
 teamMembers.forEach((el) => observer.observe(el));
+
+const listings = document.querySelectorAll(".listing");
+listings.forEach((listing) => observer.observe(listing));

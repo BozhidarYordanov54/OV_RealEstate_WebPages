@@ -430,7 +430,17 @@ select:focus{
     height: 2px;
     background-color: #efefef;
 }
-
+.listing{
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(5px);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, filter 0.4s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.listing.show{
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
 @media(max-width: 768px){
     .listings-container{
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
