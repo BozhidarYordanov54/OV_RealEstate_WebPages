@@ -17,6 +17,7 @@ footer{
     padding: 2em;
     border-radius: 6px;
     /* width: 360px; */
+    color: #45525b;
 }
 .sign-in-container h2{
     text-align: center;
@@ -27,7 +28,6 @@ footer{
     align-items: center;
 }
 input{
-    background-color: #fafafc;
     background-color: transparent;
 }
 .sign-in-container a,
@@ -39,17 +39,29 @@ input{
 }
 .btn-sign-in,
 .alt-sign-in{
-    width: 100%;
-    border: none;
-    font-size: 1em;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    margin-top:10px;
-    padding: 0.5em;
+    margin-top:6px;
     text-align: center;
-    transition: box-shadow 0.2s;
+    border: 1px solid #9db1b1;
+    width: 100%;
+    font-size: 1em;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 8px;
+    border-radius: 5px;
     cursor: pointer;
     background-color: white;
+    transition: all 0.1s ease-in-out 0ms;
+    user-select: none;
+    color: #45525b;
+}
+
+.btn-sign-in:hover,
+.alt-sign-in:hover{
+    background-color: #F2F2F2;
+    box-shadow: 0px 0px 20px -18px;
+}
+.btn-sign-in:active,
+.alt-sign-in:active{
+    transform: scale(0.95);
 }
 
 .sign-in-form{
@@ -80,5 +92,7 @@ input{
     position: absolute;
     right: 8px;
     top: 14px;
+    color: #45525b;
     cursor: pointer;
 }
+
