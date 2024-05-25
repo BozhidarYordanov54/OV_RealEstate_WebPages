@@ -16,6 +16,7 @@
     <script src="js/checkInputContent.js"></script>
     <script src="js/burger-button.js" defer></script>
     <script src="js/show-pass.js" defer></script>
+    <script src="js/confirm-pass.js" defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Влез</title>
@@ -78,6 +79,7 @@
                 name="pass"
                 id="password"
                 class="input-text input-password"
+                onchange="confirmPass()"
                 required
               />
               <label for="pass">Парола</label>
@@ -91,6 +93,7 @@
                 name="pass"
                 id="confirm-password"
                 class="input-text input-password"
+                onchange="confirmPass()"
                 required
               />
               <label for="pass">Потвърди паролата</label>

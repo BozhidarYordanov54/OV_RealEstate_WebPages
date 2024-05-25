@@ -12,8 +12,10 @@ footer{
 }
 .sign-in-container{
     /* border: 1px solid red; */
-    background-color:#fafafc;
+    background-color:rgba(250, 250, 252, 0.8);
+    backdrop-filter: blur(5px);
     padding: 2em;
+    border-radius: 6px;
     /* width: 360px; */
 }
 .sign-in-container h2{
@@ -26,6 +28,7 @@ footer{
 }
 input{
     background-color: #fafafc;
+    background-color: transparent;
 }
 .sign-in-container a,
 .sign-in-container a:hover,
@@ -73,7 +76,7 @@ input{
 }
 .show-pass{
     border: none;
-    background-color: white;
+    background-color:transparent;
     position: absolute;
     right: 8px;
     top: 14px;
