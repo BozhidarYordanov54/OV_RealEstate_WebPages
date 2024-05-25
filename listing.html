@@ -3,19 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/typography.css" />
-    <link rel="stylesheet" href="css/listing.css"> 
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/listing.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/site.css" />
-    <link rel="stylesheet" href="css/listing-carousel.css">
+    <link rel="stylesheet" href="css/listing-carousel.css" />
 
     <script
       src="https://kit.fontawesome.com/6592283e01.js"
-      crossorigin="anonymous" defer
+      crossorigin="anonymous"
+      defer
     ></script>
     <script src="js/listing-img-expand.js" defer></script>
     <script src="js/swiper-bundle.min.js" defer></script>
@@ -23,293 +24,392 @@
     <script src="js/checkInputContent.js" defer></script>
     <script src="js/burger-button.js"></script>
 
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="icon" type="image/png" href="images/logo.png" />
     <title>Къща под наем</title>
   </head>
   <body>
     <header class="site-header">
-        <div class="main-nav-wrapper">
-            <div class="main-nav">
-                <div class="logo-wrapper">
-                    <a class="logo-link" href="index.html">
-                        <img class="logo" src="images/logo.png" alt="">
-                    </a>
-                </div>
-                <div class="burger">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <nav class="nav-wrapper">
-                    <ul class="nav-elements main-list">
-                        <li class="nav-element"><a href="index.html">Начало</a></li>
-                        <li class="nav-element"><a href="listings.html">Имоти</a></li>
-                        <li class="nav-element"><a href="index.html">Нови сгради</a></li>
-                        <li class="nav-element"><a href="aboutUs.html">За нас</a></li>
-                        <li class="nav-element contacts"><a href="contacts.html">Контакти</a></li>
-                        <li class="nav-element"><a href="blog.html">Блог</a></li>
-                        <li class="nav-element login-element"><a href="#">Вход</a></li>
-                        <li class="nav-element login-element"><a href="#">Регистрация</a></li>
-                    </ul>
-                </nav>
-                <div class="login-element">
-                    <a href="signIn.html" class="login">Вход</a>
-                    <a href="singUp.html" class="register">Регистрация</a>
-                </div>
-            </div>
-        </div>
-</header>
-    <div class="listing-background-img">
-        <div class="swiper swiper-listing">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="images/Dormitory01.jpg" alt="property1"></div>
-              <div class="swiper-slide"><img src="images/Dormitory02.jpg" alt="property2"></div>
-              <div class="swiper-slide"><img src="images/Dormitory03.jpg" alt="property3"></div>
-              <div class="swiper-slide"><img src="images/Dormitory04.jpg" alt="property4"></div>
-              <div class="swiper-slide"><img src="images/Dormitory05.jpg" alt=""></div>
-              <div class="swiper-slide"><img src="images/Dormitory06.jpg" alt=""></div>
-              <div class="swiper-slide"><img src="images/Dormitory10.jpg" alt=""></div>
-              <div class="swiper-slide"><img src="images/Dormitory11.jpg" alt=""></div>
-              <div class="swiper-slide"><img src="images/Dormitory12.jpg" alt=""></div>
-            </div>
-            <div class="swiper-button-next swiper-navBtn"><i class="fa-solid fa-circle-chevron-right"></i></div>
-            <div class="swiper-button-prev swiper-navBtn"><i class="fa-solid fa-circle-chevron-left"></i></div>
-            <div class="swiper-pagination estates"></div>
+      <div class="main-nav-wrapper">
+        <div class="main-nav">
+          <div class="logo-wrapper">
+            <a class="logo-link" href="index.html">
+              <img class="logo" src="images/logo.png" alt="" />
+            </a>
           </div>
-          <button class="expand-listing-images"><i class="fa-solid fa-expand"></i></button>
-    </div>
-   
-    <div class="listing-floating-info">
-        <p class="property-type">Къща</p>
-        <p class="rent-buy">Продажба</p>
-        <h2 class="property-street">ж.к. Овча Купел</h2>
-        <p class="property-address">София, България 1000</p>
-        <div class="property-features-wrapper">
-            <div class="price-contact-wrapper">
-                <div class="price-wrapper">
-                    <p class="price-info-wrapper"><span class="price">500 000$</span>/<span class="price-per-meter">500$ m2</span></p>
-                </div>
-                <a href="tel:+359888888888" class="call">
-                    <div class="phone-wrapper">
-                        <p class="interest">Имаш интерес?</p>
-                        <p class="phone-number">Обади се сега за оглед</p>
-                    </div>
-                    <i class="fa-solid fa-phone"></i>
-                </a>
-                <p class="ref-number">Референтен номер: 1865234</p>
-            </div>
-            <div class="property-features-list-wrapper">
-                <ul class="property-features">
-                    <li class="bed-count">
-                        <div class="info-wrapper">
-                            <p class="label-info"><i class="fa-solid fa-bed"></i>Спални</p>
-                            <p>3</p>
-                    </li>
-                    <li class="bathrooms-count">
-                        <div class="info-wrapper">
-                            <p class="label-info"><i class="fa-solid fa-bath"></i>Бани</p>
-                            <p>2</p>
-                    </li>
-                    <li class="room-count">
-                        <div class="info-wrapper">
-                            <p class="label-info"><i class="fa-solid fa-door-open"></i>Стаи</p>
-                            <p>5</p>
-                    </li>
-                    <li class="property-heating">
-                        <div class="info-wrapper">
-                            <p class="label-info"><i class="fa-solid fa-temperature-arrow-up"></i>Отопление</p>
-                            <p>Централно</p>
-                        </div>
-                    </li>
-                </ul>
-                <ul class="property-features">
-                    <li class="bed-count">
-                        <div class="info-wrapper">
-                            <p class="label-info"><i class="fa-solid fa-calendar"></i>Построен през</p>
-                            <p>2015 г.</p>
-                        </div>
-                    </li>
-                    <li class="bathrooms-count">
-                        <div class="info-wrapper">
-                            <p class="label-info"><i class="fa-solid fa-stairs"></i>Етаж</p>
-                            <p>2 от 10</p>
-                        </div>
-                    </li>
-                    <li class="room-count">
-                        <div class="info-wrapper">
-                            <p class="label-info"><i class="fa-solid fa-trowel"></i>Строителство</p>
-                            <p>Тухла</p>
-                    </li>
-                    <li class="property-volume">
-                        <div class="info-wrapper">
-                            <p class="label-info"><i class="fa-solid fa-ruler"></i>Площ</p>
-                            <p>1000 m2</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+          <div class="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <nav class="nav-wrapper">
+            <ul class="nav-elements main-list">
+              <li class="nav-element"><a href="index.html">Начало</a></li>
+              <li class="nav-element"><a href="listings.html">Имоти</a></li>
+              <li class="nav-element"><a href="index.html">Нови сгради</a></li>
+              <li class="nav-element"><a href="aboutUs.html">За нас</a></li>
+              <li class="nav-element contacts">
+                <a href="contacts.html">Контакти</a>
+              </li>
+              <li class="nav-element"><a href="blog.html">Блог</a></li>
+              <li class="nav-element login-element">
+                <a href="signIn.html">Вход</a>
+              </li>
+              <li class="nav-element login-element">
+                <a href="singUp.html">Регистрация</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="login-element">
+            <a href="signIn.html" class="login">Вход</a>
+            <a href="singUp.html" class="register">Регистрация</a>
+          </div>
         </div>
+      </div>
+    </header>
+    <div class="listing-background-img">
+      <div class="swiper swiper-listing">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/Dormitory01.jpg" alt="property1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/Dormitory02.jpg" alt="property2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/Dormitory03.jpg" alt="property3" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/Dormitory04.jpg" alt="property4" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/Dormitory05.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/Dormitory06.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/Dormitory10.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/Dormitory11.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/Dormitory12.jpg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-button-next swiper-navBtn">
+          <i class="fa-solid fa-circle-chevron-right"></i>
+        </div>
+        <div class="swiper-button-prev swiper-navBtn">
+          <i class="fa-solid fa-circle-chevron-left"></i>
+        </div>
+        <div class="swiper-pagination estates"></div>
+      </div>
+      <button class="expand-listing-images">
+        <i class="fa-solid fa-expand"></i>
+      </button>
+    </div>
+
+    <div class="listing-floating-info">
+      <p class="property-type">Къща</p>
+      <p class="rent-buy">Продажба</p>
+      <h2 class="property-street">ж.к. Овча Купел</h2>
+      <p class="property-address">София, България 1000</p>
+      <div class="property-features-wrapper">
+        <div class="price-contact-wrapper">
+          <div class="price-wrapper">
+            <p class="price-info-wrapper">
+              <span class="price">500 000$</span>/<span class="price-per-meter"
+                >500$ m2</span
+              >
+            </p>
+          </div>
+          <a href="tel:+359888888888" class="call">
+            <div class="phone-wrapper">
+              <p class="interest">Имаш интерес?</p>
+              <p class="phone-number">Обади се сега за оглед</p>
+            </div>
+            <i class="fa-solid fa-phone"></i>
+          </a>
+          <p class="ref-number">Референтен номер: 1865234</p>
+        </div>
+        <div class="property-features-list-wrapper">
+          <ul class="property-features">
+            <li class="bed-count">
+              <div class="info-wrapper">
+                <p class="label-info"><i class="fa-solid fa-bed"></i>Спални</p>
+                <p>3</p>
+              </div>
+            </li>
+            <li class="bathrooms-count">
+              <div class="info-wrapper">
+                <p class="label-info"><i class="fa-solid fa-bath"></i>Бани</p>
+                <p>2</p>
+              </div>
+            </li>
+            <li class="room-count">
+              <div class="info-wrapper">
+                <p class="label-info">
+                  <i class="fa-solid fa-door-open"></i>Стаи
+                </p>
+                <p>5</p>
+              </div>
+            </li>
+            <li class="property-heating">
+              <div class="info-wrapper">
+                <p class="label-info">
+                  <i class="fa-solid fa-temperature-arrow-up"></i>Отопление
+                </p>
+                <p>Централно</p>
+              </div>
+            </li>
+          </ul>
+          <ul class="property-features">
+            <li class="bed-count">
+              <div class="info-wrapper">
+                <p class="label-info">
+                  <i class="fa-solid fa-calendar"></i>Построен през
+                </p>
+                <p>2015 г.</p>
+              </div>
+            </li>
+            <li class="bathrooms-count">
+              <div class="info-wrapper">
+                <p class="label-info"><i class="fa-solid fa-stairs"></i>Етаж</p>
+                <p>2 от 10</p>
+              </div>
+            </li>
+            <li class="room-count">
+              <div class="info-wrapper">
+                <p class="label-info">
+                  <i class="fa-solid fa-trowel"></i>Строителство
+                </p>
+                <p>Тухла</p>
+              </div>
+            </li>
+            <li class="property-volume">
+              <div class="info-wrapper">
+                <p class="label-info"><i class="fa-solid fa-ruler"></i>Площ</p>
+                <p>1000 m2</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="listing-presentation">
-        <div class="container-header-wrapper">
-            <p class="container-header">Презентация.</p>
-            <p class="listing-presentation-heading">За обявата</p>
-        </div>
-        <div class="listing-presentation-paragraph-wrapper">
-            <div class="listing-presentation-paragraph">
-                <p class="listing-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus eveniet adipisci totam, temporibus minus nam culpa, incidunt in molestiae nihil voluptates, ducimus fugit delectus optio suscipit nostrum voluptas deserunt autem!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus eveniet adipisci totam, temporibus minus nam culpa, incidunt in molestiae nihil voluptates, ducimus fugit delectus optio suscipit nostrum voluptas deserunt autem!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus eveniet adipisci totam, temporibus minus nam culpa, incidunt in molestiae nihil voluptates, ducimus fugit delectus optio suscipit nostrum voluptas deserunt autem!Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus eveniet adipisci totam, temporibus minus nam culpa, incidunt in molestiae nihil voluptates, ducimus fugit delectus optio suscipit nostrum voluptas deserunt autem!</p>
-                <div class="details-wrapper">
-                    <div class="details-header">
-                        <div class="heading-wrapper">
-                            <p class="details-heading small">детайли</p>
-                            <p class="details-heading big">Допълнителни характеристиките на тази обява</p>
-                        </div>
-                        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam alias praesentium et debitis, tempora dolorem ab eaque dolorum, in neque cum delectus rem perferendis consequatur pariatur quibusdam. Sequi, culpa iusto.</div>
-                    </div>
-                    <div class="details-card-wrapper">
-                        <div class="card-wrapper">
-                            <div class="card">
-                                <p class="card-icon"><i class="fa-solid fa-bus"></i></p>
-                                <p class="card-text">Автобус</p>
-                            </div>
-                            <div class="card">
-                                <p class="card-icon"><i class="fa-solid fa-train-subway"></i></p>
-                                <p class="card-text">Метростанция</p>
-                            </div>
-                            <div class="card">
-                                <p class="card-icon"><i class="fa-solid fa-car"></i></p>
-                                <p class="card-text">Гараж</p>
-                            </div>
-                            <div class="card">
-                                <p class="card-icon"><i class="fa-solid fa-store"></i></p>
-                                <p class="card-text">Магазини</p>
-                            </div>
-                            <div class="card">
-                                <p class="card-icon"><i class="fa-solid fa-utensils"></i></p>
-                                <p class="card-text">Ресторанти</p>
-                            </div>
-                            <div class="card">
-                                <p class="card-icon"><i class="fa-solid fa-martini-glass"></i></p>
-                                <p class="card-text">Бар</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="container-header-wrapper">
+        <p class="container-header">Презентация.</p>
+        <p class="listing-presentation-heading">За обявата</p>
+      </div>
+      <div class="listing-presentation-paragraph-wrapper">
+        <div class="listing-presentation-paragraph">
+          <p class="listing-description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus
+            eveniet adipisci totam, temporibus minus nam culpa, incidunt in
+            molestiae nihil voluptates, ducimus fugit delectus optio suscipit
+            nostrum voluptas deserunt autem!Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Accusamus eveniet adipisci totam,
+            temporibus minus nam culpa, incidunt in molestiae nihil voluptates,
+            ducimus fugit delectus optio suscipit nostrum voluptas deserunt
+            autem!Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Accusamus eveniet adipisci totam, temporibus minus nam culpa,
+            incidunt in molestiae nihil voluptates, ducimus fugit delectus optio
+            suscipit nostrum voluptas deserunt autem!Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Accusamus eveniet adipisci totam,
+            temporibus minus nam culpa, incidunt in molestiae nihil voluptates,
+            ducimus fugit delectus optio suscipit nostrum voluptas deserunt
+            autem!
+          </p>
+          <div class="details-wrapper">
+            <div class="details-header">
+              <div class="heading-wrapper">
+                <p class="details-heading small">детайли</p>
+                <p class="details-heading big">
+                  Допълнителни характеристиките на тази обява
+                </p>
+              </div>
+              <div class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                alias praesentium et debitis, tempora dolorem ab eaque dolorum,
+                in neque cum delectus rem perferendis consequatur pariatur
+                quibusdam. Sequi, culpa iusto.
+              </div>
             </div>
-            <div class="contact-broker-form-wrapper">
-                <div class="broker-contact-card">
-                    <div class="broker-img"><img src="images/damontweedy_alt4_stocksphotography.webp" alt="nigga broker"></div>
-                    <div class="broker-contacts">
-                        <div class="broker-name-info">
-                            <p class="broker-name">Иван Иванов</p>
-                            <p class="broker-specialization">Отдел продажбни</p>
-                        </div>
-                        <a href="mailto:test@mail.com" class="broker-mail">test@mail.com</a>
-                        <a href="tel:0888888888" class="broker-tel">+359888888888</a>
-                    </div>
+            <div class="details-card-wrapper">
+              <div class="card-wrapper">
+                <div class="card">
+                  <p class="card-icon"><i class="fa-solid fa-bus"></i></p>
+                  <p class="card-text">Автобус</p>
                 </div>
-                <form class="broker-contact" action="">
-                    <div class="input-wrapper">
-                        <input type="text" name="name" id="name" class="input-text">
-                        <label for="name">Име</label>
-                    </div>
-                    <div class="input-wrapper">
-                        <input type="text" name="email" id="email" class="input-text">
-                        <label for="email">Имейл</label>
-                    </div>
-                    <div class="input-wrapper">
-                        <input type="tel" name="phone" id="phone" class="input-text">
-                        <label for="phone">Телефон</label>
-                    </div>
-                    <div class="input-wrapper">
-                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                        <label for="message">Съобщение</label>
-                    </div>
-                        <button class="btn-submit">Изпрати запитване <i class="fa-regular fa-paper-plane"></i></button>
-                    </div>
-                </form>
+                <div class="card">
+                  <p class="card-icon">
+                    <i class="fa-solid fa-train-subway"></i>
+                  </p>
+                  <p class="card-text">Метростанция</p>
+                </div>
+                <div class="card">
+                  <p class="card-icon"><i class="fa-solid fa-car"></i></p>
+                  <p class="card-text">Гараж</p>
+                </div>
+                <div class="card">
+                  <p class="card-icon"><i class="fa-solid fa-store"></i></p>
+                  <p class="card-text">Магазини</p>
+                </div>
+                <div class="card">
+                  <p class="card-icon"><i class="fa-solid fa-utensils"></i></p>
+                  <p class="card-text">Ресторанти</p>
+                </div>
+                <div class="card">
+                  <p class="card-icon">
+                    <i class="fa-solid fa-martini-glass"></i>
+                  </p>
+                  <p class="card-text">Бар</p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="contact-broker-form-wrapper">
+          <div class="broker-contact-card">
+            <div class="broker-img">
+              <img
+                src="images/damontweedy_alt4_stocksphotography.webp"
+                alt="nigga broker"
+              />
+            </div>
+            <div class="broker-contacts">
+              <div class="broker-name-info">
+                <p class="broker-name">Иван Иванов</p>
+                <p class="broker-specialization">Отдел продажбни</p>
+              </div>
+              <a href="mailto:test@mail.com" class="broker-mail"
+                >test@mail.com</a
+              >
+              <a href="tel:0888888888" class="broker-tel">+359888888888</a>
+            </div>
+          </div>
+          <form class="broker-contact" action="">
+            <div class="input-wrapper">
+              <input type="text" name="name" id="name" class="input-text" />
+              <label for="name">Име</label>
+            </div>
+            <div class="input-wrapper">
+              <input type="text" name="email" id="email" class="input-text" />
+              <label for="email">Имейл</label>
+            </div>
+            <div class="input-wrapper">
+              <input type="tel" name="phone" id="phone" class="input-text" />
+              <label for="phone">Телефон</label>
+            </div>
+            <div class="input-wrapper">
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <label for="message">Съобщение</label>
+            </div>
+            <button class="btn-submit">
+              Изпрати запитване <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
     <footer class="footer">
-        <div class="footer-container">
-            <div class="socials-wrapper">
-                <img class="footer-logo" src="images/logo.png" alt="">
-                <div class="socials-links">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                </div>
-            </div>
-            <div class="footer-wrapper">
-                <div class="footer-elements">
-                    <div class="footer-element">
-                        <h3 class="footer-header">Последни статии</h3>
-                        <ul class="footer-list articles">
-                            <li class="footer-article-card">
-                                <a href="#" class="footer-article-link">Как да продадем имота си бързо?</a>
-                                <span class="article-date">04/03/2024</span>
-                            </li>
-                            <li class="footer-article-card">
-                                <a href="#" class="footer-article-link">Как да продадем имота си бързо?</a>
-                                <span class="article-date">04/03/2024</span>
-                            </li>
-                            <li class="footer-article-card">
-                                <a href="#" class="footer-article-link">Как да продадем имота си бързо?</a>
-                                <span class="article-date">04/03/2024</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-element">
-                        <h3 class="footer-header">Имоти</h3>
-                        <ul class="footer-list">
-                            <li class="footer-list-element"><a href="#">Сгради</a></li>
-                            <li class="footer-list-element"><a href="#">Апартаменти</a></li>
-                            <li class="footer-list-element"><a href="#">Гаражи</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-element">
-                        <h3 class="footer-header">Полезни Връзки</h3>
-                        <ul class="footer-list">
-                            <li class="footer-list-element"><a href="#">Услуги</a></li>
-                            <li class="footer-list-element"><a href="#">Блог</a></li>
-                            <li class="footer-list-element"><a href="#">Контакти</a></li>
-                            <li class="footer-list-element"><a href="#">За нас</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-element">
-                        <h3 class="footer-header">Контакти</h3>
-                        <p class="address town">София</p>
-                        <p class="address">ж.к. Овча Купел 1</p>
-                        <p class="address">ул. "761-ва"</p>
-                        <p class="email">Email: test@mail.com</p>
-                        <p class="phone">Телефон: +359 888 888 888</p>
-                    </div>
-                </div>
-            </div>
+      <div class="footer-container">
+        <div class="socials-wrapper">
+          <img class="footer-logo" src="images/logo.png" alt="" />
+          <div class="socials-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
         </div>
-        <div class="newsletter-section">
-            <div class="newsletter-wrapper">
-                <div class="newsletter-content">
-                    <i class="fa-solid fa-envelope-open-text"></i>
-                    <h2 class="newsletter-header">Абонирай се</h2>
-                    <p class="newsletter-text">Запишете се за нашия бюлетин и научавайте първи за всички актуални оферти на пазара!</p>
-                    <form class="newsletter-form" action="">
-                        <div class="input-wrapper">
-                            <input type="text" name="email" id="email" class="input-text">
-                            <label for="email">Имейл</label>
-                        </div>
-                        <div class="input-wrapper">
-                            <input type="hidden" name="name" id="name">
-                        </div>
-                        <button type="submit" class="subscribe-button btn-submit">Абонирай се <i class="fa-regular fa-paper-plane"></i></button>
-                    </form>
-                </div>
+        <div class="footer-wrapper">
+          <div class="footer-elements">
+            <div class="footer-element">
+              <h3 class="footer-header">Последни статии</h3>
+              <ul class="footer-list articles">
+                <li class="footer-article-card">
+                  <a href="#" class="footer-article-link"
+                    >Как да продадем имота си бързо?</a
+                  >
+                  <span class="article-date">04/03/2024</span>
+                </li>
+                <li class="footer-article-card">
+                  <a href="#" class="footer-article-link"
+                    >Как да продадем имота си бързо?</a
+                  >
+                  <span class="article-date">04/03/2024</span>
+                </li>
+                <li class="footer-article-card">
+                  <a href="#" class="footer-article-link"
+                    >Как да продадем имота си бързо?</a
+                  >
+                  <span class="article-date">04/03/2024</span>
+                </li>
+              </ul>
             </div>
+            <div class="footer-element">
+              <h3 class="footer-header">Имоти</h3>
+              <ul class="footer-list">
+                <li class="footer-list-element"><a href="#">Сгради</a></li>
+                <li class="footer-list-element"><a href="#">Апартаменти</a></li>
+                <li class="footer-list-element"><a href="#">Гаражи</a></li>
+              </ul>
+            </div>
+            <div class="footer-element">
+              <h3 class="footer-header">Полезни Връзки</h3>
+              <ul class="footer-list">
+                <li class="footer-list-element"><a href="#">Услуги</a></li>
+                <li class="footer-list-element"><a href="#">Блог</a></li>
+                <li class="footer-list-element"><a href="#">Контакти</a></li>
+                <li class="footer-list-element"><a href="#">За нас</a></li>
+              </ul>
+            </div>
+            <div class="footer-element">
+              <h3 class="footer-header">Контакти</h3>
+              <p class="address town">София</p>
+              <p class="address">ж.к. Овча Купел 1</p>
+              <p class="address">ул. "761-ва"</p>
+              <p class="email">Email: test@mail.com</p>
+              <p class="phone">Телефон: +359 888 888 888</p>
+            </div>
+          </div>
         </div>
-        <div class="copyright-wrapper">
-            <p class="copy-text">© 2024 Овча Купел Estate. Всички права запазени.</p>
+      </div>
+      <div class="newsletter-section">
+        <div class="newsletter-wrapper">
+          <div class="newsletter-content">
+            <i class="fa-solid fa-envelope-open-text"></i>
+            <h2 class="newsletter-header">Абонирай се</h2>
+            <p class="newsletter-text">
+              Запишете се за нашия бюлетин и научавайте първи за всички актуални
+              оферти на пазара!
+            </p>
+            <form class="newsletter-form" action="">
+              <div class="input-wrapper">
+                <input type="text" name="email" id="email" class="input-text" />
+                <label for="email">Имейл</label>
+              </div>
+              <div class="input-wrapper">
+                <input type="hidden" name="name" id="name" />
+              </div>
+              <button type="submit" class="subscribe-button btn-submit">
+                Абонирай се <i class="fa-regular fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
         </div>
+      </div>
+      <div class="copyright-wrapper">
+        <p class="copy-text">
+          © 2024 Овча Купел Estate. Всички права запазени.
+        </p>
+      </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.min.js"></script>
