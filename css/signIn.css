@@ -146,4 +146,14 @@ input{
         transform:translateX(5px)
     }
 }
+@media (max-width: 768px) {
+    .sign-in-container{
+        padding: 1.5em;
+        margin-top: 60px;
+    }
+    input[type=password],
+    input[type=email]{
+        width: 250px;
+    }
+}
 
