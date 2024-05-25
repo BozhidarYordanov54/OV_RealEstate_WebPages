@@ -15,6 +15,7 @@
     <link rel="icon" type="image/png" href="images/logo.png" />
     <script src="js/checkInputContent.js"></script>
     <script src="js/burger-button.js" defer></script>
+    <script src="js/show-pass.js" defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Влез</title>
@@ -62,19 +63,34 @@
           <h2>Влез в профила си</h2>
           <form class="sign-in-form" action="">
             <div class="input-wrapper">
-              <input type="email" name="mail" id="mail" class="input-text" />
+              <input
+                type="email"
+                name="mail"
+                id="mail"
+                class="input-text"
+                required
+              />
               <label for="mail">Имейл</label>
             </div>
             <div class="input-wrapper">
-              <input type="password" name="pass" id="pass" class="input-text" />
+              <input
+                type="password"
+                name="pass"
+                id="pass"
+                class="input-text"
+                required
+              />
               <label for="pass">Парола</label>
+              <button class="show-pass">
+                <i class="fa-regular fa-eye"></i>
+              </button>
             </div>
             <div class="additional-options">
               <div>
                 <input type="checkbox" id="remember-me" />
                 <label for="remember-me">Запомни ме</label>
               </div>
-              <a href="#">Регистрирай се</a>
+              <a href="#">Регистрирай се?</a>
             </div>
             <div class="consent">
               <input type="checkbox" id="consent" />
