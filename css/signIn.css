@@ -69,6 +69,14 @@ input{
 .btn-sign-in:focus i{
     animation: signInArrow 0.5s alternate infinite;
 }
+
+.btn-sign-in:hover,
+.btn-sign-in:focus,
+.alt-sign-in:hover,
+.alt-sign-in:focus{
+    background-image: linear-gradient(rgb(0 0 0/10%) 0 0);
+}
+
 .sign-in-form{
     padding-top: 1.5em;
     display: flex;
