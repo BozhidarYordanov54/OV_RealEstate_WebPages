@@ -60,7 +60,7 @@
     <main>
       <div class="sign-in-container-wrapper">
         <div class="sign-in-container">
-          <h2>Влез в профила си</h2>
+          <h2>Регистритрай се</h2>
           <form class="sign-in-form" action="">
             <div class="input-wrapper">
               <input
@@ -85,18 +85,24 @@
                 <i class="fa-regular fa-eye"></i>
               </button>
             </div>
-            <div class="additional-options">
-              <div>
-                <input type="checkbox" id="remember-me" />
-                <label for="remember-me">Запомни ме</label>
-              </div>
-              <a href="#">Регистрирай се?</a>
+            <div class="input-wrapper">
+              <input
+                type="password"
+                name="pass"
+                id="confirm-password"
+                class="input-text input-password"
+                required
+              />
+              <label for="pass">Потвърди паролата</label>
+              <button class="show-pass" data-target="confirm-password">
+                <i class="fa-regular fa-eye"></i>
+              </button>
             </div>
             <div class="consent">
-              <input type="checkbox" id="consent" />
-              <label for="consent">Запознах се с общите условия</label>
+              <input type="checkbox" id="consent" required />
+              <label for="consent">*Запознах се с общите условия</label>
             </div>
-            <button class="btn-sign-in">Вход</button>
+            <button class="btn-sign-in">Регистрация</button>
           </form>
           <div class="alt-sign-in-opts">
             <a class="alt-sign-in google-opt" href="#"
