@@ -3,29 +3,29 @@
     --floating-label-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     --light-gray: #646464;
 
-    --price-call-color: #659df1;
+    --price-call-color: #3d485d;
     --price-call-color-second: #ffffff;
 
     --more-details-bg: #efefef59;
     --information-list-border-color: rgb(117, 117, 117);
-    --proprty-features-color: #659df1;
-    --property-type-color: #eeb3a7;
-    --small-heading-color: #ed816b;
-    --big-headeing-color: #659df1;
+    --proprty-features-color: #b9a698;;
+    --property-type-color: #b9a698;
+    --small-heading-color: #b9a698;;
+    --big-headeing-color: #3d485d;
     --card-color: #4b545b;
     --main-property-text-color: #8c8c8d;
     --listing-floating-info-color: #4b545b;
 
     --broker-contacts-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     --broker-specialization-color: #aeaeae;
-    --btn-contact-bg: #659df1;
-    --broker-card-color: #659df1;
+    --btn-contact-bg: #4b545b;
+    --broker-card-color: #4b545b;
 
-    --container-header-color: #ed816b;
+    --container-header-color: #b9a698;;
 
     --label-color: #efefef;
 
-    --expand-btn-color: #659df1;
+    --expand-btn-color: #3d485d;
 
     --listing-feature-border-color: gray;
 }
@@ -342,7 +342,7 @@
 .listing-presentation-heading{
     font-size: 2em;
     font-weight: 600;
-    color: #659df1;
+    color: var(--big-headeing-color);
     text-align: center;
 }
 
