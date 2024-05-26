@@ -1,3 +1,6 @@
+:root{
+    --accent-color: #b09480;
+}
 *::-webkit-scrollbar{
     width: 5px;
     height: 5px;
