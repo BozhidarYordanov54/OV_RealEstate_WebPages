@@ -35,7 +35,7 @@ html{
 .small-heading{
     font-size: 14px;
     letter-spacing: 2px;
-    color: rgb(255, 136, 0);
+    color: var(--accent-color);
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -50,7 +50,7 @@ html{
     list-style-type: none;
 }
 .fa-arrow-right{
-    color: rgb(255, 136, 0);
+    color: var(--accent-color);
     margin-left: 5px;
     transition: transform 0.2s ease;
 }
