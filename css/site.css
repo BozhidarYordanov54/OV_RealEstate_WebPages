@@ -172,6 +172,10 @@ textarea:focus + label{
     gap: 1rem;
 }
 
+input{
+    background: none;
+}
+
 input[type="radio"]{
     display: none;
 }

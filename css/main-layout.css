@@ -1,5 +1,7 @@
 :root{
-    --header-border-color: #000;
+    --header-border-color: #b09480;
+    --header-color: #3d485d;
+    --header-decription-color: #b09480;
     --view-more-link-color: #000;
     --more-properties-border-color: #000;
     --more-propertues-bg-hover: #000;
@@ -11,10 +13,10 @@
 
     --swiper-slide-bg: #ffffff;
 
-    --services-bg: #000;
+    --services-bg: #b09480;
     --services-bg-hover: #efefef;
     --services-color: #efefef;
-    --services-color-hover: #000;
+    --services-color-hover: #3d485d;
     --services-border-color: #efefef;
 
     --article-bg: #efefefd0;
@@ -30,14 +32,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1em;
+    gap: 0.8em;
     text-align: center;
 }
 
 .header{
     font-size: 3rem;
     font-weight: 500;
-    border-bottom: 1px solid var(--header-border-color);
+    color: var(--header-color);
+}
+
+.header::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--header-border-color);
+    border-radius: 10px;
 }
 
 .description{
@@ -46,6 +57,7 @@
     font-family: "Pacifico", cursive;
     text-align: center;
     font-style: italic;
+    color: var(--header-decription-color);
 }
 
 .property-feature{

@@ -23,8 +23,9 @@
     --deal-type-color: #659df1;
     --price-background: #3d485d;
     --price-color: #ffffff;
-    --btn-search-color: #000000;
-    --svg-main-color: #b09480;
+    
+    --btn-search-color: #3d485d;
+    --svg-main-color: #3d485d;
 
     --listing-short-info-color: #b09480;
 }
