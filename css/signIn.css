@@ -47,10 +47,10 @@ input{
     padding: 8px;
     border-radius: 5px;
     cursor: pointer;
-    background-color: white;
+    background-color: rgb(117, 121, 118);
     transition: all 0.1s ease-in-out 0ms;
     user-select: none;
-    color: #45525b;
+    color: white;
     font-weight: 600;
 }
 
@@ -74,14 +74,14 @@ input{
 .btn-sign-in:focus,
 .alt-sign-in:hover,
 .alt-sign-in:focus{
-    background-image: linear-gradient(rgb(0 0 0/10%) 0 0);
+    background-image: linear-gradient(rgb(0 0 0/4%) 0 0);
 }
 
 .sign-in-form{
-    padding-top: 1.5em;
+    padding-top: 2em;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 .additional-options{
     display: flex;
@@ -124,6 +124,14 @@ input{
     color: #45525b;
     text-decoration:underline !important;
 }
+input[type=text],
+input[type=email],
+input[type=password]{
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.7em;
+    color: #45525b;
+}
 @keyframes rotateLogo {
     0%{
         transform: rotate(0deg);
@@ -155,5 +163,17 @@ input{
     input[type=email]{
         width: 250px;
     }
+    .sign-in-form{
+        padding-top: 1em;
+        gap: 5px;
+    }
+    input[type=text],
+    input[type=email],
+    input[type=password]{
+    font-size: 1em !important;
+    font-weight: 500 !important;
+    padding: 0.5em !important;
+    color: #45525b;
+}
 }
 
