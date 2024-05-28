@@ -208,9 +208,12 @@ input[type="radio"]:checked + label{
     }
     .team-members{
         grid-template-columns: 1fr;
+        justify-items: center;
         padding: 0;
     }
-
+    .team-member-card{
+        width: 360px;
+    }
     .team-filter{
         flex-direction: column;
         width: 100%;
