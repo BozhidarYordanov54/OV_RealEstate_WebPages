@@ -247,7 +247,7 @@
 .service-card:hover{
     background: var(--services-bg);
     color: var(--services-color);
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .service-card i{
@@ -390,7 +390,7 @@
     .service-card.focus{
         background: var(--services-bg);
         color: var(--services-color);
-        transform: scale(1.05);
+        transform: scale(1.02);
     }
     
 }
