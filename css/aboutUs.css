@@ -133,6 +133,10 @@
     width: fit-content;
 }
 
+.agent-listings i {
+    color: #b09480;
+}
+
 .agent-listings-btn{
     background-color: transparent;
     border: none;
