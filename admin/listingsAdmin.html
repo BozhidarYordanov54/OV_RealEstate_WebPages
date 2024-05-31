@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Обяви</title>
+
+    <link rel="stylesheet" href="/css/typography.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+
+    <script
+      src="https://kit.fontawesome.com/6592283e01.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/js/collapse-properties-filter.js" defer></script>
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+
+    <script src="/js/burger-button.js" defer></script>
+    <script src="/js/checkInputContent.js" defer></script>
+    <script src="/js/nav-movement.js" defer></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="/js/swiper-bundle.min.js" defer></script>
+    <script src="/js/carousel.js" defer></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"
+      defer
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="/css/listings.css" />
+
+    <script src="/js/selectSearch.js" defer></script>
+    <script src="/js/scrollAnimation.js" defer></script>
+  </head>
+  <body>
+    <div class="site">
+      <header class="site-header">
+        <div class="main-nav-wrapper">
+          <div class="main-nav">
+            <div class="logo-wrapper">
+              <a class="logo-link" href="/index.html">
+                <img class="logo" src="/images/logo.png" alt="" />
+              </a>
+            </div>
+            <div class="burger">
+              <button class="hamb" aria-label="Open Menu">
+                <span class="sr-only">Open Menu</span
+                ><svg class="ham" viewBox="0 0 100 100">
+                  <path
+                    class="line top"
+                    d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+                  ></path>
+                  <path class="line middle" d="m 30,50 h 40"></path>
+                  <path
+                    class="line bottom"
+                    d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <nav class="nav-wrapper">
+              <ul class="nav-elements main-list">
+                <li class="nav-element highlighted-element">
+                  <a href="addListing.html">Добави имот</a>
+                </li>
+                <li class="nav-element"><a href="admin.html">Начало</a></li>
+                <li class="nav-element">
+                  <a href="listingsAdmin.html">Имоти</a>
+                </li>
+                <li class="nav-element"><a href="#">Екип</a></li>
+                <li class="nav-element"><a href="#">Блог</a></li>
+                <li class="nav-element">
+                  <a href="/index.html">Начална страница</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="main-wrapper">
+          <div class="listings-filter-container">
+            <div class="filter-section-heading">
+              <h2 class="filter-header">Филтри</h2>
+              <button class="collapse-filters-btn">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="listings-filter-collapsable-wrapper">
+              <div class="inputs-container">
+                <div class="radio-input-wrapper">
+                  <div class="radio-input">
+                    <div class="input-wrapper radio">
+                      <input
+                        type="radio"
+                        name="search-type"
+                        id="buy"
+                        value="buy"
+                        checked
+                      />
+                      <label for="buy">Продажби</label>
+                    </div>
+                    <div class="input-wrapper radio">
+                      <input
+                        type="radio"
+                        name="search-type"
+                        id="rent"
+                        value="rent"
+                      />
+                      <label for="rent">Наеми</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-select-wrapper">
+                  <div class="selection-wrapper">
+                    <div class="input-wrapper">
+                      <i class="fa-solid fa-location-dot"></i>
+                      <select class="town" name="town" id="town">
+                        <option value="">Град/Област</option>
+                        <option value="1">София</option>
+                      </select>
+                    </div>
+                    <span class="vertical-splitter"></span>
+                    <div class="input-wrapper">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <select
+                        class="neighborhood"
+                        name=""
+                        id=""
+                        multiple="multiple"
+                      >
+                        <option value="1">Овча Купел</option>
+                      </select>
+                    </div>
+                    <span class="vertical-splitter"></span>
+                    <div class="input-wrapper">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <select
+                        class="estate-type"
+                        name=""
+                        id=""
+                        multiple="multiple"
+                      >
+                        <option value="1">1-стаен</option>
+                        <option value="2">2-стаен</option>
+                        <option value="3">3-стаен</option>
+                        <option value="4">4-стаен</option>
+                        <option value="5">Многостаен</option>
+                        <option value="6">Мезонет</option>
+                        <option value="7">Къща, Под наем</option>
+                        <option value="8">Офис</option>
+                        <option value="9">Магазин</option>
+                        <option value="10">Склад</option>
+                        <option value="11">Парцел</option>
+                        <option value="12">Гараж/Паркомясто</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="variable-number-input-wrapper">
+                <div class="price-input-container input-container">
+                  <label for="price"
+                    ><i class="fa-solid fa-tag"></i> Цена в €</label
+                  >
+                  <div class="input-fields-container">
+                    <input type="number" placeholder="От" />
+                    <span>-</span>
+                    <input type="number" placeholder="До" />
+                  </div>
+                </div>
+                <div class="floor-number-container input-container">
+                  <label for="floor-number"
+                    ><i class="fa-solid fa-stairs"></i> Етаж</label
+                  >
+                  <div class="input-fields-container">
+                    <input type="number" placeholder="От" />
+                    <span>-</span>
+                    <input type="number" placeholder="До" />
+                  </div>
+                </div>
+                <div class="are-size-container input-container">
+                  <label for="area-size"
+                    ><i
+                      class="fa-solid fa-up-right-and-down-left-from-center"
+                    ></i>
+                    Площ м2</label
+                  >
+                  <div class="input-fields-container">
+                    <input type="number" placeholder="От" />
+                    <span>-</span>
+                    <input type="number" placeholder="До" />
+                  </div>
+                </div>
+              </div>
+              <!-- <label for="construction-type">Vid konstrukciq</label> -->
+              <div class="selection-wrapper">
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-trowel"></i>
+                  <select
+                    class="construction-type"
+                    name="construction-type"
+                    id="construction-type"
+                    multiple="multiple"
+                  >
+                    <option value="none">Тип строителство</option>
+                    <option value="tuhla">Тухла</option>
+                    <option value="panel">Панел</option>
+                    <option value="epk">ЕПК</option>
+                    <option value="greadored">Гредоред</option>
+                  </select>
+                </div>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-chair"></i>
+                  <select class="furnished" name="obzavejdane" id="obzavejdane">
+                    <option value="none">Обзавеждане</option>
+                    <option value="true">Обзаведен</option>
+                    <option value="false">Необзаведен</option>
+                  </select>
+                </div>
+                <!-- <label for="otoplenie">Otoplenie</label> -->
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-temperature-three-quarters"></i>
+                  <select class="heating" name="otoplenie" id="otoplenie">
+                    <option value="none">Отопление</option>
+                    <option value="tec">ТЕЦ</option>
+                    <option value="electric">Ток</option>
+                    <option value="local">Газ</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="search-button btn-submit">
+                Приложи<i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
+          <div class="listings-wrapper">
+            <div class="listings-container">
+              <a href="#" class="listing">
+                <p class="offer top">Топ оферта</p>
+                <div class="listing-card-images">
+                  <div class="swiper listing-card-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="/images/Dormitory02.jpg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/images/Dormitory03.jpg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/images/Dormitory06.jpg" alt="" />
+                      </div>
+                      <!-- <div class="swiper-slide">Slide 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div> -->
+                    </div>
+                    <div class="swiper-button-next">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+                <div class="listing-info-wrapper">
+                  <div class="listing-location">
+                    <p class="property-category">Къща, Под наем</p>
+                    <div class="price-location-wrapper">
+                      <div class="location">
+                        <h3 class="property-location">Овча Купел, София</h3>
+                      </div>
+                      <div class="price">
+                        <p class="price-tag">500 € / месец</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="listing-short-info">
+                    <p class="area short-info">
+                      <i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                        aria-hidden="true"
+                      ></i
+                      >100m2
+                    </p>
+                    <p class="baths short-info">
+                      <i class="fa-solid fa-bath"></i>2 бани
+                    </p>
+                    <p class="rooms short-info">
+                      <i class="fa-solid fa-door-open" aria-hidden="true"></i>5
+                      стаен
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="listing">
+                <p class="offer top">Топ оферта</p>
+                <div class="listing-card-images">
+                  <div class="swiper listing-card-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="/images/property1.jpeg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/images/property2.jpeg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/images/property3.jpeg" alt="" />
+                      </div>
+                      <!-- <div class="swiper-slide">Slide 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div> -->
+                    </div>
+                    <div class="swiper-button-next">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+                <div class="listing-info-wrapper">
+                  <div class="listing-location">
+                    <p class="property-category">Къща, Под наем</p>
+                    <div class="price-location-wrapper">
+                      <div class="deal-location">
+                        <h3 class="property-location">Овча Купел</h3>
+                      </div>
+                      <div class="price-wrapper">
+                        <p class="price">500€ / месец</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="listing-short-info">
+                    <p class="area short-info">
+                      <i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                        aria-hidden="true"
+                      ></i
+                      >100m2
+                    </p>
+                    <p class="baths short-info">
+                      <i class="fa-solid fa-bath"></i>2 бани
+                    </p>
+                    <p class="rooms short-info">
+                      <i class="fa-solid fa-door-open" aria-hidden="true"></i>5
+                      стаен
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="listing">
+                <p class="offer top">Топ оферта</p>
+                <div class="listing-card-images">
+                  <div class="swiper listing-card-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="/images/property3.jpeg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/images/property2.jpeg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/images/property3.jpeg" alt="" />
+                      </div>
+                      <!-- <div class="swiper-slide">Slide 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div> -->
+                    </div>
+                    <div class="swiper-button-next">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+                <div class="listing-info-wrapper">
+                  <div class="listing-location">
+                    <p class="property-category">Къща, Под наем</p>
+                    <div class="price-location-wrapper">
+                      <div class="deal-location">
+                        <h3 class="property-location">Овча Купел</h3>
+                      </div>
+                      <div class="price-wrapper">
+                        <p class="price">500€ / месец</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="listing-short-info">
+                    <p class="area short-info">
+                      <i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                        aria-hidden="true"
+                      ></i
+                      >100m2
+                    </p>
+                    <p class="baths short-info">
+                      <i class="fa-solid fa-bath"></i>2 бани
+                    </p>
+                    <p class="rooms short-info">
+                      <i class="fa-solid fa-door-open" aria-hidden="true"></i>5
+                      стаен
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="listing">
+                <p class="offer top">Топ оферта</p>
+                <div class="listing-card-images">
+                  <div class="swiper listing-card-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="/images/property2.jpeg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/images/property2.jpeg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/images/property3.jpeg" alt="" />
+                      </div>
+                      <!-- <div class="swiper-slide">Slide 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div> -->
+                    </div>
+                    <div class="swiper-button-next">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+                <div class="listing-info-wrapper">
+                  <div class="listing-location">
+                    <p class="property-category">Къща, Под наем</p>
+                    <div class="price-location-wrapper">
+                      <div class="deal-location">
+                        <h3 class="property-location">Овча Купел</h3>
+                      </div>
+                      <div class="price-wrapper">
+                        <p class="price">500€ / месец</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="listing-short-info">
+                    <p class="area short-info">
+                      <i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                        aria-hidden="true"
+                      ></i
+                      >100m2
+                    </p>
+                    <p class="baths short-info">
+                      <i class="fa-solid fa-bath"></i>2 бани
+                    </p>
+                    <p class="rooms short-info">
+                      <i class="fa-solid fa-door-open" aria-hidden="true"></i>5
+                      стаен
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="listing">
+                <p class="offer deposit">Депозит</p>
+                <div class="listing-card-images">
+                  <div class="swiper listing-card-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="/images/Dormitory15.jpg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/images/property2.jpeg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/images/property3.jpeg" alt="" />
+                      </div>
+                      <!-- <div class="swiper-slide">Slide 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div> -->
+                    </div>
+                    <div class="swiper-button-next">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+                <div class="listing-info-wrapper">
+                  <div class="listing-location">
+                    <p class="property-category">Къща, Под наем</p>
+                    <div class="price-location-wrapper">
+                      <div class="deal-location">
+                        <h3 class="property-location">Овча Купел</h3>
+                      </div>
+                      <div class="price-wrapper">
+                        <p class="price">500€ / месец</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="listing-short-info">
+                    <p class="area short-info">
+                      <i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                        aria-hidden="true"
+                      ></i
+                      >100m2
+                    </p>
+                    <p class="baths short-info">
+                      <i class="fa-solid fa-bath"></i>2 бани
+                    </p>
+                    <p class="rooms short-info">
+                      <i class="fa-solid fa-door-open" aria-hidden="true"></i>5
+                      стаен
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="listing">
+                <p class="offer new">Нов</p>
+                <div class="listing-card-images">
+                  <div class="swiper listing-card-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="/images/property1.jpeg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/images/property2.jpeg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/images/property3.jpeg" alt="" />
+                      </div>
+                      <!-- <div class="swiper-slide">Slide 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div> -->
+                    </div>
+                    <div class="swiper-button-next">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+                <div class="listing-info-wrapper">
+                  <div class="listing-location">
+                    <p class="property-category">Къща, Под наем</p>
+                    <div class="price-location-wrapper">
+                      <div class="deal-location">
+                        <h3 class="property-location">Овча Купел</h3>
+                      </div>
+                      <div class="price-wrapper">
+                        <p class="price">500€ / месец</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="listing-short-info">
+                    <p class="area short-info">
+                      <i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                        aria-hidden="true"
+                      ></i
+                      >100m2
+                    </p>
+                    <p class="baths short-info">
+                      <i class="fa-solid fa-bath"></i>2 бани
+                    </p>
+                    <p class="rooms short-info">
+                      <i class="fa-solid fa-door-open" aria-hidden="true"></i>5
+                      стаен
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="listing">
+                <p class="offer no-commision">Без комисионна</p>
+                <div class="listing-card-images">
+                  <div class="swiper listing-card-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="/images/property1.jpeg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/images/property2.jpeg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/images/property3.jpeg" alt="" />
+                      </div>
+                      <!-- <div class="swiper-slide">Slide 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div> -->
+                    </div>
+                    <div class="swiper-button-next">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+                <div class="listing-info-wrapper">
+                  <div class="listing-location">
+                    <p class="property-category">Къща, Под наем</p>
+                    <div class="price-location-wrapper">
+                      <div class="deal-location">
+                        <h3 class="property-location">Овча Купел</h3>
+                      </div>
+                      <div class="price-wrapper">
+                        <p class="price">500€ / месец</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="listing-short-info">
+                    <p class="area short-info">
+                      <i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                        aria-hidden="true"
+                      ></i
+                      >100m2
+                    </p>
+                    <p class="baths short-info">
+                      <i class="fa-solid fa-bath"></i>2 бани
+                    </p>
+                    <p class="rooms short-info">
+                      <i class="fa-solid fa-door-open" aria-hidden="true"></i>5
+                      стаен
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="listing">
+                <p class="offer top">Топ Оферта</p>
+                <div class="listing-card-images">
+                  <div class="swiper listing-card-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="/images/property1.jpeg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/images/property2.jpeg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/images/property3.jpeg" alt="" />
+                      </div>
+                      <!-- <div class="swiper-slide">Slide 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div> -->
+                    </div>
+                    <div class="swiper-button-next">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+                <div class="listing-info-wrapper">
+                  <div class="listing-location">
+                    <p class="property-category">Къща, Под наем</p>
+                    <div class="price-location-wrapper">
+                      <div class="deal-location">
+                        <h3 class="property-location">Овча Купел</h3>
+                      </div>
+                      <div class="price-wrapper">
+                        <p class="price">500€ / месец</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="listing-short-info">
+                    <p class="area short-info">
+                      <i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                        aria-hidden="true"
+                      ></i
+                      >100m2
+                    </p>
+                    <p class="baths short-info">
+                      <i class="fa-solid fa-bath"></i>2 бани
+                    </p>
+                    <p class="rooms short-info">
+                      <i class="fa-solid fa-door-open" aria-hidden="true"></i>5
+                      стаен
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="listing">
+                <p class="offer sold">Продаден</p>
+                <div class="listing-card-images">
+                  <div class="swiper listing-card-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="/images/property1.jpeg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/images/property2.jpeg" alt="" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="/images/property3.jpeg" alt="" />
+                      </div>
+                      <!-- <div class="swiper-slide">Slide 4</div>
+                      <div class="swiper-slide">Slide 5</div>
+                      <div class="swiper-slide">Slide 6</div>
+                      <div class="swiper-slide">Slide 7</div>
+                      <div class="swiper-slide">Slide 8</div>
+                      <div class="swiper-slide">Slide 9</div> -->
+                    </div>
+                    <div class="swiper-button-next">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                      <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+                <div class="listing-info-wrapper">
+                  <div class="listing-location">
+                    <p class="property-category">Къща, Под наем</p>
+                    <div class="price-location-wrapper">
+                      <div class="deal-location">
+                        <h3 class="property-location">Овча Купел</h3>
+                      </div>
+                      <div class="price-wrapper">
+                        <p class="price">500€ / месец</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="listing-short-info">
+                    <p class="area short-info">
+                      <i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                        aria-hidden="true"
+                      ></i
+                      >100m2
+                    </p>
+                    <p class="baths short-info">
+                      <i class="fa-solid fa-bath"></i>2 бани
+                    </p>
+                    <p class="rooms short-info">
+                      <i class="fa-solid fa-door-open" aria-hidden="true"></i>5
+                      стаен
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

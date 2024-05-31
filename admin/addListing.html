@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Добави Имот</title>
+
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/main-layout.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/typography.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/carousel.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="/css/addListing.css" />
+
+    <script
+      src="https://kit.fontawesome.com/6592283e01.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <script src="/js/burger-button.js" defer></script>
+    <script src="/js/checkInputContent.js" defer></script>
+    <script src="/js/swiper-bundle.min.js" defer></script>
+    <script src="/js/carousel.js" defer></script>
+    <script src="/js/focus-element.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="main-nav-wrapper">
+        <div class="main-nav">
+          <div class="logo-wrapper">
+            <a class="logo-link" href="/index.html">
+              <img class="logo" src="/images/logo.png" alt="" />
+            </a>
+          </div>
+          <div class="burger">
+            <button class="hamb" aria-label="Open Menu">
+              <span class="sr-only">Open Menu</span
+              ><svg class="ham" viewBox="0 0 100 100">
+                <path
+                  class="line top"
+                  d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+                ></path>
+                <path class="line middle" d="m 30,50 h 40"></path>
+                <path
+                  class="line bottom"
+                  d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <nav class="nav-wrapper">
+            <ul class="nav-elements main-list">
+              <li class="nav-element"><a href="admin.html">Начало</a></li>
+              <li class="nav-element">
+                <a href="listingsAdmin.html">Имоти</a>
+              </li>
+              <li class="nav-element"><a href="#">Екип</a></li>
+              <li class="nav-element"><a href="#">Блог</a></li>
+              <li class="nav-element">
+                <a href="/index.html">Начална страница</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="form-container">
+        <form action="#">
+          <div class="input-wrapper">
+            <label for="photos">Upload Photos:</label>
+            <input
+              type="file"
+              id="photos"
+              name="photos[]"
+              multiple
+              accept="image/*"
+            />
+          </div>
+          <div class="input-wrapper">
+            <label for="listing-type">Тип обява</label>
+            <select name="listing-type" id="listing-type">
+              <option value="rent">Под наем</option>
+              <option value="sale">Продава</option>
+            </select>
+          </div>
+          <div class="input-wrapper">
+            <label for="property-type">Тип имот</label>
+            <select id="property-type" name="property-type">
+              <option value="1">1-стаен</option>
+              <option value="2">2-стаен</option>
+              <option value="3">3-стаен</option>
+              <option value="4">4-стаен</option>
+              <option value="5">Многостаен</option>
+              <option value="6">Мезонет</option>
+              <option value="7">Къща, Под наем</option>
+              <option value="8">Офис</option>
+              <option value="9">Магазин</option>
+              <option value="10">Склад</option>
+              <option value="11">Парцел</option>
+              <option value="12">Гараж/Паркомясто</option>
+            </select>
+          </div>
+          <div class="input-wrapper">
+            <label for="heating">Отопление:</label>
+            <select name="heating" id="heating">
+              <option value="none">Отопление</option>
+              <option value="tec">ТЕЦ</option>
+              <option value="electric">Ток</option>
+              <option value="local">Газ</option>
+            </select>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="city">Град</label>
+            <select name="city" id="city">
+              <option value="sofia">София</option>
+            </select>
+          </div>
+          <div class="input-wrapper">
+            <label for="neighbourhood">Квартал</label>
+            <select name="neighbourhood" id="neighbourhood">
+              <option value="ovchaKupel">Овча Купел</option>
+            </select>
+          </div>
+
+          <div class="input-wrapper">
+            <label>Особености</label>
+
+            <label for="garage"
+              >Гараж<input
+                type="checkbox"
+                id="garage"
+                name="features"
+                value="garage"
+            /></label>
+
+            <label for="pool"
+              >Басейн<input
+                type="checkbox"
+                id="pool"
+                name="features"
+                value="pool"
+            /></label>
+
+            <label for="garden"
+              >Двор<input
+                type="checkbox"
+                id="garden"
+                name="features"
+                value="garden"
+            /></label>
+
+            <label for="basement"
+              >Мазе<input
+                type="checkbox"
+                id="basement"
+                name="features"
+                value="basement"
+            /></label>
+          </div>
+          <div class="input-wrapper">
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" required />
+          </div>
+
+          <button type="submit">Submit Listing</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

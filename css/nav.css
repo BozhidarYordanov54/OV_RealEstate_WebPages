@@ -142,7 +142,7 @@ button{
     text-decoration: none;
 }
 
-.nav-element a:after,
+.nav-element:not(.highlighted-element) a:after,
 .login-element a:after{    
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
@@ -153,7 +153,17 @@ button{
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
-
+.highlighted-element {
+    border: 2px solid var(--nav-element-after-bg);
+    padding: 0.3em 0.6em;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+}
+.highlighted-element:hover,
+.highlighted-element:focus,
+.highlighted-element:active{
+    transform: scale(0.95);
+}
 .nav-elements a:not(.logo-link):hover:after,
 .login-element a:hover:after{ 
     width: 100%; 
