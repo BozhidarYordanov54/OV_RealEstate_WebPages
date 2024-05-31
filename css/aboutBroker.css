@@ -224,6 +224,14 @@ html{
     letter-spacing: 0.1em;
 }
 
+.broker-contacts-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    gap: 2em;
+}
+
 .deal-type{
     text-transform: uppercase;
     font-size: 0.9em;
@@ -282,10 +290,7 @@ html{
     /* flex-direction: column; */
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-.agent-img{
-    /* min-width: 40%; */
-    /* height: 70%; */
-}
+
 .agent-img img{
     width: 100%;
     object-fit: cover;
@@ -296,17 +301,38 @@ html{
     padding: 1em;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    justify-content: space-evenly;
 }
 .agent-intro{
     text-align: justify;
 }
+.agent-mail,
+.agent-phone{
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #3d485d;
+    transition: all 0.2s ease-in-out;
+}
+
+.agent-mail:hover,
+.agent-phone:hover{
+    color: #b09480;
+    transform: scale(1.1);
+}
 .small-heading{
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 2px;
     color: var(--accent-color);
     text-transform: uppercase;
     font-weight: 600;
+}
+.agent-name{
+    font-size: 32px;
 }
 .all-listings-header{
     width: fit-content;
@@ -324,7 +350,6 @@ html{
     }
     .agent-img{
         height: 500px;
-        border: 1px solid red;
     }
 }
 @media(max-width: 1050px){ 
