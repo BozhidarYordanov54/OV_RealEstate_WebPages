@@ -12,7 +12,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../images/main-bg2.jpg') no-repeat center center/cover;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 20%),
+                url('../images/test.jpg') no-repeat center bottom/cover;
+    filter: brightness(1);
     height: 100vh;
     z-index: -1;
     object-fit: cover;

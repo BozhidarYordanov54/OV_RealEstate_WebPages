@@ -1,6 +1,6 @@
 :root{
     --footer-bg: #f4f4f4;
-    --footer-text-color: #333;
+    --footer-text-color: #3d485d;
     --footer-article-bg: #eeeeee;
     --footer-border-color: #e4e4e4;
 }
@@ -121,6 +121,7 @@
 
 .fa-solid.fa-envelope-open-text{
     font-size: 5rem;
+    color: var(--footer-text-color);
 }
 
 .newsletter-text{
