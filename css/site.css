@@ -194,12 +194,13 @@ input[type="radio"] + label{
     background: transparent;
     border: 2px solid #efefef;
     color: #fff;
+    font-weight: 500;
     transition: color 0.2s ease-in-out;
 }
 
 input[type="radio"]:checked + label{
     background: #efefef;
-    color: #405a5e;
+    color: #3d485d;
 }
 
 .vertical-splitter{
@@ -221,6 +222,8 @@ select{
     min-width: 200px;
     border: none;
     outline: none;
+    color: #3d485d;
+    font-weight: 500;
     background: transparent;
     font-size: 1em;
 }
@@ -231,10 +234,10 @@ select{
     align-items: center;
     gap: 0.5em;
     padding: 1em;
-    color: #000000;
+    color: #3d485d;
     background: #efefef;
     font-weight: bold;
-    font-size: 0.8em;
+    font-size: 0.9em;
     border: none;
     border-radius: 0.3rem;
     cursor: pointer;
@@ -397,11 +400,6 @@ select{
 @media(max-width: 950px)
 {
     textarea{
-        width: 100%;
-    }
-
-    input[type=text],
-    input[type=tel]{
         width: 100%;
     }
 }
