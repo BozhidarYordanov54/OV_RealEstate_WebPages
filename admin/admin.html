@@ -29,6 +29,19 @@
     <script src="/js/swiper-bundle.min.js" defer></script>
     <script src="/js/carousel.js" defer></script>
     <script src="/js/focus-element.js" defer></script>
+    <script src="/js/selectSearch.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"
+      defer
+    ></script>
+
+    <link rel="stylesheet" href="../css/admin-css/admin-main.css">
   </head>
   <body>
     <header class="site-header">
@@ -58,9 +71,6 @@
           <nav class="nav-wrapper">
             <ul class="nav-elements main-list">
               <li class="nav-element"><a href="admin.html">Начало</a></li>
-              <li class="nav-element">
-                <a href="listingsAdmin.html">Имоти</a>
-              </li>
               <li class="nav-element"><a href="#">Екип</a></li>
               <li class="nav-element"><a href="#">Блог</a></li>
               <li class="nav-element">
@@ -71,5 +81,408 @@
         </div>
       </div>
     </header>
+    <main>
+      <form class="admin-filters" action="">
+        <div class="radio-input-wrapper">
+          <div class="radio-input">
+            <div class="input-wrapper radio">
+              <input
+                type="radio"
+                name="search-type"
+                id="buy"
+                value="buy"
+                checked
+              />
+              <label for="buy">Продажби</label>
+            </div>
+            <div class="input-wrapper radio">
+              <input
+                type="radio"
+                name="search-type"
+                id="rent"
+                value="rent"
+              />
+              <label for="rent">Наеми</label>
+            </div>
+          </div>
+        </div>
+        <div class="selection-input-wrapper">
+          <div class="filter-select-wrapper">
+            <div class="selection-wrapper">
+              <div class="input-wrapper">
+                <i class="fa-solid fa-location-dot"></i>
+                <select class="town" name="town" id="town">
+                  <option value="">Град/Област</option>
+                  <option value="1">София</option>
+                </select>
+              </div>
+              <span class="vertical-splitter"></span>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <select
+                  class="neighborhood"
+                  name=""
+                  id=""
+                  multiple="multiple"
+                >
+                  <option value="1">Овча Купел</option>
+                </select>
+              </div>
+              <span class="vertical-splitter"></span>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <select
+                  class="estate-type"
+                  name=""
+                  id=""
+                  multiple="multiple"
+                >
+                  <option value="1">1-стаен</option>
+                  <option value="2">2-стаен</option>
+                  <option value="3">3-стаен</option>
+                  <option value="4">4-стаен</option>
+                  <option value="5">Многостаен</option>
+                  <option value="6">Мезонет</option>
+                  <option value="7">Къща, Под наем</option>
+                  <option value="8">Офис</option>
+                  <option value="9">Магазин</option>
+                  <option value="10">Склад</option>
+                  <option value="11">Парцел</option>
+                  <option value="12">Гараж/Паркомясто</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="filter-selection-wrapper">
+            <div class="selection-wrapper">
+              <div class="input-wrapper">
+                <i class="fa-solid fa-trowel"></i>
+                <select
+                  class="construction-type"
+                  name="construction-type"
+                  id="construction-type"
+                  multiple="multiple"
+                >
+                  <option value="none">Тип строителство</option>
+                  <option value="tuhla">Тухла</option>
+                  <option value="panel">Панел</option>
+                  <option value="epk">ЕПК</option>
+                  <option value="greadored">Гредоред</option>
+                </select>
+              </div>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-chair"></i>
+                <select class="furnished" name="obzavejdane" id="obzavejdane">
+                  <option value="none">Обзавеждане</option>
+                  <option value="true">Обзаведен</option>
+                  <option value="false">Необзаведен</option>
+                </select>
+              </div>
+              <!-- <label for="otoplenie">Otoplenie</label> -->
+              <div class="input-wrapper">
+                <i class="fa-solid fa-temperature-three-quarters"></i>
+                <select class="heating" name="otoplenie" id="otoplenie">
+                  <option value="none">Отопление</option>
+                  <option value="tec">ТЕЦ</option>
+                  <option value="electric">Ток</option>
+                  <option value="local">Газ</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="variable-number-input-wrapper">
+        <div class="price-input-container input-container">
+          <label for="price"
+            ><i class="fa-solid fa-tag"></i> Цена в €</label
+          >
+          <div class="input-fields-container">
+            <input type="number" placeholder="От" />
+            <input type="number" placeholder="До" />
+          </div>
+        </div>
+        <div class="floor-number-container input-container">
+          <label for="floor-number"
+            ><i class="fa-solid fa-stairs"></i> Етаж</label
+          >
+          <div class="input-fields-container">
+            <input type="number" placeholder="От" />
+            <input type="number" placeholder="До" />
+          </div>
+        </div>
+        <div class="are-size-container input-container">
+          <label for="area-size"
+            ><i
+              class="fa-solid fa-up-right-and-down-left-from-center"
+            ></i>
+            Площ м2</label
+          >
+          <div class="input-fields-container">
+            <input type="number" placeholder="От" />
+            <input type="number" placeholder="До" />
+          </div>
+        </div>
+      </div>
+      <!-- <label for="construction-type">Vid konstrukciq</label> -->
+      
+      <button type="submit" class="search-button btn-submit">
+        Приложи
+      </button>
+      </form>
+      <section class="add-property">
+        <a href="addListing.html"><i class="fa-solid fa-plus"></i>Добави имот</a>
+      </section>
+      <section class="admin-listings">
+        <div class="listings-wrapper">
+          <div class="listings-container">
+            <div class="listing">
+              <div class="listing-card-images">
+                <div class="swiper listing-card-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="../images/Dormitory02.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../images/Dormitory03.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../images/Dormitory06.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide"><img src="../images/Dormitory01.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/Dormitory06.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/Dormitory10.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/Dormitory11.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/Dormitory17.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/Dormitory15.jpg" alt=""></div>
+                  </div>
+                  <div class="swiper-button-next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <div class="listing-info-wrapper">
+                <div class="listing-location">
+                  <p class="property-category">Къща, Под наем</p>
+                  <div class="price-location-wrapper">
+                    <div class="location">
+                      <h3 class="property-location">ул. „Монтевидео“ 13, ж.к Овча Купел, София</h3>
+                      <h3 class="property-location"></h3>
+                    </div>
+                    <div class="price">
+                      <p class="price-tag">500 € / месец</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="listing-short-info">
+                  <ul class="property-features">
+                    <li class="bed-count">
+                      <div class="info-wrapper">
+                        <p class="label-info"><i class="fa-solid fa-bed"></i>Спални</p>
+                        <p>3</p>
+                      </div>
+                    </li>
+                    <li class="bathrooms-count">
+                      <div class="info-wrapper">
+                        <p class="label-info"><i class="fa-solid fa-bath"></i>Бани</p>
+                        <p>2</p>
+                      </div>
+                    </li>
+                    <li class="room-count">
+                      <div class="info-wrapper">
+                        <p class="label-info">
+                          <i class="fa-solid fa-door-open"></i>Стаи
+                        </p>
+                        <p>5</p>
+                      </div>
+                    </li>
+                    <li class="property-heating">
+                      <div class="info-wrapper">
+                        <p class="label-info">
+                          <i class="fa-solid fa-temperature-arrow-up"></i>Отопление
+                        </p>
+                        <p>Централно</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="property-features">
+                    <li class="bed-count">
+                      <div class="info-wrapper">
+                        <p class="label-info">
+                          <i class="fa-solid fa-calendar"></i>Построен през
+                        </p>
+                        <p>2015 г.</p>
+                      </div>
+                    </li>
+                    <li class="bathrooms-count">
+                      <div class="info-wrapper">
+                        <p class="label-info"><i class="fa-solid fa-stairs"></i>Етаж</p>
+                        <p>2 от 10</p>
+                      </div>
+                    </li>
+                    <li class="room-count">
+                      <div class="info-wrapper">
+                        <p class="label-info">
+                          <i class="fa-solid fa-trowel"></i>Строителство
+                        </p>
+                        <p>Тухла</p>
+                      </div>
+                    </li>
+                    <li class="property-volume">
+                      <div class="info-wrapper">
+                        <p class="label-info"><i class="fa-solid fa-ruler"></i>Площ</p>
+                        <p>1000 m2</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="listing-description-wrapper">
+                    <p class="listing-description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur. Ut perferendis, adipisci, voluptatibus tenetur accusantium odio consectetur, earum quisquam dignissimos architecto maiores repellat ducimus sapiente expedita sequi facilis ad!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur. Ut perferendis, adipisci, voluptatibus tenetur accusantium odio consectetur, earum quisquam dignissimos architecto maiores repellat ducimus sapiente expedita sequi facilis ad!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur. Ut perferendis, adipisci, voluptatibus tenetur accusantium odio consectetur, earum quisquam dignissimos architecto maiores repellat ducimus sapiente expedita sequi facilis ad!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur. Ut perferendis, adipisci, voluptatibus tenetur accusantium odio consectetur, earum quisquam dignissimos architecto maiores repellat ducimus sapiente expedita sequi facilis ad!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur. Ut perferendis, adipisci, voluptatibus tenetur accusantium odio consectetur, earum quisquam dignissimos architecto maiores repellat ducimus sapiente expedita sequi facilis ad!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur. Ut perferendis, adipisci, voluptatibus tenetur accusantium odio consectetur, earum quisquam dignissimos architecto maiores repellat ducimus sapiente expedita sequi facilis ad!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur. Ut perferendis, adipisci, voluptatibus tenetur accusantium odio consectetur, earum quisquam dignissimos architecto maiores repellat ducimus sapiente expedita sequi facilis ad!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur. Ut perferendis, adipisci, voluptatibus tenetur accusantium odio consectetur, earum quisquam dignissimos architecto maiores repellat ducimus sapiente expedita sequi facilis ad!
+                    </p>
+                  </div>
+                </div>
+                <div class="listing-actions">
+                  <a class="listing-see-more btn" href="#">Виж повече за тази обява</a>
+                  <a class="edit-btn btn" href="#">Редакция</a>
+                  <a class="delete-btn btn" href="#">Архивирай</a>
+                </div>
+              </div>
+            </div>
+            <div class="listing">
+              <div class="listing-card-images">
+                <div class="swiper listing-card-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="../images/Dormitory02.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../images/Dormitory03.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="../images/Dormitory06.jpg" alt="" />
+                    </div>
+                    <div class="swiper-slide"><img src="../images/Dormitory01.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/Dormitory06.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/Dormitory10.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/Dormitory11.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/Dormitory17.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="../images/Dormitory15.jpg" alt=""></div>
+                  </div>
+                  <div class="swiper-button-next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <div class="listing-info-wrapper">
+                <div class="listing-location">
+                  <p class="property-category">Къща, Под наем</p>
+                  <div class="price-location-wrapper">
+                    <div class="location">
+                      <h3 class="property-location">ул. „Монтевидео“ 13, ж.к Овча Купел, София</h3>
+                      <h3 class="property-location"></h3>
+                    </div>
+                    <div class="price">
+                      <p class="price-tag">500 € / месец</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="listing-short-info">
+                  <ul class="property-features">
+                    <li class="bed-count">
+                      <div class="info-wrapper">
+                        <p class="label-info"><i class="fa-solid fa-bed"></i>Спални</p>
+                        <p>3</p>
+                      </div>
+                    </li>
+                    <li class="bathrooms-count">
+                      <div class="info-wrapper">
+                        <p class="label-info"><i class="fa-solid fa-bath"></i>Бани</p>
+                        <p>2</p>
+                      </div>
+                    </li>
+                    <li class="room-count">
+                      <div class="info-wrapper">
+                        <p class="label-info">
+                          <i class="fa-solid fa-door-open"></i>Стаи
+                        </p>
+                        <p>5</p>
+                      </div>
+                    </li>
+                    <li class="property-heating">
+                      <div class="info-wrapper">
+                        <p class="label-info">
+                          <i class="fa-solid fa-temperature-arrow-up"></i>Отопление
+                        </p>
+                        <p>Централно</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="property-features">
+                    <li class="bed-count">
+                      <div class="info-wrapper">
+                        <p class="label-info">
+                          <i class="fa-solid fa-calendar"></i>Построен през
+                        </p>
+                        <p>2015 г.</p>
+                      </div>
+                    </li>
+                    <li class="bathrooms-count">
+                      <div class="info-wrapper">
+                        <p class="label-info"><i class="fa-solid fa-stairs"></i>Етаж</p>
+                        <p>2 от 10</p>
+                      </div>
+                    </li>
+                    <li class="room-count">
+                      <div class="info-wrapper">
+                        <p class="label-info">
+                          <i class="fa-solid fa-trowel"></i>Строителство
+                        </p>
+                        <p>Тухла</p>
+                      </div>
+                    </li>
+                    <li class="property-volume">
+                      <div class="info-wrapper">
+                        <p class="label-info"><i class="fa-solid fa-ruler"></i>Площ</p>
+                        <p>1000 m2</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="listing-description-wrapper">
+                    <p class="listing-description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur. Ut perferendis, adipisci, voluptatibus tenetur accusantium odio consectetur, earum quisquam dignissimos architecto maiores repellat ducimus sapiente expedita sequi facilis ad!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur. Ut perferendis, adipisci, voluptatibus tenetur accusantium odio consectetur, earum quisquam dignissimos architecto maiores repellat ducimus sapiente expedita sequi facilis ad!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur. Ut perferendis, adipisci, voluptatibus tenetur accusantium odio consectetur, earum quisquam dignissimos architecto maiores repellat ducimus sapiente expedita sequi facilis ad!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur. Ut perferendis, adipisci, voluptatibus tenetur accusantium odio consectetur, earum quisquam dignissimos architecto maiores repellat ducimus sapiente expedita sequi facilis ad!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur. Ut perferendis, adipisci, voluptatibus tenetur accusantium odio consectetur, earum quisquam dignissimos architecto maiores repellat ducimus sapiente expedita sequi facilis ad!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur. Ut perferendis, adipisci, voluptatibus tenetur accusantium odio consectetur, earum quisquam dignissimos architecto maiores repellat ducimus sapiente expedita sequi facilis ad!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur. Ut perferendis, adipisci, voluptatibus tenetur accusantium odio consectetur, earum quisquam dignissimos architecto maiores repellat ducimus sapiente expedita sequi facilis ad!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, consequatur. Ut perferendis, adipisci, voluptatibus tenetur accusantium odio consectetur, earum quisquam dignissimos architecto maiores repellat ducimus sapiente expedita sequi facilis ad!
+                    </p>
+                  </div>
+                </div>
+                <div class="listing-actions">
+                  <a class="listing-see-more btn" href="#">Виж повече за тази обява</a>
+                  <a class="edit-btn btn" href="#">Редакция</a>
+                  <a class="delete-btn btn" href="#">Архивирай</a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
