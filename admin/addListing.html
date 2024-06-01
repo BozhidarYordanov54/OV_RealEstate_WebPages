@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/css/carousel.css" />
     <link rel="stylesheet" href="/css/site.css" />
-    <link rel="stylesheet" href="/css/addListing.css" />
+    <link rel="stylesheet" href="/css/admin-css/addListing.css" />
 
     <script
       src="https://kit.fontawesome.com/6592283e01.js"
@@ -24,12 +24,14 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <script src="/js/burger-button.js" defer></script>
     <script src="/js/checkInputContent.js" defer></script>
     <script src="/js/swiper-bundle.min.js" defer></script>
     <script src="/js/carousel.js" defer></script>
     <script src="/js/focus-element.js" defer></script>
+    <script src="/js/multipleImagePreview.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -74,68 +76,69 @@
     </header>
     <main>
       <div class="form-container">
-        <form action="#">
-          <div class="input-wrapper">
-            <label for="photos">Upload Photos:</label>
-            <input
-              type="file"
-              id="photos"
-              name="photos[]"
-              multiple
-              accept="image/*"
-            />
+        <form action="#" class="add-property">
+          <div class="variable-container">
+            <div class="input-wrapper">
+              <label for="listing-type">Тип обява</label>
+              <select name="listing-type" id="listing-type">
+                <option value="rent">Под наем</option>
+                <option value="sale">Продава</option>
+              </select>
+            </div>
+            <div class="input-wrapper">
+              <label for="property-type">Тип имот</label>
+              <select id="property-type" name="property-type">
+                <option value="1">1-стаен</option>
+                <option value="2">2-стаен</option>
+                <option value="3">3-стаен</option>
+                <option value="4">4-стаен</option>
+                <option value="5">Многостаен</option>
+                <option value="6">Мезонет</option>
+                <option value="7">Къща, Под наем</option>
+                <option value="8">Офис</option>
+                <option value="9">Магазин</option>
+                <option value="10">Склад</option>
+                <option value="11">Парцел</option>
+                <option value="12">Гараж/Паркомясто</option>
+              </select>
+            </div>
+            <div class="input-wrapper">
+              <label for="heating">Отопление:</label>
+              <select name="heating" id="heating">
+                <option value="none">Отопление</option>
+                <option value="tec">ТЕЦ</option>
+                <option value="electric">Ток</option>
+                <option value="local">Газ</option>
+              </select>
+            </div>
+  
+            <div class="input-wrapper">
+              <label for="city">Град</label>
+              <select name="city" id="city">
+                <option value="sofia">София</option>
+              </select>
+            </div>
+            <div class="input-wrapper">
+              <label for="neighbourhood">Квартал</label>
+              <select name="neighbourhood" id="neighbourhood">
+                <option value="ovchaKupel">Овча Купел</option>
+              </select>
+            </div>
           </div>
-          <div class="input-wrapper">
-            <label for="listing-type">Тип обява</label>
-            <select name="listing-type" id="listing-type">
-              <option value="rent">Под наем</option>
-              <option value="sale">Продава</option>
-            </select>
+          <div class="property-more-info">
+            <div class="input-wrapper">
+              <input type="text" id="address" name="address" class="input-text" required />
+              <label for="address">Адрес</label>
+            </div>
+            <div class="input-wrapper">
+              <input type="number" id="price" name="price" class="input-text" required />
+              <label for="price">Цена в €</label>
+            </div>
           </div>
-          <div class="input-wrapper">
-            <label for="property-type">Тип имот</label>
-            <select id="property-type" name="property-type">
-              <option value="1">1-стаен</option>
-              <option value="2">2-стаен</option>
-              <option value="3">3-стаен</option>
-              <option value="4">4-стаен</option>
-              <option value="5">Многостаен</option>
-              <option value="6">Мезонет</option>
-              <option value="7">Къща, Под наем</option>
-              <option value="8">Офис</option>
-              <option value="9">Магазин</option>
-              <option value="10">Склад</option>
-              <option value="11">Парцел</option>
-              <option value="12">Гараж/Паркомясто</option>
-            </select>
-          </div>
-          <div class="input-wrapper">
-            <label for="heating">Отопление:</label>
-            <select name="heating" id="heating">
-              <option value="none">Отопление</option>
-              <option value="tec">ТЕЦ</option>
-              <option value="electric">Ток</option>
-              <option value="local">Газ</option>
-            </select>
-          </div>
-
-          <div class="input-wrapper">
-            <label for="city">Град</label>
-            <select name="city" id="city">
-              <option value="sofia">София</option>
-            </select>
-          </div>
-          <div class="input-wrapper">
-            <label for="neighbourhood">Квартал</label>
-            <select name="neighbourhood" id="neighbourhood">
-              <option value="ovchaKupel">Овча Купел</option>
-            </select>
-          </div>
-
-          <div class="input-wrapper">
-            <label>Особености</label>
-
-            <label for="garage"
+          <div class="input-wrapper checkbox">
+           <h2>Особености</h2>
+            <div class="characteristics-wrapper">
+              <label for="garage"
               >Гараж<input
                 type="checkbox"
                 id="garage"
@@ -166,13 +169,66 @@
                 name="features"
                 value="basement"
             /></label>
+            <label for="subway"
+              >Метростанция<input
+                type="checkbox"
+                id="subway"
+                name="features"
+                value="subway"
+            /></label>
+            <label for="school"
+              >Училище<input
+                type="checkbox"
+                id="school"
+                name="features"
+                value="school"
+            /></label>
+            <label for="kindergarten"
+              >Детска градина<input
+                type="checkbox"
+                id="kindergarten"
+                name="features"
+                value="kindergarten"
+            /></label>
+            <label for="hospital"
+              >Болница<input
+                type="checkbox"
+                id="hospital"
+                name="features"
+                value="hospital"
+            /></label>
+            <label for="pharmacy"
+              >Аптека<input
+                type="checkbox"
+                id="pharmacy"
+                name="features"
+                value="pharmacy"
+            /></label>
+            <label for="bus-stop"
+              >Автобусна спирка<input
+                type="checkbox"
+                id="bus-stop"
+                name="features"
+                value="bus-stop"
+            /></label>
+            </div>
           </div>
-          <div class="input-wrapper">
-            <label for="price">Price:</label>
-            <input type="number" id="price" name="price" required />
+          
+
+          <div class="input-wrapper images">
+            <div class="upload__box">
+              <i class="fa-solid fa-file-arrow-up"></i>
+              <div class="upload__btn-box">
+                <label class="upload__btn">
+                  <p>Качване на снимки</p>
+                  <input type="file" multiple="" data-max_length="20" class="upload__inputfile">
+                </label>
+              </div>
+              <div class="upload__img-wrap"></div>
+            </div>
           </div>
 
-          <button type="submit">Submit Listing</button>
+          <button class="btn-submit" type="submit">Публикувай обявата</button>
         </form>
       </div>
     </main>
