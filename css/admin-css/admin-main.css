@@ -20,8 +20,8 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    background: #949494;
     row-gap: 1em;
+    border-bottom: 2px solid gray;
 }
 
 .selection-input-wrapper{
@@ -244,13 +244,13 @@ input[type="number"]{
     width: 150px;
     padding: 0.5em;
     border-radius: 5px;
-    border: 1px solid #3d485d;
-    color: #ffffff;
+    border: 2px solid #3d485d;
+    color: #3d485d;
     outline: none;
 }
 
 input[type="number"]::placeholder{
-    color: #ffffff;
+    color: #3d485d;
 }
 
 .input-container{
@@ -259,13 +259,22 @@ input[type="number"]::placeholder{
     justify-content: center;
     align-items: center;
     gap: 0.5em;
-    color: #ffffff;
+    color: #3d485d;
 }
 
 .input-fields-container{
     display: flex;
     flex-direction: column;
     gap: 1em;
+}
+
+input[type="radio"] + label{
+    color: #3d485d;
+}
+
+input[type="radio"]:checked + label{
+    background: #3d485d;
+    color: white;
 }
 
 

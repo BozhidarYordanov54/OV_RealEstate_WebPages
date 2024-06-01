@@ -195,7 +195,7 @@ input[type="radio"] + label{
     border: 2px solid #efefef;
     color: #fff;
     font-weight: 500;
-    transition: color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 input[type="radio"]:checked + label{
