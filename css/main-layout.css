@@ -2,13 +2,13 @@
     --header-border-color: #b09480;
     --header-color: #3d485d;
     --header-decription-color: #b09480;
-    --view-more-link-color: #000;
-    --more-properties-border-color: #000;
-    --more-propertues-bg-hover: #000;
+    --view-more-link-color: #3d485d;
+    --more-properties-border-color: #3d485d;
+    --more-propertues-bg-hover: #3d485d;
 
     --property-features-color: rgb(65, 75, 90);
     --property-feature-bg: #efefef;
-    --property-price-bg: #2b2c32;
+    --property-price-bg: #3d485d;
     --property-price-color: #fff;
 
     --swiper-slide-bg: #ffffff;
@@ -83,7 +83,7 @@
     top: -0.5em;
 }
 
-.more-properties{
+.more{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,7 +99,7 @@
         border-radius ease-in-out 0.3s;
 }
 
-.more-properties:hover{
+.more:hover{
     background: var(--more-propertues-bg-hover);
     color: #fff;
     border-radius: 5px;

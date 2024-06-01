@@ -66,7 +66,7 @@ input[type=tel]:focus + label,
 input[type=email]:focus + label,
 input[type=password]:focus + label,
 .input-text.has-content + label{
-    transform: translateY(-2em);
+    transform: translateY(-1.2em);
     font-weight: bold;
 }
 
@@ -202,6 +202,11 @@ input[type="radio"]:checked + label{
     background: #efefef;
     color: #3d485d;
 }
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
 
 .vertical-splitter{
     border-left: 1px solid #333;

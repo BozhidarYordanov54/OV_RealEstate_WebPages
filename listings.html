@@ -108,150 +108,152 @@
             </div>
             <div class="listings-filter-collapsable-wrapper">
               <div class="inputs-container">
-                <div class="radio-input-wrapper">
-                  <div class="radio-input">
-                    <div class="input-wrapper radio">
-                      <input
-                        type="radio"
-                        name="search-type"
-                        id="buy"
-                        value="buy"
-                        checked
-                      />
-                      <label for="buy">Продажби</label>
+                <form action="">
+                  <div class="radio-input-wrapper">
+                    <div class="radio-input">
+                      <div class="input-wrapper radio">
+                        <input
+                          type="radio"
+                          name="search-type"
+                          id="buy"
+                          value="buy"
+                          checked
+                        />
+                        <label for="buy">Продажби</label>
+                      </div>
+                      <div class="input-wrapper radio">
+                        <input
+                          type="radio"
+                          name="search-type"
+                          id="rent"
+                          value="rent"
+                        />
+                        <label for="rent">Наеми</label>
+                      </div>
                     </div>
-                    <div class="input-wrapper radio">
-                      <input
-                        type="radio"
-                        name="search-type"
-                        id="rent"
-                        value="rent"
-                      />
-                      <label for="rent">Наеми</label>
+                  </div>
+                  <div class="filter-select-wrapper">
+                    <div class="selection-wrapper">
+                      <div class="input-wrapper">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <select class="town" name="town" id="town">
+                          <option value="">Град/Област</option>
+                          <option value="1">София</option>
+                        </select>
+                      </div>
+                      <span class="vertical-splitter"></span>
+                      <div class="input-wrapper">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <select
+                          class="neighborhood"
+                          name=""
+                          id=""
+                          multiple="multiple"
+                        >
+                          <option value="1">Овча Купел</option>
+                        </select>
+                      </div>
+                      <span class="vertical-splitter"></span>
+                      <div class="input-wrapper">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <select
+                          class="estate-type"
+                          name=""
+                          id=""
+                          multiple="multiple"
+                        >
+                          <option value="1">1-стаен</option>
+                          <option value="2">2-стаен</option>
+                          <option value="3">3-стаен</option>
+                          <option value="4">4-стаен</option>
+                          <option value="5">Многостаен</option>
+                          <option value="6">Мезонет</option>
+                          <option value="7">Къща, Под наем</option>
+                          <option value="8">Офис</option>
+                          <option value="9">Магазин</option>
+                          <option value="10">Склад</option>
+                          <option value="11">Парцел</option>
+                          <option value="12">Гараж/Паркомясто</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="filter-select-wrapper">
-                  <div class="selection-wrapper">
-                    <div class="input-wrapper">
-                      <i class="fa-solid fa-location-dot"></i>
-                      <select class="town" name="town" id="town">
-                        <option value="">Град/Област</option>
-                        <option value="1">София</option>
-                      </select>
+                <div class="variable-number-input-wrapper">
+                  <div class="price-input-container input-container">
+                    <label for="price"
+                      ><i class="fa-solid fa-tag"></i> Цена в €</label
+                    >
+                    <div class="input-fields-container">
+                      <input type="number" placeholder="От" />
+                      <span>-</span>
+                      <input type="number" placeholder="До" />
                     </div>
-                    <span class="vertical-splitter"></span>
-                    <div class="input-wrapper">
-                      <i class="fa-solid fa-magnifying-glass"></i>
-                      <select
-                        class="neighborhood"
-                        name=""
-                        id=""
-                        multiple="multiple"
-                      >
-                        <option value="1">Овча Купел</option>
-                      </select>
+                  </div>
+                  <div class="floor-number-container input-container">
+                    <label for="floor-number"
+                      ><i class="fa-solid fa-stairs"></i> Етаж</label
+                    >
+                    <div class="input-fields-container">
+                      <input type="number" placeholder="От" />
+                      <span>-</span>
+                      <input type="number" placeholder="До" />
                     </div>
-                    <span class="vertical-splitter"></span>
-                    <div class="input-wrapper">
-                      <i class="fa-solid fa-magnifying-glass"></i>
-                      <select
-                        class="estate-type"
-                        name=""
-                        id=""
-                        multiple="multiple"
-                      >
-                        <option value="1">1-стаен</option>
-                        <option value="2">2-стаен</option>
-                        <option value="3">3-стаен</option>
-                        <option value="4">4-стаен</option>
-                        <option value="5">Многостаен</option>
-                        <option value="6">Мезонет</option>
-                        <option value="7">Къща, Под наем</option>
-                        <option value="8">Офис</option>
-                        <option value="9">Магазин</option>
-                        <option value="10">Склад</option>
-                        <option value="11">Парцел</option>
-                        <option value="12">Гараж/Паркомясто</option>
-                      </select>
+                  </div>
+                  <div class="are-size-container input-container">
+                    <label for="area-size"
+                      ><i
+                        class="fa-solid fa-up-right-and-down-left-from-center"
+                      ></i>
+                      Площ м2</label
+                    >
+                    <div class="input-fields-container">
+                      <input type="number" placeholder="От" />
+                      <span>-</span>
+                      <input type="number" placeholder="До" />
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="variable-number-input-wrapper">
-                <div class="price-input-container input-container">
-                  <label for="price"
-                    ><i class="fa-solid fa-tag"></i> Цена в €</label
-                  >
-                  <div class="input-fields-container">
-                    <input type="number" placeholder="От" />
-                    <span>-</span>
-                    <input type="number" placeholder="До" />
+                <!-- <label for="construction-type">Vid konstrukciq</label> -->
+                <div class="selection-wrapper">
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-trowel"></i>
+                    <select
+                      class="construction-type"
+                      name="construction-type"
+                      id="construction-type"
+                      multiple="multiple"
+                    >
+                      <option value="none">Тип строителство</option>
+                      <option value="tuhla">Тухла</option>
+                      <option value="panel">Панел</option>
+                      <option value="epk">ЕПК</option>
+                      <option value="greadored">Гредоред</option>
+                    </select>
+                  </div>
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-chair"></i>
+                    <select class="furnished" name="obzavejdane" id="obzavejdane">
+                      <option value="none">Обзавеждане</option>
+                      <option value="true">Обзаведен</option>
+                      <option value="false">Необзаведен</option>
+                    </select>
+                  </div>
+                  <!-- <label for="otoplenie">Otoplenie</label> -->
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-temperature-three-quarters"></i>
+                    <select class="heating" name="otoplenie" id="otoplenie">
+                      <option value="none">Отопление</option>
+                      <option value="tec">ТЕЦ</option>
+                      <option value="electric">Ток</option>
+                      <option value="local">Газ</option>
+                    </select>
                   </div>
                 </div>
-                <div class="floor-number-container input-container">
-                  <label for="floor-number"
-                    ><i class="fa-solid fa-stairs"></i> Етаж</label
-                  >
-                  <div class="input-fields-container">
-                    <input type="number" placeholder="От" />
-                    <span>-</span>
-                    <input type="number" placeholder="До" />
-                  </div>
-                </div>
-                <div class="are-size-container input-container">
-                  <label for="area-size"
-                    ><i
-                      class="fa-solid fa-up-right-and-down-left-from-center"
-                    ></i>
-                    Площ м2</label
-                  >
-                  <div class="input-fields-container">
-                    <input type="number" placeholder="От" />
-                    <span>-</span>
-                    <input type="number" placeholder="До" />
-                  </div>
-                </div>
-              </div>
-              <!-- <label for="construction-type">Vid konstrukciq</label> -->
-              <div class="selection-wrapper">
-                <div class="input-wrapper">
-                  <i class="fa-solid fa-trowel"></i>
-                  <select
-                    class="construction-type"
-                    name="construction-type"
-                    id="construction-type"
-                    multiple="multiple"
-                  >
-                    <option value="none">Тип строителство</option>
-                    <option value="tuhla">Тухла</option>
-                    <option value="panel">Панел</option>
-                    <option value="epk">ЕПК</option>
-                    <option value="greadored">Гредоред</option>
-                  </select>
-                </div>
-                <div class="input-wrapper">
-                  <i class="fa-solid fa-chair"></i>
-                  <select class="furnished" name="obzavejdane" id="obzavejdane">
-                    <option value="none">Обзавеждане</option>
-                    <option value="true">Обзаведен</option>
-                    <option value="false">Необзаведен</option>
-                  </select>
-                </div>
-                <!-- <label for="otoplenie">Otoplenie</label> -->
-                <div class="input-wrapper">
-                  <i class="fa-solid fa-temperature-three-quarters"></i>
-                  <select class="heating" name="otoplenie" id="otoplenie">
-                    <option value="none">Отопление</option>
-                    <option value="tec">ТЕЦ</option>
-                    <option value="electric">Ток</option>
-                    <option value="local">Газ</option>
-                  </select>
-                </div>
-              </div>
-              <button type="submit" class="search-button btn-submit">
-                Приложи<i class="fa-solid fa-magnifying-glass"></i>
-              </button>
+                <button type="submit" class="search-button btn-submit">
+                  Приложи<i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                </form>
             </div>
           </div>
           <div class="listings-wrapper">
