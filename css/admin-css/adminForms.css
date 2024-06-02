@@ -8,6 +8,28 @@ main {
   align-items: center;
 }
 
+.add-member-form{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+
+.main-nav-wrapper{
+  position: static;
+}
+
+.form-title{
+  margin-bottom: 1em;
+}
+
+.short-inputs-wrapper{
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
 .dropdown-btn{
   position: relative;
   background: none;
@@ -180,10 +202,6 @@ main {
   color: #4045ba;
 }
 
-input[type="text"] {
-  width: auto;
-}
-
 .property-more-info {
   display: flex;
   flex: 1;
@@ -238,7 +256,35 @@ input[type="number"]:focus + label{
     font-weight: bold;
 }
 
+input[type="password"],
+input[type="text"],
+textarea{
+  width: auto;
+}
+
+input[type=text],
+input[type=email],
+input[type=password]{
+    font-size: 1em;
+    font-weight: 500;
+    padding: 0.7em;
+    color: #45525b;
+}
+
+.show-pass{
+  border: none;
+  background-color:transparent;
+  position: absolute;
+  right: 8px;
+  top: 14px;
+  color: #45525b;
+  cursor: pointer;
+  font-size: 16px;
+}
+
 .variable-container .input-wrapper{
     border-bottom: 2px solid #b1b1b1;
     padding: 1em;
 }
+
+

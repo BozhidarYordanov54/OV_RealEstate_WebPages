@@ -14,6 +14,12 @@ jQuery(document).ready(function () {
         var files = e.target.files;
         var filesArr = Array.prototype.slice.call(files);
         var iterator = 0;
+
+if(filesArr.length > 0){
+  imgWrap.empty();
+  imgArray = [];
+}
+
         filesArr.forEach(function (f, index) {
   
           if (!f.type.match('image.*')) {
