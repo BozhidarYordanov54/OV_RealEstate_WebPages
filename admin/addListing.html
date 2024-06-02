@@ -32,6 +32,7 @@
     <script src="../js/carousel.js" defer></script>
     <script src="../js/focus-element.js" defer></script>
     <script src="../js/multipleImagePreview.js" defer></script>
+    <script src="../js/dropdownMenu.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -60,11 +61,20 @@
           </div>
           <nav class="nav-wrapper">
             <ul class="nav-elements main-list">
-              <li class="nav-element"><a href="admin.html">Начало</a></li>
               <li class="nav-element">
-                <a href="listingsAdmin.html">Имоти</a>
+                <div class="dropdown-wrapper">
+                  <button class="dropdown-btn"><i class="fa-solid fa-chevron-down"></i> Имоти</button>
+                  <ul class="dropdown-list">
+                    <li class="nav-element">
+                      <a href="admin.html">Всички имоти</a>
+                    </li>
+                    <li class="nav-element">
+                      <a href="addListing.html">Добави имот</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li class="nav-element"><a href="#">Екип</a></li>
+              <li class="nav-element"><a href="teamMembers.html">Екип</a></li>
               <li class="nav-element"><a href="#">Блог</a></li>
               <li class="nav-element">
                 <a href="../index.html">Начална страница</a>
