@@ -277,4 +277,58 @@ input[type="radio"]:checked + label{
     color: white;
 }
 
+.dropdown-btn{
+    position: relative;
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.dropdown-btn::after{
+    position: absolute;
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    background: var(--nav-element-after-bg);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    left: 0;
+}
+
+.dropdown-btn:hover::after{
+    width: 100%;
+}
+
+.dropdown-wrapper .dropdown-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 5px;
+    position: absolute;
+    list-style-type: none;
+    max-height: 0;
+    overflow: hidden;
+    width: 0;
+    background: #3d485d;
+    transition: all 0.3s ease;
+}
+
+.dropdown-list.show{
+    max-height: 200px;
+    padding: 0.5em 1em;
+    overflow: visible;
+    width: fit-content;
+}
+
 
