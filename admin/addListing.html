@@ -64,7 +64,9 @@
             <ul class="nav-elements main-list">
               <li class="nav-element">
                 <div class="dropdown-wrapper">
-                  <button class="dropdown-btn"><i class="fa-solid fa-chevron-down"></i> Имоти</button>
+                  <button class="dropdown-btn">
+                    <i class="fa-solid fa-chevron-down"></i> Имоти
+                  </button>
                   <ul class="dropdown-list">
                     <li class="nav-element">
                       <a href="admin.html">Всички имоти</a>
@@ -76,7 +78,9 @@
                 </div>
               </li>
               <li class="nav-element"><a href="teamMembers.html">Екип</a></li>
-              <li class="nav-element"><a href="#">Блог</a></li>
+              <li class="nav-element">
+                <a href="../admin/blogContent.html">Блог</a>
+              </li>
               <li class="nav-element">
                 <a href="../index.html">Начална страница</a>
               </li>
@@ -85,7 +89,7 @@
         </div>
       </div>
     </header>
-    
+
     <main>
       <div class="form-container">
         <form action="#" class="add-property">
@@ -123,7 +127,7 @@
                 <option value="local">Газ</option>
               </select>
             </div>
-  
+
             <div class="input-wrapper">
               <label for="city">Град</label>
               <select name="city" id="city">
@@ -139,93 +143,104 @@
           </div>
           <div class="property-more-info">
             <div class="input-wrapper">
-              <input type="text" id="address" name="address" class="input-text" required />
+              <input
+                type="text"
+                id="address"
+                name="address"
+                class="input-text"
+                required
+              />
               <label for="address">Адрес</label>
             </div>
             <div class="input-wrapper">
-              <input type="number" id="price" name="price" class="input-text" required />
+              <input
+                type="number"
+                id="price"
+                name="price"
+                class="input-text"
+                required
+              />
               <label for="price">Цена в €</label>
             </div>
           </div>
           <div class="input-wrapper checkbox">
-           <h2>Особености</h2>
+            <h2>Особености</h2>
             <div class="characteristics-wrapper">
               <label for="garage"
-              >Гараж<input
-                type="checkbox"
-                id="garage"
-                name="features"
-                value="garage"
-            /></label>
+                >Гараж<input
+                  type="checkbox"
+                  id="garage"
+                  name="features"
+                  value="garage"
+              /></label>
 
-            <label for="pool"
-              >Басейн<input
-                type="checkbox"
-                id="pool"
-                name="features"
-                value="pool"
-            /></label>
+              <label for="pool"
+                >Басейн<input
+                  type="checkbox"
+                  id="pool"
+                  name="features"
+                  value="pool"
+              /></label>
 
-            <label for="garden"
-              >Двор<input
-                type="checkbox"
-                id="garden"
-                name="features"
-                value="garden"
-            /></label>
+              <label for="garden"
+                >Двор<input
+                  type="checkbox"
+                  id="garden"
+                  name="features"
+                  value="garden"
+              /></label>
 
-            <label for="basement"
-              >Мазе<input
-                type="checkbox"
-                id="basement"
-                name="features"
-                value="basement"
-            /></label>
-            <label for="subway"
-              >Метростанция<input
-                type="checkbox"
-                id="subway"
-                name="features"
-                value="subway"
-            /></label>
-            <label for="school"
-              >Училище<input
-                type="checkbox"
-                id="school"
-                name="features"
-                value="school"
-            /></label>
-            <label for="kindergarten"
-              >Детска градина<input
-                type="checkbox"
-                id="kindergarten"
-                name="features"
-                value="kindergarten"
-            /></label>
-            <label for="hospital"
-              >Болница<input
-                type="checkbox"
-                id="hospital"
-                name="features"
-                value="hospital"
-            /></label>
-            <label for="pharmacy"
-              >Аптека<input
-                type="checkbox"
-                id="pharmacy"
-                name="features"
-                value="pharmacy"
-            /></label>
-            <label for="bus-stop"
-              >Автобусна спирка<input
-                type="checkbox"
-                id="bus-stop"
-                name="features"
-                value="bus-stop"
-            /></label>
+              <label for="basement"
+                >Мазе<input
+                  type="checkbox"
+                  id="basement"
+                  name="features"
+                  value="basement"
+              /></label>
+              <label for="subway"
+                >Метростанция<input
+                  type="checkbox"
+                  id="subway"
+                  name="features"
+                  value="subway"
+              /></label>
+              <label for="school"
+                >Училище<input
+                  type="checkbox"
+                  id="school"
+                  name="features"
+                  value="school"
+              /></label>
+              <label for="kindergarten"
+                >Детска градина<input
+                  type="checkbox"
+                  id="kindergarten"
+                  name="features"
+                  value="kindergarten"
+              /></label>
+              <label for="hospital"
+                >Болница<input
+                  type="checkbox"
+                  id="hospital"
+                  name="features"
+                  value="hospital"
+              /></label>
+              <label for="pharmacy"
+                >Аптека<input
+                  type="checkbox"
+                  id="pharmacy"
+                  name="features"
+                  value="pharmacy"
+              /></label>
+              <label for="bus-stop"
+                >Автобусна спирка<input
+                  type="checkbox"
+                  id="bus-stop"
+                  name="features"
+                  value="bus-stop"
+              /></label>
             </div>
           </div>
-          
 
           <div class="input-wrapper images">
             <div class="upload__box">
@@ -233,7 +248,12 @@
               <div class="upload__btn-box">
                 <label class="upload__btn">
                   <p>Качване на снимки</p>
-                  <input type="file" multiple="" data-max_length="20" class="upload__inputfile">
+                  <input
+                    type="file"
+                    multiple=""
+                    data-max_length="20"
+                    class="upload__inputfile"
+                  />
                 </label>
               </div>
               <div class="upload__img-wrap"></div>
