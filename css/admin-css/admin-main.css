@@ -29,7 +29,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    /* height: 80px; */
 }
 
 .radio-input{
@@ -48,6 +48,7 @@
     display: flex;
     gap: 0.5em;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .select2-container--default .select2-selection--single,
@@ -131,6 +132,9 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 10px;
+}
+.listing-short-info ul{
+    padding: 0.5em;
 }
 
 .property-features{
@@ -331,5 +335,21 @@ input[type="radio"]:checked + label{
     width: fit-content;
     z-index: 99999;
 }
+@media (max-width: 1050px){
+    .listing{
+        max-height: fit-content;
+      flex-direction: column;
+    }
+    .swiper{
+      height: 500px;
+    }
+    .listing-card-images{
+        width: auto;
+    }
+    .listing-short-info{
+        flex-wrap: wrap;
+    }
+    
+  }
 
 
