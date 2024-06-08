@@ -98,20 +98,19 @@ html{
     width: 100%;
 }
 .listings-container{
-    display: none; /* REPLACE THIS WITH GRID */
+    display: grid; /* REPLACE THIS WITH GRID */
     row-gap: 30px;
     column-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-auto-rows: 420px;
 }
 .no-properties-wrapper{
-    display: flex;
+    display: none;
     flex-direction: column-reverse;
     justify-content: center;
     gap: 1em;
     align-items: center;
     color: #3d485d;
-    height: 100vh;
 }
 .no-properties-wrapper .icon-wrapper{
     position: relative;
@@ -287,6 +286,13 @@ html{
     margin: 0 auto;
     transition: height 0.5s ease; /* Smooth transition for max-height */
     overflow: hidden;
+}
+.property-sorting{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    flex: 1;
+
 }
 .listings-filter-collapsable-wrapper.collapse-filters{
     height: 0;
