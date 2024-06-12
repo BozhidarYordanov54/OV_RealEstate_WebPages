@@ -14,10 +14,9 @@
       crossorigin="anonymous"
     ></script>
     <link rel="icon" type="image/png" href="images/logo.png" />
-    <script src="js/checkInputContent.js"></script>
+    <script src="js/checkInputContent.js" defer></script>
     <script src="js/burger-button.js" defer></script>
     <script src="js/show-pass.js" defer></script>
-    <script src="js/confirm-pass.js" defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Влез</title>
@@ -99,53 +98,47 @@
               </li>
             </ul>
           </div>
-          <div class="change-pass-container">
-            <h2 class="section-title">Смени парола</h2>
-            <form class="sign-in-form" action="">
+          <div class="change-basic-container">
+            <h2 class="section-title">Профил</h2>
+            <h3>Имейл и парола</h3>
+            <div class="info-container">
               <div class="input-wrapper">
                 <input
-                  type="password"
-                  name="oldPassword"
-                  id="oldPassword"
-                  class="input-text input-password"
-                  onchange="confirmPass()"
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="input-text"
+                  value="example@email.com"
+                  disabled
                   required
                 />
-                <label for="oldPassword">Стара парола</label>
-                <button class="show-pass" data-target="oldPassword">
-                  <i class="fa-regular fa-eye"></i>
-                </button>
+                <label for="email">Имейл</label>
               </div>
-              <div class="input-wrapper">
+            </div>
+            <h3>Име</h3>
+            <div class="info-container">
+              <div class="input-wrapper small">
                 <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  class="input-text input-password"
-                  onchange="confirmPass()"
+                  type="text"
+                  name="nameFirst"
+                  id="nameFirst"
+                  class="input-text"
                   required
                 />
-                <label for="password">Нова парола</label>
-                <button class="show-pass" data-target="password">
-                  <i class="fa-regular fa-eye"></i>
-                </button>
+                <label for="nameFirst">Име</label>
               </div>
-              <div class="input-wrapper">
+              <div class="input-wrapper small">
                 <input
-                  type="password"
-                  name="confirm-password"
-                  id="confirm-password"
-                  class="input-text input-password"
-                  onchange="confirmPass()"
+                  type="text"
+                  name="nameLast"
+                  id="nameLast"
+                  class="input-text"
                   required
                 />
-                <label for="confirm-password">Потвърди паролата</label>
-                <button class="show-pass" data-target="confirm-password">
-                  <i class="fa-regular fa-eye"></i>
-                </button>
+                <label for="nameLast">Фамилия</label>
               </div>
-              <button class="change-btn">Запази промените</button>
-            </form>
+            </div>
+            <button class="change-btn">Запази промените</button>
           </div>
         </div>
       </div>

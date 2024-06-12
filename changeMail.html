@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/signIn.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <!-- <link rel="stylesheet" href="css/signIn.css" /> -->
 
     <script
       src="https://kit.fontawesome.com/6592283e01.js"
@@ -73,33 +74,59 @@
     </header>
     <main>
       <div class="main-bg">
-        <div class="sign-in-container">
-          <h2>Регистритрай се</h2>
-          <form class="sign-in-form" action="">
-            <div class="input-wrapper">
-              <input
-                type="email"
-                name="mail"
-                id="mail"
-                class="input-text"
-                required
-              />
-              <label for="mail">Нов имейл</label>
-            </div>
-            <div class="input-wrapper">
-              <input
-                type="email"
-                name="mail"
-                id="mail"
-                class="input-text"
-                required
-              />
-              <label for="mail">Потвърди имейл</label>
-            </div>
-            <button class="btn-sign-in">
-              Запази промените<i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </form>
+        <div class="profile-container">
+          <div class="profile-nav">
+            <ul>
+              <li>
+                <a href="profile.html"
+                  ><i class="fa-solid fa-user"></i>Профил</a
+                >
+              </li>
+              <li>
+                <a href="changeMail.html"
+                  ><i class="fa-solid fa-envelope"></i>Имейл адрес</a
+                >
+              </li>
+              <li>
+                <a href="changePass.html"
+                  ><i class="fa-solid fa-key"></i>Парола</a
+                >
+              </li>
+              <li>
+                <a href="personalData.html"
+                  ><i class="fa-solid fa-circle-info"></i>Лични данни</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="change-mail-container">
+            <h2 class="section-title">Промени имейл</h2>
+            <form class="sign-in-form" action="">
+              <div class="input-wrapper">
+                <input
+                  type="email"
+                  name="mail"
+                  id="mail"
+                  class="input-text"
+                  required
+                />
+                <label for="mail">Нов имейл</label>
+              </div>
+              <div class="input-wrapper">
+                <input
+                  type="email"
+                  name="mail"
+                  id="mail"
+                  class="input-text"
+                  required
+                />
+                <label for="mail">Потвърди имейл</label>
+              </div>
+              <button class="change-btn">
+                Запази промените</i>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </main>

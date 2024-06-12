@@ -14,10 +14,9 @@
       crossorigin="anonymous"
     ></script>
     <link rel="icon" type="image/png" href="images/logo.png" />
-    <script src="js/checkInputContent.js"></script>
+    <script src="js/checkInputContent.js" defer></script>
     <script src="js/burger-button.js" defer></script>
     <script src="js/show-pass.js" defer></script>
-    <script src="js/confirm-pass.js" defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Влез</title>
@@ -99,53 +98,24 @@
               </li>
             </ul>
           </div>
-          <div class="change-pass-container">
-            <h2 class="section-title">Смени парола</h2>
-            <form class="sign-in-form" action="">
-              <div class="input-wrapper">
-                <input
-                  type="password"
-                  name="oldPassword"
-                  id="oldPassword"
-                  class="input-text input-password"
-                  onchange="confirmPass()"
-                  required
-                />
-                <label for="oldPassword">Стара парола</label>
-                <button class="show-pass" data-target="oldPassword">
-                  <i class="fa-regular fa-eye"></i>
-                </button>
-              </div>
-              <div class="input-wrapper">
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  class="input-text input-password"
-                  onchange="confirmPass()"
-                  required
-                />
-                <label for="password">Нова парола</label>
-                <button class="show-pass" data-target="password">
-                  <i class="fa-regular fa-eye"></i>
-                </button>
-              </div>
-              <div class="input-wrapper">
-                <input
-                  type="password"
-                  name="confirm-password"
-                  id="confirm-password"
-                  class="input-text input-password"
-                  onchange="confirmPass()"
-                  required
-                />
-                <label for="confirm-password">Потвърди паролата</label>
-                <button class="show-pass" data-target="confirm-password">
-                  <i class="fa-regular fa-eye"></i>
-                </button>
-              </div>
-              <button class="change-btn">Запази промените</button>
-            </form>
+          <div class="personal-data-container">
+            <h2 class="section-title">Лични данни</h2>
+            <p>
+              Този акаунт съдържа личните данни, които сте ни предоставили. Тази
+              страница Ви позволява да изтеглите или изтриете тези данни.
+            </p>
+            <br />
+            <p>
+              <b
+                >Изтриването на тези данни ще премахне акаунта ви перманентно,
+                като това действие е необратимо</b
+              >
+            </p>
+            <br />
+            <div class="data-options">
+              <button class="change-btn">Изтегляне</button>
+              <button class="change-btn important">Изтриване</button>
+            </div>
           </div>
         </div>
       </div>
