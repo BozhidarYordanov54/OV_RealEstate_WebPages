@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/typography.css" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/signIn.css" />
+
+    <script
+      src="https://kit.fontawesome.com/6592283e01.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <script src="js/checkInputContent.js"></script>
+    <script src="js/burger-button.js" defer></script>
+    <script src="js/show-pass.js" defer></script>
+    <script src="js/confirm-pass.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Влез</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="main-nav-wrapper">
+        <div class="main-nav">
+          <div class="logo-wrapper">
+            <a class="logo-link" href="index.html">
+              <img class="logo" src="images/logo.png" alt="" />
+            </a>
+          </div>
+          <div class="burger">
+            <button class="hamb" aria-label="Open Menu">
+              <span class="sr-only">Open Menu</span
+              ><svg class="ham" viewBox="0 0 100 100">
+                <path
+                  class="line top"
+                  d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+                ></path>
+                <path class="line middle" d="m 30,50 h 40"></path>
+                <path
+                  class="line bottom"
+                  d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <nav class="nav-wrapper">
+            <ul class="nav-elements main-list">
+              <li class="nav-element"><a href="index.html">Начало</a></li>
+              <li class="nav-element"><a href="listings.html">Имоти</a></li>
+              <li class="nav-element"><a href="index.html">Нови сгради</a></li>
+              <li class="nav-element"><a href="aboutUs.html">За нас</a></li>
+              <li class="nav-element contacts">
+                <a href="contacts.html">Контакти</a>
+              </li>
+              <li class="nav-element"><a href="blog.html">Блог</a></li>
+              <li class="nav-element login-element">
+                <a href="signIn.html">Вход</a>
+              </li>
+              <li class="nav-element login-element">
+                <a href="singUp.html">Регистрация</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="login-element">
+            <a href="signIn.html" class="login">Вход</a>
+            <a href="singUp.html" class="register">Регистрация</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main-bg">
+        <div class="sign-in-container">
+          <h2>Регистритрай се</h2>
+          <form class="sign-in-form" action="">
+            <div class="input-wrapper">
+              <input
+                type="password"
+                name="pass"
+                id="password"
+                class="input-text input-password"
+                onchange="confirmPass()"
+                required
+              />
+              <label for="pass">Нова парола</label>
+              <button class="show-pass" data-target="password">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+            <div class="input-wrapper">
+              <input
+                type="password"
+                name="pass"
+                id="confirm-password"
+                class="input-text input-password"
+                onchange="confirmPass()"
+                required
+              />
+              <label for="pass">Потвърди паролата</label>
+              <button class="show-pass" data-target="confirm-password">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+            <button class="btn-sign-in">
+              Запази промените<i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="socials-wrapper">
+          <img class="footer-logo" src="images/logo.png" alt="" />
+          <div class="socials-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="footer-wrapper">
+          <div class="footer-elements">
+            <div class="footer-element">
+              <h3 class="footer-header">Последни статии</h3>
+              <ul class="footer-list articles">
+                <li class="footer-article-card">
+                  <a href="#" class="footer-article-link"
+                    >Как да продадем имота си бързо?</a
+                  >
+                  <span class="article-date">04/03/2024</span>
+                </li>
+                <li class="footer-article-card">
+                  <a href="#" class="footer-article-link"
+                    >Как да продадем имота си бързо?</a
+                  >
+                  <span class="article-date">04/03/2024</span>
+                </li>
+                <li class="footer-article-card">
+                  <a href="#" class="footer-article-link"
+                    >Как да продадем имота си бързо?</a
+                  >
+                  <span class="article-date">04/03/2024</span>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-element">
+              <h3 class="footer-header">Имоти</h3>
+              <ul class="footer-list">
+                <li class="footer-list-element"><a href="#">Сгради</a></li>
+                <li class="footer-list-element"><a href="#">Апартаменти</a></li>
+                <li class="footer-list-element"><a href="#">Гаражи</a></li>
+              </ul>
+            </div>
+            <div class="footer-element">
+              <h3 class="footer-header">Полезни Връзки</h3>
+              <ul class="footer-list">
+                <li class="footer-list-element"><a href="#">Услуги</a></li>
+                <li class="footer-list-element"><a href="#">Блог</a></li>
+                <li class="footer-list-element"><a href="#">Контакти</a></li>
+                <li class="footer-list-element"><a href="#">За нас</a></li>
+              </ul>
+            </div>
+            <div class="footer-element">
+              <h3 class="footer-header">Контакти</h3>
+              <p class="address town">София</p>
+              <p class="address">ж.к. Овча Купел 1</p>
+              <p class="address">ул. "761-ва"</p>
+              <p class="email">Email: test@mail.com</p>
+              <p class="phone">Телефон: +359 888 888 888</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="newsletter-section">
+        <div class="newsletter-wrapper">
+          <div class="newsletter-content">
+            <i class="fa-solid fa-envelope-open-text"></i>
+            <h2 class="newsletter-header">Абонирай се</h2>
+            <p class="newsletter-text">
+              Запишете се за нашия бюлетин и научавайте първи за всички актуални
+              оферти на пазара!
+            </p>
+            <form class="newsletter-form" action="">
+              <div class="input-wrapper">
+                <input type="text" name="email" id="email" class="input-text" />
+                <label for="email">Имейл</label>
+              </div>
+              <div class="input-wrapper">
+                <input type="hidden" name="name" id="name" />
+              </div>
+
+              <button type="submit" class="subscribe-button btn-submit">
+                Абонирай се <i class="fa-regular fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-wrapper">
+        <p class="copy-text">
+          © 2024 Овча Купел Estate. Всички права запазени.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
