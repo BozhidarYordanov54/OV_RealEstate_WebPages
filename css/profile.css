@@ -50,14 +50,17 @@
     background-color: #45525b;
     margin: 0 10px;
 }
-.profile-nav ul{
+.profile-nav-opts{
     list-style-type: none;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-.profile-nav ul li a{
+.profile-nav-opts li a{
     color: #45525b;
+}
+.profile-nav-opts li a i{
+    margin-right:6px;
 }
 
 .show-pass{
