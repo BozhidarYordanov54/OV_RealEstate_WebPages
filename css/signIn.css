@@ -154,11 +154,7 @@ input[type=password]{
         transform:translateX(5px)
     }
 }
-@media (max-width: 1047px) {
-    .input-wrapper{
-        gap: 0em;
-    }
-}
+
 @media (max-width: 768px) {
     .sign-in-container{
         padding: 1.5em;
@@ -171,14 +167,6 @@ input[type=password]{
     .sign-in-form{
         padding-top: 1em;
         gap: 5px;
-    }
-    input[type=text],
-    input[type=email],
-    input[type=password]{
-    font-size: 1em !important;
-    font-weight: 500 !important;
-    padding: 3em !important;
-    color: #45525b;
-}
+    } 
 }
 
