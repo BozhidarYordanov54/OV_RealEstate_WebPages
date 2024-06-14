@@ -93,18 +93,6 @@
     .input-wrapper.small{
         width: 100%;
     }
-    input[type=password],
-    input[type=email]{
-        width: 100%;
-    }
-    input[type=text],
-    input[type=email],
-    input[type=password]{
-    font-size: 1em !important;
-    font-weight: 500 !important;
-    padding: 0.5em !important;
-    color: #45525b;
-    }
     .data-options{
         flex-direction: column;
         gap: 10px; 
