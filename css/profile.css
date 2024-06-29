@@ -1,0 +1,119 @@
+.info-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    margin: 15px 0;
+}
+.change-btn{
+    width: 100%;
+    height: 35px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.change-btn.important{
+    background: red;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 2px;
+}
+.change-btn.important:hover{
+    background-image: linear-gradient(rgb(0 0 0/4%) 0 0);
+}
+.input-wrapper.small{
+    width: 150px;
+}
+#nameFirst,
+#nameLast{
+    width: 100%;
+}
+
+.profile-container{
+    display: flex;
+     background-color:rgba(250, 250, 252, 0.8);
+     backdrop-filter: blur(5px);
+     padding: 2em;
+     border-radius: 6px;
+     color: #45525b
+}
+
+.profile-nav{
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+.profile-nav::after{
+    content: "";
+    height: 100%;
+    width: 1px;
+    background-color: #45525b;
+    margin: 0 10px;
+}
+.profile-nav-opts{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.profile-nav-opts li a{
+    color: #45525b;
+}
+.profile-nav-opts li a i{
+    margin-right:6px;
+}
+
+.show-pass{
+    border: none;
+    background-color:transparent;
+    position: absolute;
+    right: 8px;
+    top: 14px;
+    color: #45525b;
+    cursor: pointer;
+}
+.section-title{
+    width: fit-content;
+    margin: 0 auto 20px auto;
+}
+.personal-data-container{
+    max-width: 400px;
+}
+.data-options{
+    display: flex;
+    justify-content: space-between;
+}
+.data-options button{
+    width: 45%;
+}
+
+
+@media(max-width: 768px) {
+    .info-container{
+        flex-direction: column;
+        align-items: start;
+    }
+    .input-wrapper.small{
+        width: 100%;
+    }
+    .data-options{
+        flex-direction: column;
+        gap: 10px; 
+    }
+    .data-options button{
+        width: 100%;
+    }
+    .profile-container{
+        padding: 1em;
+        margin: 0.5em;
+        flex-direction: column;
+    }
+    .profile-nav{
+        display: flex;
+        border-bottom: 1px solid #45525b;
+        margin-bottom: 20px;
+    }
+    .profile-nav ul{
+        margin: 0 auto;
+    }
+}

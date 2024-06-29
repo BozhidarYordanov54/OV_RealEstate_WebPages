@@ -101,6 +101,7 @@
     transform: translateY(-5px);
 }
 .team-members{
+    min-height: 200px;
     width: 100%;
     display: grid;
     max-width: 1300px;
@@ -184,6 +185,16 @@ input[type="radio"]:hover + label{
 input[type="radio"]:checked + label{
     background: #45525b;
     color: #ffffff;
+}
+
+.empty-msg{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #45525b;
+    font-weight: 500;
+    font-size: 1em;
+    text-align: center;
 }
 
 @media (max-width: 1050px) {

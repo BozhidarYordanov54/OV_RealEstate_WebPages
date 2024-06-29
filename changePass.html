@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/signIn.css" />
+    <!-- <link rel="stylesheet" href="css/signIn.css" /> -->
+    <link rel="stylesheet" href="css/profile.css" />
 
     <script
       src="https://kit.fontawesome.com/6592283e01.js"
@@ -73,62 +74,78 @@
     </header>
     <main>
       <div class="main-bg">
-        <div class="sign-in-container">
-          <h2>Регистритрай се</h2>
-          <form class="sign-in-form" action="">
-            <div class="input-wrapper">
-              <input
-                type="email"
-                name="mail"
-                id="mail"
-                class="input-text"
-                required
-              />
-              <label for="mail">Имейл</label>
-            </div>
-            <div class="input-wrapper">
-              <input
-                type="password"
-                name="pass"
-                id="password"
-                class="input-text input-password"
-                onchange="confirmPass()"
-                required
-              />
-              <label for="pass">Парола</label>
-              <button class="show-pass" data-target="password">
-                <i class="fa-regular fa-eye"></i>
-              </button>
-            </div>
-            <div class="input-wrapper">
-              <input
-                type="password"
-                name="pass"
-                id="confirm-password"
-                class="input-text input-password"
-                onchange="confirmPass()"
-                required
-              />
-              <label for="pass">Потвърди паролата</label>
-              <button class="show-pass" data-target="confirm-password">
-                <i class="fa-regular fa-eye"></i>
-              </button>
-            </div>
-            <div class="consent">
-              <input type="checkbox" id="consent" required />
-              <label for="consent">*Запознах се с общите условия</label>
-            </div>
-            <button class="btn-sign-in">
-              Регистрация<i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </form>
-          <div class="alt-sign-in-opts">
-            <a class="alt-sign-in google-opt" href="#"
-              >Вход с Google<i class="fa-brands fa-google"></i
-            ></a>
-            <a class="alt-sign-in facebook-opt" href="#"
-              >Вход с Facebook<i class="fa-brands fa-facebook"></i
-            ></a>
+        <div class="profile-container">
+          <div class="profile-nav">
+            <ul class="profile-nav-opts">
+              <li>
+                <a href="profile.html"
+                  ><i class="fa-solid fa-user"></i>Профил</a
+                >
+              </li>
+              <li>
+                <a href="changeMail.html"
+                  ><i class="fa-solid fa-envelope"></i>Имейл адрес</a
+                >
+              </li>
+              <li>
+                <a href="changePass.html"
+                  ><i class="fa-solid fa-key"></i>Парола</a
+                >
+              </li>
+              <li>
+                <a href="personalData.html"
+                  ><i class="fa-solid fa-circle-info"></i>Лични данни</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="change-pass-container">
+            <h2 class="section-title">Смени парола</h2>
+            <form class="sign-in-form" action="">
+              <div class="input-wrapper">
+                <input
+                  type="password"
+                  name="oldPassword"
+                  id="oldPassword"
+                  class="input-text input-password"
+                  onchange="confirmPass()"
+                  required
+                />
+                <label for="oldPassword">Стара парола</label>
+                <button class="show-pass" data-target="oldPassword">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+              <div class="input-wrapper">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="input-text input-password"
+                  onchange="confirmPass()"
+                  required
+                />
+                <label for="password">Нова парола</label>
+                <button class="show-pass" data-target="password">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+              <div class="input-wrapper">
+                <input
+                  type="password"
+                  name="confirm-password"
+                  id="confirm-password"
+                  class="input-text input-password"
+                  onchange="confirmPass()"
+                  required
+                />
+                <label for="confirm-password">Потвърди паролата</label>
+                <button class="show-pass" data-target="confirm-password">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+              <button class="change-btn">Запази промените</button>
+            </form>
           </div>
         </div>
       </div>

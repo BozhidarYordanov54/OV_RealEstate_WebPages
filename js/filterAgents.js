@@ -1,33 +1,30 @@
 const agents = document.querySelectorAll(".team-member-card");
 const filters = document.querySelectorAll(".agent-filter");
+const agentsContainer = document.querySelector('.team-members');
+const emptyMsg = document.createElement('p');
+emptyMsg.classList.add('empty-msg');
+emptyMsg.innerHTML = 'Няма намерени резултати';
 
 function filterAgents(btn) {
-  // Set all agents to display: flex initially
+  if(agentsContainer.contains(emptyMsg)){
+    agentsContainer.removeChild(emptyMsg);
+  };
+  
+  let empty = true;
+  
   agents.forEach((agent) => {
-    agent.style.display = "flex";
-    requestAnimationFrame(() => {
-      agent.classList.remove("show"); // Remove show class to start the transition
-    });
-  });
-
-  // Ensure the 'transitionend' event listener is not duplicated
-  agents.forEach((agent) => {
-    const handleTransitionEnd = () => {
       if (!agent.classList.contains(btn.value)) {
-        agent.style.display = "none"; // Set display: none if the agent does not match the filter
+        agent.style.display = "none";
       }
-      agent.removeEventListener("transitionend", handleTransitionEnd);
-    };
-
-    agent.addEventListener("transitionend", handleTransitionEnd);
-
-    // Check if the agent matches the filter criteria
-    if (agent.classList.contains(btn.value)) {
-      requestAnimationFrame(() => {
-        agent.classList.add("show"); // Add show class to start the transition
-      });
-    }
+      else{
+        agent.style.display = "flex";
+        empty = false;
+      }
   });
+
+  if(empty){
+    agentsContainer.appendChild(emptyMsg);
+  }
 }
 
 filters.forEach((filter) => {
