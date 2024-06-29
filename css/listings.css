@@ -3,7 +3,7 @@
     --listing-shadow-hover: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     --background-color: #efefef;
     --filter-container-background: #ffffff;
-    --filter-container-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --filter-container-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     --number-input-border: 1px solid black;
     --listing-card-background: #ffffff;
     --short-info-color: #3d485d;
@@ -18,8 +18,8 @@
     --search-button-background: #659df1;
     --search-button-icon-color: #fff;
     --icon-color: #659df1;
-    --property-category-color: #8b908d;
-    --property-location-color: #3d485d;
+    --property-category-color: #6f7278;
+    --property-location-color: #45525b;
     --deal-type-color: #659df1;
     --price-background: #3d485d;
     --price-color: #ffffff;
@@ -27,11 +27,11 @@
     --btn-search-color: #3d485d;
     --svg-main-color: #3d485d;
 
-    --listing-short-info-color: #b09480;
+    --listing-short-info-color: #7c868c;
 }
 
 html{
-    background: #efefef;
+    background: #fafafc;
 }
 
 .main-nav-wrapper{
@@ -106,10 +106,10 @@ html{
 }
 .no-properties-wrapper{
     display: none;
-    flex-direction: column-reverse;
-    justify-content: center;
-    gap: 1em;
+    flex-direction: column;
+    text-align: center;
     align-items: center;
+    gap: 1em;
     color: #3d485d;
 }
 .no-properties-wrapper .icon-wrapper{
@@ -291,7 +291,6 @@ html{
     display: flex;
     flex-direction: column;
     gap: 2em;
-    flex: 1;
 
 }
 .listings-filter-collapsable-wrapper.collapse-filters{
@@ -419,16 +418,16 @@ select:focus{
 }
 
 .property-category{
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
     color: var(--property-category-color);
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 .property-location{
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--property-location-color);
     letter-spacing: 0.1em;
 }
@@ -449,8 +448,8 @@ select:focus{
     padding: 10px;
     border-radius: 5px;
     letter-spacing: 2px;
-    font-size: 1.2em;
-    font-weight: 700;
+    font-size: 1em;
+    font-weight: 600;
 }
 
 .price::after{

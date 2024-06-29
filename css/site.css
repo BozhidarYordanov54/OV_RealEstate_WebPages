@@ -24,10 +24,6 @@ a:active{
     text-decoration: none;
 }
 
-.main{
-    border-bottom: 2px solid #b1b1b1;
-}
-
 input[type=text],
 input[type=tel],
 input[type=email],
@@ -146,6 +142,8 @@ textarea:focus + label{
     display: flex;
     flex-direction: column;
     gap: 1em;
+    transform: translateY(100px);
+    opacity: 0;
 }
 
 .select-wrapper{
