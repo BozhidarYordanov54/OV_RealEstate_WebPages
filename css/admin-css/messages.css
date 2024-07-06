@@ -1,0 +1,96 @@
+.msg-container{
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    overflow: hidden;
+}
+.msg-table-container{
+    overflow: scroll;
+    border: 1px solid black;
+}
+.msg-table{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    /* overflow-x: scroll; */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align:center;
+}
+
+.table-head th {
+    background-color: red;
+    color: white;
+    padding: 12px 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.msg-entry{
+    font-weight: 600;
+}
+.msg-entry:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.msg-entry:hover {
+    background-color: #ddd;
+}
+
+.msg-entry.read{
+    font-weight: 400;
+    color: #84888e;
+}
+
+.view-btn,
+.delete-btn{
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.msg-pagination{
+    display: flex;
+}
+
+.page-number a{
+    background-color: red;
+    color: white;
+    font-weight: 600; 
+    font-size: 14px;
+    margin: 0 6px;
+    border-radius: 4px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.msg-nav{
+    display: flex;
+}
+
+.msg-nav li{
+    list-style-type: none;
+    
+}
+.msg-nav li a{
+    color: white;
+    background-color: red;
+    font-weight: 500;
+    margin: 0 6px;
+    padding: 6px;
+    border-radius: 6px;
+}
+.msg-nav li a:hover{
+    color: white;
+    background-color: blue;
+}
