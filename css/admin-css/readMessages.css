@@ -1,0 +1,40 @@
+.messageContainer,
+.responseContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.messageContainer {
+    align-items: flex-start;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #efefef;
+}
+
+.messageContent {
+    text-align: justify;
+    margin: 20px 0;
+}
+.responseForm {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+.response {
+    width: 100%;
+}
+.sendResponse {
+    width: 250px;
+    margin: 0 auto;
+    height: 30px;
+    background:#3498db !important;
+    color: white;
+}
+
