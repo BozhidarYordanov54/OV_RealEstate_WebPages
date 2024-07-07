@@ -1,6 +1,6 @@
 .msg-container{
     width: 100%;
-    border: 1px solid red;
+    position: absolute;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -8,16 +8,16 @@
     gap: 20px;
     overflow: hidden;
 }
+
 .msg-table-container{
     overflow: scroll;
-    border: 1px solid black;
 }
+
 .msg-table{
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     border-collapse: collapse;
-    /* overflow-x: scroll; */
 }
 
 th, td {
@@ -27,7 +27,7 @@ th, td {
 }
 
 .table-head th {
-    background-color: red;
+    background-color: #3d485d;
     color: white;
     padding: 12px 8px;
     text-transform: uppercase;
@@ -48,15 +48,31 @@ th, td {
     font-weight: 400;
     color: #84888e;
 }
+.msg-options {
+    display: flex;
+    flex-direction: column;
+}
+.msg-options a {
+    flex-grow: 1;
+}
+.viewBtn:visited{
+    color: white;
+}
 
-.view-btn,
-.delete-btn{
+.viewBtn,
+.deleteBtn{
     padding: 5px 10px;
-    margin-right: 5px;
+    margin: 10px;
     border: none;
     cursor: pointer;
     border-radius: 4px;
     font-weight: 500;
+    color: white;
+    font-size: 16px;
+    background-color: #3d485d;
+}
+.deleteBtn {
+    background-color: red;
 }
 
 .msg-pagination{
@@ -64,7 +80,7 @@ th, td {
 }
 
 .page-number a{
-    background-color: red;
+    background-color: #3d485d;
     color: white;
     font-weight: 600; 
     font-size: 14px;
@@ -79,18 +95,27 @@ th, td {
 }
 
 .msg-nav li{
-    list-style-type: none;
-    
+    list-style-type: none;   
 }
+
 .msg-nav li a{
     color: white;
-    background-color: red;
+    background-color: #3d485d;
     font-weight: 500;
     margin: 0 6px;
     padding: 6px;
     border-radius: 6px;
 }
-.msg-nav li a:hover{
-    color: white;
-    background-color: blue;
+
+.msg-nav li a:hover,
+.page-number a{
+    background-color: #566071;
 }
+
+@media (max-width: 768px) {
+    tr > *:nth-child(2),
+    tr > *:nth-child(1){
+    display: none;
+    }
+}
+
