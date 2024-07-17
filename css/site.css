@@ -24,6 +24,15 @@ a:active{
     text-decoration: none;
 }
 
+.cookie-banner-wrapper{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
 input[type=text],
 input[type=tel],
 input[type=email],
